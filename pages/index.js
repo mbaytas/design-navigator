@@ -12,7 +12,7 @@ export default function Home() {
   let [social, setSocial] = useState("social");
 
   const handleClickNext = (event) => {
-    if (step < 10) {
+    if (step < 15) {
       setStep(step + 1);
     }
   };
@@ -34,6 +34,11 @@ export default function Home() {
     8: "translate-x-[-192rem] [&>:nth-child(9)]:opacity-100",
     9: "translate-x-[-216rem] [&>:nth-child(10)]:opacity-100",
     10: "translate-x-[-240rem] [&>:nth-child(11)]:opacity-100",
+    11: "translate-x-[-264rem] [&>:nth-child(12)]:opacity-100",
+    12: "translate-x-[-308rem] [&>:nth-child(13)]:opacity-100",
+    13: "translate-x-[-332rem] [&>:nth-child(14)]:opacity-100",
+    14: "translate-x-[-356rem] [&>:nth-child(15)]:opacity-100",
+    15: "translate-x-[-380rem] [&>:nth-child(16)]:opacity-100",
   };
 
   const questions = [
