@@ -35,10 +35,10 @@ export default function Home() {
     9: "translate-x-[-216rem] [&>:nth-child(10)]:opacity-100",
     10: "translate-x-[-240rem] [&>:nth-child(11)]:opacity-100",
     11: "translate-x-[-264rem] [&>:nth-child(12)]:opacity-100",
-    12: "translate-x-[-308rem] [&>:nth-child(13)]:opacity-100",
-    13: "translate-x-[-332rem] [&>:nth-child(14)]:opacity-100",
-    14: "translate-x-[-356rem] [&>:nth-child(15)]:opacity-100",
-    15: "translate-x-[-380rem] [&>:nth-child(16)]:opacity-100",
+    12: "translate-x-[-288rem] [&>:nth-child(13)]:opacity-100",
+    13: "translate-x-[-312rem] [&>:nth-child(14)]:opacity-100",
+    14: "translate-x-[-336rem] [&>:nth-child(15)]:opacity-100",
+    15: "translate-x-[-360rem] [&>:nth-child(16)]:opacity-100",
   };
 
   const questions = [
@@ -166,7 +166,7 @@ export default function Home() {
               }
             >
               <h1 className="text-xl font-display font-bold">
-                Discover your optimal path as a design professional.
+                Discover the best path for you.
               </h1>
               <p>Get a personalized list of resources to become a designer.</p>
               <p>Start with 15 questions.</p>
