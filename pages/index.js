@@ -169,7 +169,7 @@ export default function Home() {
                 Discover your optimal path as a design professional.
               </h1>
               <p>Get a personalized list of resources to become a designer.</p>
-              <p>Start with 10 questions.</p>
+              <p>Start with 15 questions.</p>
             </div>
             {questions.map((question) => (
               <div
