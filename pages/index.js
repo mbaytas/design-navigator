@@ -9,7 +9,22 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   let [step, setStep] = useState(0);
-  let [social, setSocial] = useState("social");
+
+  let [progressive1, setProgressive1] = useState(null);
+  let [progressive2, setProgressive2] = useState(null);
+  let [progressive3, setProgressive3] = useState(null);
+  let [progressive4, setProgressive4] = useState(null);
+  let [progressive5, setProgressive5] = useState(null);
+  let [social1, setSocial1] = useState(null);
+  let [social2, setSocial2] = useState(null);
+  let [social3, setSocial3] = useState(null);
+  let [social4, setSocial4] = useState(null);
+  let [social5, setSocial5] = useState(null);
+  let [strategic1, setStrategic1] = useState(null);
+  let [strategic2, setStrategic2] = useState(null);
+  let [strategic3, setStrategic3] = useState(null);
+  let [strategic4, setStrategic4] = useState(null);
+  let [strategic5, setStrategic5] = useState(null);
 
   const handleClickNext = (event) => {
     if (step < 15) {
@@ -23,114 +38,174 @@ export default function Home() {
   };
 
   const stepClasses = {
-    0: "translate-x-0 [&>:nth-child(1)]:opacity-100",
-    1: "translate-x-[-24rem] [&>:nth-child(2)]:opacity-100",
-    2: "translate-x-[-48rem] [&>:nth-child(3)]:opacity-100",
-    3: "translate-x-[-72rem] [&>:nth-child(4)]:opacity-100",
-    4: "translate-x-[-96rem] [&>:nth-child(5)]:opacity-100",
-    5: "translate-x-[-120rem] [&>:nth-child(6)]:opacity-100",
-    6: "translate-x-[-144rem] [&>:nth-child(7)]:opacity-100",
-    7: "translate-x-[-168rem] [&>:nth-child(8)]:opacity-100",
-    8: "translate-x-[-192rem] [&>:nth-child(9)]:opacity-100",
-    9: "translate-x-[-216rem] [&>:nth-child(10)]:opacity-100",
-    10: "translate-x-[-240rem] [&>:nth-child(11)]:opacity-100",
-    11: "translate-x-[-264rem] [&>:nth-child(12)]:opacity-100",
-    12: "translate-x-[-288rem] [&>:nth-child(13)]:opacity-100",
-    13: "translate-x-[-312rem] [&>:nth-child(14)]:opacity-100",
-    14: "translate-x-[-336rem] [&>:nth-child(15)]:opacity-100",
-    15: "translate-x-[-360rem] [&>:nth-child(16)]:opacity-100",
+    0: "[&>:nth-child(1)]:opacity-100 [&>:nth-child(1)]:pointer-events-auto translate-x-0 ",
+    1: "[&>:nth-child(2)]:opacity-100 [&>:nth-child(2)]:pointer-events-auto translate-x-[-24rem] ",
+    2: "[&>:nth-child(3)]:opacity-100 [&>:nth-child(3)]:pointer-events-auto translate-x-[-48rem]",
+    3: "[&>:nth-child(4)]:opacity-100 [&>:nth-child(4)]:pointer-events-auto translate-x-[-72rem]",
+    4: "[&>:nth-child(5)]:opacity-100 [&>:nth-child(5)]:pointer-events-auto translate-x-[-96rem]",
+    5: "[&>:nth-child(6)]:opacity-100 [&>:nth-child(6)]:pointer-events-auto translate-x-[-120rem]",
+    6: "[&>:nth-child(7)]:opacity-100 [&>:nth-child(7)]:pointer-events-auto translate-x-[-144rem]",
+    7: "[&>:nth-child(8)]:opacity-100 [&>:nth-child(8)]:pointer-events-auto translate-x-[-168rem]",
+    8: "[&>:nth-child(9)]:opacity-100 [&>:nth-child(9)]:pointer-events-auto translate-x-[-192rem]",
+    9: "[&>:nth-child(10)]:opacity-100 [&>:nth-child(10)]:pointer-events-auto translate-x-[-216rem]",
+    10: "[&>:nth-child(11)]:opacity-100 [&>:nth-child(11)]:pointer-events-auto translate-x-[-240rem]",
+    11: "[&>:nth-child(12)]:opacity-100 [&>:nth-child(12)]:pointer-events-auto translate-x-[-264rem]",
+    12: "[&>:nth-child(13)]:opacity-100 [&>:nth-child(13)]:pointer-events-auto translate-x-[-288rem]",
+    13: "[&>:nth-child(14)]:opacity-100 [&>:nth-child(14)]:pointer-events-auto translate-x-[-312rem]",
+    14: "[&>:nth-child(15)]:opacity-100 [&>:nth-child(15)]:pointer-events-auto translate-x-[-336rem]",
+    15: "[&>:nth-child(16)]:opacity-100 [&>:nth-child(16)]:pointer-events-auto translate-x-[-360rem]",
   };
 
   const questions = [
     {
       id: "q1",
-      text: "When did you last learn a new tool?",
+      radioValue: social1,
+      radioOnChange: setSocial1,
+      text: "Do you get more done working solo or together with collaborators?",
       a1: "Solo",
-      a2: "Team",
+      a2: "Together",
+      val1: 0,
+      val2: 1,
     },
     {
       id: "q2",
+      radioValue: social2,
+      radioOnChange: setSocial2,
       text: "Do you enjoy going to conferences?",
       a1: "Yes",
       a2: "No",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q3",
-      text: "Your DMs are...",
-      a1: "open",
-      a2: "locked",
+      radioValue: social3,
+      radioOnChange: setSocial3,
+      text: "Your inbox is...",
+      a1: "Open",
+      a2: "Private",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q4",
-      text: "Do enjoy working solo or on larger projects with a team?",
-      a1: "Solo",
-      a2: "Team",
+      radioValue: social4,
+      radioOnChange: setSocial4,
+      text: "Do you enjoy talking in front of an audience?",
+      a1: "Yes",
+      a2: "No",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q5",
-      text: "Do you enjoy pitching your ideas to an audience?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: social5,
+      radioOnChange: setSocial5,
+      text: "When people disagree with you, you...",
+      a1: "Compromise",
+      a2: "Defend Yourself",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q6",
-      text: "Do you periodically write down your personal goals?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: progressive1,
+      radioOnChange: setProgressive1,
+      text: "When your can't figure it out, you...",
+      a1: "Hit Google",
+      a2: "Call a Friend",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q7",
-      text: "Are you always looking for new tools?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: progressive2,
+      radioOnChange: setProgressive2,
+      text: "When was the last time you learned how to use a new tool?",
+      a1: "This Year",
+      a2: "A Few Years Ago",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q8",
-      text: "When your software doesn’t work, you...",
-      a1: "hit Google",
-      a2: "call someone",
+      radioValue: progressive3,
+      radioOnChange: setProgressive3,
+      text: "How many books have you read within the 12 months?",
+      a1: "More than 5",
+      a2: "More like 0",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q9",
-      text: "Learning how something work is usually… boring/exciting.",
-      a1: "Boring",
-      a2: "Exciting",
+      radioValue: progressive4,
+      radioOnChange: setProgressive4,
+      text: "If you could only have one, you'd choose...",
+      a1: "YouTube",
+      a2: "Netflix",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q10",
-      text: "Do you usually like to learn and teach what you just learned to someone?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: progressive5,
+      radioOnChange: setProgressive5,
+      text: "Would you accept to join the first crew to go to Mars?",
+      a1: "Sign Me Up",
+      a2: "No Thanks",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q11",
-      text: "Do you like to take initiative and come up with plans, ideas or do you usually feel more comfortable to listen to what other people have in mind?",
+      radioValue: strategic1,
+      radioOnChange: setStrategic1,
+      text: "Are you as comfortable with Excel as you are with Photoshop?",
       a1: "Yes",
       a2: "No",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q12",
-      text: "Would you prefer to have a regular work-time schedule or to be flexible and change based on projects you have?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: strategic2,
+      radioOnChange: setStrategic2,
+      text: "Weekends are for...",
+      a1: "Family",
+      a2: "Side Projects",
+      val1: 0,
+      val2: 1,
     },
     {
       id: "q13",
-      text: "Would you be up to address financial bureaucracy and be willing to learn about it?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: strategic3,
+      radioOnChange: setStrategic3,
+      text: "Would you rather pick stocks to invest in, or leave your savings in a fund managed by professionals?",
+      a1: "Stocks",
+      a2: "Fund",
+      val1: 1,
+      val2: 0,
     },
     {
       id: "q14",
-      text: "Before doing a project you want to know the budget.",
-      a1: "Yes",
-      a2: "No",
+      radioValue: strategic4,
+      radioOnChange: setStrategic4,
+      text: "An economic crisis would be...",
+      a1: "Scary",
+      a2: "Full of Opportunities",
+      val1: 0,
+      val2: 1,
     },
     {
       id: "q15",
-      text: "Do you see yourself usually take the lead and be a good mentor in a group environment or do you prefer to not to?",
-      a1: "Yes",
-      a2: "No",
+      radioValue: strategic5,
+      radioOnChange: setStrategic5,
+      text: "Your hero is...",
+      a1: "Steve Jobs",
+      a2: "Jony Ive",
+      val1: 1,
+      val2: 0,
     },
   ];
 
@@ -151,63 +226,76 @@ export default function Home() {
           </a>
         </header>
 
-        <main className="border w-96 h-[30rem] flex flex-col justify-between">
-          {/* <div className={stepClasses[step]}> */}
+        <main className="border-2 border-white/40 w-96 h-[30rem] flex flex-col justify-between">
           <div
             className={
-              "transition-transform duration-150 flex flex-row h-full [&>*]:opacity-20 " +
+              "transition-transform duration-300 flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
               stepClasses[step]
             }
           >
             <div
               id="intro"
               className={
-                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0"
+                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity duration-200"
               }
             >
               <h1 className="text-xl font-display font-bold">
-                Discover the best path for you.
+                Discover the best path{" "}
+                <span className="underline underline-offset-1 decoration-2 decoration-white/80">
+                  for you
+                </span>
+                .
               </h1>
-              <p>Get a personalized list of resources to become a designer.</p>
-              <p>Start with 15 questions.</p>
+              <p className="opacity-80 leading-snug">
+                Answer 15 questions to receive your personal list of resources
+                that will make you a great designer.
+              </p>
             </div>
-            {questions.map((question) => (
+            {questions.map((question, idx) => (
               <div
                 key={question.id}
+                id={question.id}
                 className={
-                  "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 [&:nth-child(" +
-                  (step + 1) +
-                  ")]:opacity-100"
+                  "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity duration-200"
                 }
               >
                 <RadioGroup
-                  className={"flex flex-col justify-evenly items-start h-full"}
-                  value={social}
-                  onChange={setSocial}
+                  className={
+                    "flex flex-col justify-between items-start h-full w-full"
+                  }
+                  value={question.radioValue}
+                  onChange={question.radioOnChange}
                 >
-                  <RadioGroup.Label>{question.text}</RadioGroup.Label>
-                  <div className="flex flex-row gap-2 w-full justify-between">
+                  <p className="text-sm opacity-60">{idx + 1}/15</p>
+                  <RadioGroup.Label className="text-base">
+                    {question.text}
+                  </RadioGroup.Label>
+                  <div className="flex flex-row gap-2 w-full justify-between text-base leading-tight">
                     <RadioGroup.Option
-                      className="flex flex-row items-center justify-center h-16 border rounded-lg w-full"
-                      value="1"
+                      className="flex flex-row items-center justify-center h-16 border rounded-lg w-full cursor-pointer overflow-hidden"
+                      value={question.val1}
                     >
                       {({ checked }) => (
-                        <div className="">
-                          <div className={checked ? "bg-blue-200" : ""}>
-                            {question.a1}
-                          </div>
+                        <div
+                          className={`w-full h-full p-8 flex items-center justify-start transition-colors duration-150 ${
+                            checked ? "bg-white text-black" : ""
+                          }`}
+                        >
+                          {question.a1}
                         </div>
                       )}
                     </RadioGroup.Option>
                     <RadioGroup.Option
-                      className="flex flex-row items-center justify-center h-16 border rounded-lg w-full"
-                      value="2"
+                      className="flex flex-row items-center justify-start h-16 border rounded-lg w-full cursor-pointer overflow-hidden"
+                      value={question.val2}
                     >
                       {({ checked }) => (
-                        <div className="">
-                          <div className={checked ? "bg-blue-200" : ""}>
-                            {question.a2}
-                          </div>
+                        <div
+                          className={`w-full h-full p-8 flex items-center justify-center transition-colors duration-150 ${
+                            checked ? "bg-white text-black" : ""
+                          }`}
+                        >
+                          {question.a2}
                         </div>
                       )}
                     </RadioGroup.Option>
@@ -245,8 +333,11 @@ export default function Home() {
           </div>
         </main>
 
-        <aside className="h-px bg-white/20 w-96 flex flex-row justify-start items-center">
-          <div className="progress bg-white h-full" width={step * 9.6}></div>
+        <aside className="h-[2px] bg-white/20 w-96 flex flex-row justify-start items-center">
+          <div
+            className="progress bg-white h-full transition-[width] duration-300"
+            style={{ width: (step * 100) / 15 + "%" }}
+          ></div>
         </aside>
 
         <footer className="mx-8 my-4">
