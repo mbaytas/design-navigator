@@ -101,18 +101,18 @@ export default function Home() {
       id: "q5",
       radioValue: social5,
       radioOnChange: setSocial5,
-      text: "When people disagree with you, you...",
-      a1: "Compromise",
-      a2: "Defend Yourself",
-      val1: 1,
-      val2: 0,
+      text: "Your first instinct in a disagreement is to...",
+      a1: "Defend Yourself",
+      a2: "Find a Middle Way",
+      val1: 0,
+      val2: 1,
     },
     {
       id: "q6",
       radioValue: progressive1,
       radioOnChange: setProgressive1,
       text: "When your can't figure it out, you...",
-      a1: "Hit Google",
+      a1: "Google It",
       a2: "Call a Friend",
       val1: 1,
       val2: 0,
@@ -121,9 +121,9 @@ export default function Home() {
       id: "q7",
       radioValue: progressive2,
       radioOnChange: setProgressive2,
-      text: "When was the last time you learned how to use a new tool?",
+      text: "When was the last time you learned to use a new tool?",
       a1: "This Year",
-      a2: "A Few Years Ago",
+      a2: "Years Ago",
       val1: 1,
       val2: 0,
     },
@@ -131,7 +131,7 @@ export default function Home() {
       id: "q8",
       radioValue: progressive3,
       radioOnChange: setProgressive3,
-      text: "How many books have you read within the 12 months?",
+      text: "How many books have you read within the last year?",
       a1: "More than 5",
       a2: "More like 0",
       val1: 1,
@@ -141,7 +141,7 @@ export default function Home() {
       id: "q9",
       radioValue: progressive4,
       radioOnChange: setProgressive4,
-      text: "If you could only have one, you'd choose...",
+      text: "If you could have only one of them, you'd choose...",
       a1: "YouTube",
       a2: "Netflix",
       val1: 1,
@@ -151,7 +151,7 @@ export default function Home() {
       id: "q10",
       radioValue: progressive5,
       radioOnChange: setProgressive5,
-      text: "Would you accept to join the first crew to go to Mars?",
+      text: "Would you join the first crew to Mars?",
       a1: "Sign Me Up",
       a2: "No Thanks",
       val1: 1,
@@ -181,9 +181,9 @@ export default function Home() {
       id: "q13",
       radioValue: strategic3,
       radioOnChange: setStrategic3,
-      text: "Would you rather pick stocks to invest in, or leave your savings in a fund managed by professionals?",
-      a1: "Stocks",
-      a2: "Fund",
+      text: "Would you rather pick stocks to invest in, or let a professional manage your savings?",
+      a1: "Pick Stocks",
+      a2: "Leave It to the Pros",
       val1: 1,
       val2: 0,
     },
@@ -253,10 +253,13 @@ export default function Home() {
                 </span>
                 .
               </h1>
-              <p className="opacity-80 leading-snug">
-                Answer 15 questions to receive your personal list of resources
-                that will make you a great designer.
-              </p>
+              <div className="flex flex-col gap-2">
+                <p className="opacity-80 leading-snug">Answer 15 questions.</p>
+                <p className="opacity-80 leading-snug">
+                  Receive your personal list of resources that will make you a
+                  great designer.
+                </p>
+              </div>
             </div>
             {questions.map((question, idx) => (
               <div
@@ -279,7 +282,7 @@ export default function Home() {
                   </RadioGroup.Label>
                   <div className="flex flex-row gap-2 w-full justify-between text-base leading-tight">
                     <RadioGroup.Option
-                      className="flex flex-row items-center justify-center h-16 border rounded-lg w-full cursor-pointer overflow-hidden"
+                      className="flex flex-row items-center justify-center h-16 border rounded-xl w-full cursor-pointer overflow-hidden"
                       value={question.val1}
                     >
                       {({ checked }) => (
@@ -293,12 +296,12 @@ export default function Home() {
                       )}
                     </RadioGroup.Option>
                     <RadioGroup.Option
-                      className="flex flex-row items-center justify-start h-16 border rounded-lg w-full cursor-pointer overflow-hidden"
+                      className="flex flex-row items-center justify-start h-16 border rounded-xl w-full cursor-pointer overflow-hidden"
                       value={question.val2}
                     >
                       {({ checked }) => (
                         <div
-                          className={`w-full h-full p-8 flex items-center justify-center transition-colors duration-150 ${
+                          className={`w-full h-full p-8 flex items-center justify-start transition-colors duration-150 ${
                             checked ? "bg-white text-black" : ""
                           }`}
                         >
