@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "480px",
+        sd: "800px",
+        hd: "1800px",
+        "4k": "2800px",
+      },
+    },
     fontFamily: {
       display: [
         "neue-haas-grotesk-display",

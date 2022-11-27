@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .text-r1 {
+        @apply text-sm 
+        sd:text-base
+        hd:text-sm 
+        4k:text-base
+        !leading-snug;
+    }
+    .text-r2 {
+        @apply text-base 
+        sd:text-lg 
+        hd:text-base 
+        4k:text-lg
+        !leading-tight;
+    }
+    .text-r3 {
+        @apply font-display
+        text-xl 
+        sd:text-2xl 
+        hd:text-2xl 
+        4k:text-3xl
+        !leading-none;
+    }
+    .text-r4 {
+        @apply font-display
+        text-3xl 
+        sd:text-4xl
+        hd:text-4xl 
+        4k:text-7xl
+        !leading-none;
+    }
+}
+
 @font-face {
     font-family: "neue-haas-grotesk-display";
     src: url("https://use.typekit.net/af/99b799/00000000000000007735bb38/30/l?primer=66eab40ab701d8f34f803a711b9899ef5b6958f7c94f82c09df802365e52aa9d&fvd=n2&v=3")
