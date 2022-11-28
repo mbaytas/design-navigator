@@ -417,7 +417,7 @@ export default function Home() {
           </div>
         </main>
 
-        <Lifestyles></Lifestyles>
+        <Lifestyles message="...or jump to the resources:"></Lifestyles>
 
         <Footer></Footer>
       </div>

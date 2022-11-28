@@ -33,6 +33,10 @@
         4k:text-7xl
         !leading-none;
     }
+
+    .shadow-spt {
+        @apply shadow-[0_9px_9px_0_rgba(0,0,0,.1),_0_0_29px_0_rgba(0,0,0,.1)];
+    }
 }
 
 @font-face {

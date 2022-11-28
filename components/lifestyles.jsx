@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import {
-  Headphones,
+  Calendar,
   Portfolio,
   Analytics,
   Rocket,
@@ -23,20 +23,22 @@ function LifestyleLink(props) {
   );
 }
 
-export default function Lifestyles() {
+export default function Lifestyles(props) {
+  const { message } = props;
+
   return (
     <aside className="w-full flex justify-center items-end max-w-5xl mx-auto gap-x-8 gap-y-6 flex-wrap">
       <div className="w-full text-center text-sm opacity-40">
-        ...or jump to the resources:
+        {message}
       </div>
       <LifestyleLink
         label="Freelancer"
         href="/freelancer"
-        icon={<Headphones size="32" />}
+        icon={<Calendar size="32" />}
       />
       <LifestyleLink
-        label="Corporate"
-        href="/corporate"
+        label="Career Employee"
+        href="/employee"
         icon={<Portfolio size="32" />}
       />
       <LifestyleLink
@@ -54,11 +56,11 @@ export default function Lifestyles() {
         href="/creator"
         icon={<PenFountain size="32" />}
       />
-      <LifestyleLink
-        label="Agency"
-        href="/agency"
+      {/* <LifestyleLink
+        label="Agency Owner"
+        href="/agency-owner"
         icon={<Building size="32" />}
-      />
+      /> */}
       <LifestyleLink
         label="Scholar"
         href="/scholar"
