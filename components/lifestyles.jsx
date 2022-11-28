@@ -27,8 +27,8 @@ export default function Lifestyles(props) {
   const { message } = props;
 
   return (
-    <aside className="w-full flex justify-center items-end max-w-5xl mx-auto gap-x-8 gap-y-6 flex-wrap">
-      <div className="w-full text-center text-sm opacity-40">
+    <aside className="grid grid-cols-3 hd:grid-cols-6 items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
+      <div className="w-full text-center text-sm opacity-40 col-span-full">
         {message}
       </div>
       <LifestyleLink
