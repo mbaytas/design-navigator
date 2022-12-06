@@ -22,10 +22,10 @@ export default function Employee() {
         <Header></Header>
 
         <div className="w-full max-w-md flex flex-col justify-center gap-2 min-h-[38vh]">
-          <Portfolio size="64" className="opacity-80" />
+          <Portfolio size="32" className="opacity-80" />
           <p className="text-r1 opacity-60">We think you'll thrive as a...</p>
           <h1 className="font-display text-r4 font-bold">Career Employee</h1>
-          <p className="text-r2 opacity-60">
+          <p className="opacity-60">
             Employment at an established company provides stability and peace of
             mind, as well as opportunities for long-term, large-scale projects.
             Larger companies offer well-defined carreer paths where you can

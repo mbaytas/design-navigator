@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="px-8 py-4 flex flex-row flex-wrap justify-between items-center w-full">
       <p className="w-full max-w-xs">
-        <Information size='32'className="opacity-60 hover:opacity-100 transition-opacity duration-150 cursor-pointer"/>
+        <Information size='32'className="opacity-60 hover:opacity-100 transition-opacity cursor-pointer"/>
       </p>
       <p className="w-full max-w-xs">
         <span className="text-xs">Created by</span>

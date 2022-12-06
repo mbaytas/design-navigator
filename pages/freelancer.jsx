@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import Lifestyles from "../components/lifestyles";
 import ResourceCard from "../components/resourceCard";
@@ -32,10 +31,10 @@ export default function Freelancer() {
         <Header></Header>
 
         <div className="w-full max-w-md flex flex-col justify-center gap-2 min-h-[38vh]">
-          <Calendar size="64" className="opacity-80" />
+          <Calendar size="32" className="opacity-80" />
           <p className="text-r1 opacity-60">We think you'll thrive as a...</p>
           <h1 className="font-display text-r4 font-bold">Freelancer</h1>
-          <p className="text-r2 opacity-60">
+          <p className="opacity-60">
             Freelancers are self-employed, usually taking up short-term projects
             rather than long-term employment. Freelancers might be fully
             independent, or be represented by an agency that markets their work

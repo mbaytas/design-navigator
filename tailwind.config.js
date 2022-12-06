@@ -34,6 +34,12 @@ module.exports = {
         "system-ui",
       ],
     },
+    transitionDuration: {
+      DEFAULT: "300ms",
+      300: "300ms",
+      500: "500ms",
+      1000: "1000ms",
+    },
   },
   plugins: [],
 };

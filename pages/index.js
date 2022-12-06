@@ -275,7 +275,7 @@ export default function Home() {
       >
         {({ checked }) => (
           <div
-            className={`w-full h-full p-8 flex items-center justify-start text-white bg-black transition-colors duration-150 ${
+            className={`w-full h-full p-8 flex items-center justify-start text-white bg-black transition-colors ${
               checked ? "bg-white text-black" : ""
             }`}
           >
@@ -298,7 +298,7 @@ export default function Home() {
 
         <aside className="h-[2px] bg-white/20 w-96 flex flex-row justify-start items-center">
           <div
-            className="progress bg-white h-full transition-[width] duration-300"
+            className="progress bg-white h-full transition-[width]"
             style={{ width: (step * 100) / 15 + "%" }}
           ></div>
         </aside>
@@ -306,14 +306,14 @@ export default function Home() {
         <main className="border-2 border-white/40 w-96 h-[30rem] flex flex-col justify-between">
           <div
             className={
-              "transition-transform duration-300 flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
+              "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
               stepClasses[step]
             }
           >
             <div
               id="intro"
               className={
-                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity duration-200"
+                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity"
               }
             >
               <h1 className="text-xl font-display font-bold">
@@ -336,7 +336,7 @@ export default function Home() {
                 key={question.id}
                 id={question.id}
                 className={
-                  "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity duration-200"
+                  "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
                 }
               >
                 <RadioGroup
@@ -369,7 +369,7 @@ export default function Home() {
               onClick={handleClickPrev}
               className="btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
-          transition-[background-color,transform] duration-150
+          transition-[background-color,transform]
           bg-white/80
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:-rotate-2
@@ -385,7 +385,7 @@ export default function Home() {
               font-display text-xl font-medium
               leading-none
           cursor-pointer
-          transition-[background-color,transform] duration-150
+          transition-[background-color,transform]
           bg-white/80
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:rotate-2
@@ -403,7 +403,7 @@ export default function Home() {
               font-display text-xl font-medium
               leading-none
           cursor-pointer
-          transition-[background-color,transform] duration-150
+          transition-[background-color,transform]
           bg-white/80
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:rotate-2

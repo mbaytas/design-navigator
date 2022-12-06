@@ -14,7 +14,7 @@ function LifestyleLink(props) {
   const { icon, label, href } = props;
   return (
     <Link
-      className="flex flex-col justify-end items-center gap-1 opacity-40 hover:opacity-100 hover:scale-105 transition-[opacity,transform] duration-150"
+      className="flex flex-col justify-end items-center gap-1 opacity-40 hover:opacity-100 hover:scale-105 transition-[opacity,transform]"
       href={href}
     >
       {icon}
@@ -27,7 +27,7 @@ export default function Lifestyles(props) {
   const { message } = props;
 
   return (
-    <aside className="grid grid-cols-3 hd:grid-cols-6 items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
+    <aside className="grid grid-cols-5 items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
       <div className="w-full text-center text-sm opacity-40 col-span-full">
         {message}
       </div>
@@ -37,15 +37,15 @@ export default function Lifestyles(props) {
         icon={<Calendar size="32" />}
       />
       <LifestyleLink
-        label="Career Employee"
+        label="Employee"
         href="/employee"
         icon={<Portfolio size="32" />}
       />
-      <LifestyleLink
+      {/* <LifestyleLink
         label="Founder"
         href="/founder"
         icon={<Analytics size="32" />}
-      />
+      /> */}
       <LifestyleLink
         label="Startupper"
         href="/startupper"

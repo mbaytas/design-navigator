@@ -10,7 +10,7 @@ export default function Header() {
       </Link>
       <a
         href=""
-        className="text-lg flex flex-row items-center gap-2 font-display uppercase opacity-60 hover:opacity-100 transition-opacity duration-150"
+        className="text-lg flex flex-row items-center gap-2 font-display uppercase opacity-60 hover:opacity-100 transition-opacity"
       >
         <Share size="20"></Share>
         <span>Share</span>
