@@ -62,7 +62,7 @@ export default function Creator() {
             <ResourceCard
               type="course"
               img_src={course}
-              title="Build Once, Sell twice"
+              title="Build Once, Sell Twice"
               caption="The definitive curriculum on packaging your expertise into digital products that work without you, to scale your influence, impact and income."
               price="$297"
               time="5 hours"
