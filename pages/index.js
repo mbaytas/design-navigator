@@ -287,7 +287,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white w-full min-w-[100vw] max-w-[100vw] overflow-x-hidden">
       <Head>
         <title>Designer Lifestyles</title>
         <meta name="description" content="Discover the best path for you." />
@@ -367,14 +367,15 @@ export default function Home() {
           <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
             <button
               onClick={handleClickPrev}
-              className="btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
+              className={`${step === 0 ? "invisible" : "visible"}
+              btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
           transition-[background-color,transform]
           bg-white/80
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:-rotate-2
           disabled:bg-white/40 disabled:scale-95 disabled:cursor-default
-          "
+          `}
             >
               <ArrowLeft size="24" />
             </button>
