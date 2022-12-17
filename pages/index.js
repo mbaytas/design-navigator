@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
 
+import AboutDialog from "../components/aboutDialog";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Lifestyles from "../components/lifestyles";
@@ -58,7 +59,7 @@ export default function Home() {
     console.log(socialScore);
 
     if (progressiveScore >= 4 && socialScore >= 4 && strategicScore >= 4) {
-      router.push("/founder");
+      router.push("/startupper");
     } else if (
       progressiveScore >= 4 &&
       socialScore >= 0 &&
@@ -66,31 +67,13 @@ export default function Home() {
     ) {
       router.push("/creator");
     } else if (
-      progressiveScore >= 1 &&
-      socialScore >= 4 &&
-      strategicScore >= 4
-    ) {
-      router.push("/agency-owner");
-    } else if (
       progressiveScore >= 3 &&
-      socialScore >= 2 &&
-      strategicScore >= 2
-    ) {
-      router.push("/startupper");
-    } else if (
-      progressiveScore >= 4 &&
-      socialScore >= 3 &&
-      strategicScore >= 1
-    ) {
-      router.push("/scholar");
-    } else if (
-      progressiveScore >= 3  &&
-      socialScore >= 0 &&
+      socialScore >= 1 &&
       strategicScore >= 2
     ) {
       router.push("/freelancer");
     } else {
-      router.push("/corporate");
+      router.push("/employee");
     }
   }
 
@@ -286,6 +269,8 @@ export default function Home() {
     );
   }
 
+  let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
+
   return (
     <div className="bg-black text-white w-full min-w-[100vw] max-w-[100vw] overflow-x-hidden">
       <Head>
@@ -294,7 +279,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-between items-center min-h-screen gap-8">
-        <Header></Header>
+        <Header setIsAboutDialogOpen={setIsAboutDialogOpen}></Header>
+
+        <AboutDialog isAboutDialogOpen={isAboutDialogOpen} setIsAboutDialogOpen={setIsAboutDialogOpen}></AboutDialog>
 
         <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
           <div

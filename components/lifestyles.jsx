@@ -32,9 +32,9 @@ export default function Lifestyles(props) {
         {message}
       </div>
       <LifestyleLink
-        label="Freelancer"
-        href="/freelancer"
-        icon={<Calendar size="24" />}
+        label="Creator"
+        href="/creator"
+        icon={<PenFountain size="24" />}
       />
       <LifestyleLink
         label="Employee"
@@ -42,14 +42,14 @@ export default function Lifestyles(props) {
         icon={<Portfolio size="24" />}
       />
       <LifestyleLink
+        label="Freelancer"
+        href="/freelancer"
+        icon={<Calendar size="24" />}
+      />
+      <LifestyleLink
         label="Startupper"
         href="/startupper"
         icon={<Rocket size="24" />}
-      />
-      <LifestyleLink
-        label="Creator"
-        href="/creator"
-        icon={<PenFountain size="24" />}
       />
     </aside>
   );

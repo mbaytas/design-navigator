@@ -22,7 +22,7 @@ export default function ResourceCard(props) {
       href={url}
       target="_blank"
     >
-      <div className="flex sd:flex-col items-center sd:justify-center sd:text-center mt-6 mx-4 sd:m-0 gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
+      <div className="flex sd:flex-col items-center sd:justify-center sd:text-center mt-6 mx-4 sd:m-0 gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
         {
           {
             book: <Book size="24" />,
@@ -34,10 +34,10 @@ export default function ResourceCard(props) {
         }
         <h3 className="text-sm capitalize">Best {type}</h3>
       </div>
-      <div className="flex flex-row items-center gap-4 rounded-2xl group-hover:bg-white/20 transition-colors p-4 relative">
+      <div className="flex flex-row items-center gap-4 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors p-3 relative">
         <Launch
           size="16"
-          className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-60 transition-[opacity,transform] group-hover:translate-x-0 group-hover:translate-y-0"
+          className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 transition-[opacity,transform] group-hover:translate-x-0 group-hover:translate-y-0"
         />
         <div className="h-48 w-72 rounded-xl overflow-hidden">
           <Image
@@ -49,7 +49,7 @@ export default function ResourceCard(props) {
         </div>
         <div className="flex flex-col gap-2 w-full">
           <h4 className="font-display font-bold text-xl">{title}</h4>
-          <div className="flex gap-2 text-sm items-center opacity-60">
+          <div className="flex gap-2 text-sm items-center opacity-50">
             <div className="flex gap-1 items-center">
               <Currency size="20" />
               {price}

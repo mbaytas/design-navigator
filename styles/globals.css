@@ -7,8 +7,7 @@
         @apply text-sm 
         sd:text-base
         hd:text-sm 
-        4k:text-base
-        !leading-snug;
+        4k:text-base;
     }
     .text-r2 {
         @apply text-base 
