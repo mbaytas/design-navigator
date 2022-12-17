@@ -47,8 +47,8 @@ export default function Lifestyles(props) {
         icon={<Calendar size="24" />}
       />
       <LifestyleLink
-        label="Startupper"
-        href="/startupper"
+        label="Founder"
+        href="/founder"
         icon={<Rocket size="24" />}
       />
     </aside>

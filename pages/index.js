@@ -59,7 +59,7 @@ export default function Home() {
     console.log(socialScore);
 
     if (progressiveScore >= 4 && socialScore >= 4 && strategicScore >= 4) {
-      router.push("/startupper");
+      router.push("/founder");
     } else if (
       progressiveScore >= 4 &&
       socialScore >= 0 &&
@@ -269,92 +269,80 @@ export default function Home() {
     );
   }
 
-  let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
-
   return (
-    <div className="bg-black text-white w-full min-w-[100vw] max-w-[100vw] overflow-x-hidden">
-      <Head>
-        <title>Designer Life</title>
-        <meta name="description" content="Discover the best path for you." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="flex flex-col justify-between items-center min-h-screen gap-8">
-        <Header setIsAboutDialogOpen={setIsAboutDialogOpen}></Header>
+    <div className="flex flex-col justify-evenly items-center gap-24 w-full">
+      <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
+        <div
+          className="progress bg-white h-full transition-[width]"
+          style={{ width: (step * 100) / 15 + "%" }}
+        ></div>
+      </aside>
 
-        <AboutDialog isAboutDialogOpen={isAboutDialogOpen} setIsAboutDialogOpen={setIsAboutDialogOpen}></AboutDialog>
-
-        <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
+      <main className="border-2 border-white/40 w-full max-w-sm h-[30rem] flex flex-col justify-between">
+        <div
+          className={
+            "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
+            stepClasses[step]
+          }
+        >
           <div
-            className="progress bg-white h-full transition-[width]"
-            style={{ width: (step * 100) / 15 + "%" }}
-          ></div>
-        </aside>
-
-        <main className="border-2 border-white/40 w-full max-w-sm h-[30rem] flex flex-col justify-between">
-          <div
+            id="intro"
             className={
-              "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
-              stepClasses[step]
+              "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity"
             }
           >
+            <h1 className="text-xl font-display font-bold">
+              Discover the best path{" "}
+              <span className="underline underline-offset-1 decoration-2 decoration-white/80">
+                for you
+              </span>
+              .
+            </h1>
+            <div className="flex flex-col gap-2">
+              <p className="opacity-80 leading-snug">Answer 15 questions.</p>
+              <p className="opacity-80 leading-snug">
+                Receive your personal list of resources that will make you a
+                great designer.
+              </p>
+            </div>
+          </div>
+          {questions.map((question, idx) => (
             <div
-              id="intro"
+              key={question.id}
+              id={question.id}
               className={
-                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity"
+                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
               }
             >
-              <h1 className="text-xl font-display font-bold">
-                Discover the best path{" "}
-                <span className="underline underline-offset-1 decoration-2 decoration-white/80">
-                  for you
-                </span>
-                .
-              </h1>
-              <div className="flex flex-col gap-2">
-                <p className="opacity-80 leading-snug">Answer 15 questions.</p>
-                <p className="opacity-80 leading-snug">
-                  Receive your personal list of resources that will make you a
-                  great designer.
-                </p>
-              </div>
-            </div>
-            {questions.map((question, idx) => (
-              <div
-                key={question.id}
-                id={question.id}
+              <RadioGroup
                 className={
-                  "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
+                  "flex flex-col justify-between items-start h-full w-full"
                 }
+                value={question.radioValue}
+                onChange={question.radioOnChange}
               >
-                <RadioGroup
-                  className={
-                    "flex flex-col justify-between items-start h-full w-full"
-                  }
-                  value={question.radioValue}
-                  onChange={question.radioOnChange}
-                >
-                  <p className="text-sm opacity-60">{idx + 1}/15</p>
-                  <RadioGroup.Label className="text-base">
-                    {question.text}
-                  </RadioGroup.Label>
-                  <div className="flex flex-row gap-2 w-full justify-between">
-                    <ChoiceButton
-                      value={question.val1}
-                      label={question.a1}
-                    ></ChoiceButton>
-                    <ChoiceButton
-                      value={question.val2}
-                      label={question.a2}
-                    ></ChoiceButton>
-                  </div>
-                </RadioGroup>
-              </div>
-            ))}
-          </div>
-          <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
-            <button
-              onClick={handleClickPrev}
-              className={`${step === 0 ? "invisible" : "visible"}
+                <p className="text-sm opacity-60">{idx + 1}/15</p>
+                <RadioGroup.Label className="text-base">
+                  {question.text}
+                </RadioGroup.Label>
+                <div className="flex flex-row gap-2 w-full justify-between">
+                  <ChoiceButton
+                    value={question.val1}
+                    label={question.a1}
+                  ></ChoiceButton>
+                  <ChoiceButton
+                    value={question.val2}
+                    label={question.a2}
+                  ></ChoiceButton>
+                </div>
+              </RadioGroup>
+            </div>
+          ))}
+        </div>
+        <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
+          <button
+            onClick={handleClickPrev}
+            className={`${step === 0 ? "invisible" : "visible"}
               btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
           transition-[background-color,transform]
@@ -363,12 +351,12 @@ export default function Home() {
           active:bg-white/60 active:scale-95 active:-rotate-2
           disabled:bg-white/40 disabled:scale-95 disabled:cursor-default
           `}
-            >
-              <ArrowLeft size="24" />
-            </button>
-            <button
-              onClick={handleClickNext}
-              className={`${step === 15 ? "hidden" : "flex"}
+          >
+            <ArrowLeft size="24" />
+          </button>
+          <button
+            onClick={handleClickNext}
+            className={`${step === 15 ? "hidden" : "flex"}
               btn text-black py-2 px-8 h-12 rounded-full  flex flex-row justify-center items-center gap-2
               font-display text-xl font-medium
               leading-none
@@ -378,15 +366,15 @@ export default function Home() {
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:rotate-2
           `}
-            >
-              <span>
-                <nobr>Next Step</nobr>
-              </span>
-              <ArrowRight size="24" />
-            </button>
-            <button
-              onClick={handleResults}
-              className={`${step === 15 ? "flex" : "hidden"}
+          >
+            <span>
+              <nobr>Next Step</nobr>
+            </span>
+            <ArrowRight size="24" />
+          </button>
+          <button
+            onClick={handleResults}
+            className={`${step === 15 ? "flex" : "hidden"}
                btn text-black py-2 px-8 h-12 rounded-full flex-row justify-center items-center gap-2
               font-display text-xl font-medium
               leading-none
@@ -396,19 +384,16 @@ export default function Home() {
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:rotate-2
           `}
-            >
-              <span className="">
-                <nobr>See Results</nobr>
-              </span>
-              <ArrowRight size="24" />
-            </button>
-          </div>
-        </main>
+          >
+            <span className="">
+              <nobr>See Results</nobr>
+            </span>
+            <ArrowRight size="24" />
+          </button>
+        </div>
+      </main>
 
-        <Lifestyles message="...or jump to the resources:"></Lifestyles>
-
-        <Footer></Footer>
-      </div>
+      <Lifestyles message="...or jump to the resources:"></Lifestyles>
     </div>
   );
 }

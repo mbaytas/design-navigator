@@ -6,13 +6,13 @@
     .text-r1 {
         @apply text-sm 
         sd:text-base
-        hd:text-sm 
+        hd:text-base 
         4k:text-base;
     }
     .text-r2 {
         @apply text-base 
         sd:text-lg 
-        hd:text-base 
+        hd:text-lg 
         4k:text-lg
         !leading-tight;
     }

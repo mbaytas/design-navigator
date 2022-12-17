@@ -19,16 +19,10 @@ import {
   Video,
 } from "@carbon/icons-react";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-
-import styles from "../styles/Home.module.css";
-
 export default function Freelancer() {
   return (
     <div className="bg-black text-white">
       <div className="flex flex-col justify-between items-center min-h-screen gap-16">
-        <Header></Header>
 
         <div className="w-full max-w-md flex flex-col justify-center gap-2 min-h-[38vh]">
           <Calendar size="32" className="opacity-80" />
@@ -102,7 +96,6 @@ export default function Freelancer() {
 
         <Lifestyles message="You can also check out:"></Lifestyles>
 
-        <Footer></Footer>
       </div>
     </div>
   );

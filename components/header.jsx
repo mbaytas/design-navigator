@@ -18,6 +18,7 @@ export default function Header(props) {
       >
         <Information size="24"></Information> About
       </div>
+      
     </header>
   );
 }

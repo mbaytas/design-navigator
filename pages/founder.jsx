@@ -19,21 +19,14 @@ import {
   Video,
 } from "@carbon/icons-react";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-
-import styles from "../styles/Home.module.css";
-
-export default function Startupper() {
+export default function Founder() {
   return (
     <div className="bg-black text-white">
       <div className="flex flex-col justify-between items-center min-h-screen gap-16">
-        <Header></Header>
-
         <div className="w-full max-w-md flex flex-col justify-center gap-2 min-h-[38vh]">
           <Calendar size="32" className="opacity-80" />
           <p className="text-r1 opacity-60">We think you'll thrive as a...</p>
-          <h1 className="font-display text-r4 font-bold">Startupper</h1>
+          <h1 className="font-display text-r4 font-bold">Founder</h1>
           <p className="opacity-60">
             Startups are very dynamic environments with high risk and high
             potential for extraordinary results. Startup founders and employees
@@ -98,8 +91,6 @@ export default function Startupper() {
         </div>
 
         <Lifestyles message="You can also check out:"></Lifestyles>
-
-        <Footer></Footer>
       </div>
     </div>
   );

@@ -17,16 +17,10 @@ import personArvidKahl from "../public/personArvid.png";
 
 import { ArrowDown, Calendar } from "@carbon/icons-react";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-
-import styles from "../styles/Home.module.css";
-
 export default function Creator() {
   return (
     <div className="bg-black text-white">
       <div className="flex flex-col justify-between items-center min-h-screen gap-24 p-6">
-        <Header></Header>
 
         <div className="w-full max-w-md flex flex-col justify-center gap-3 min-h-[38vh]">
           <Calendar size="32" className="opacity-80" />
@@ -226,7 +220,6 @@ export default function Creator() {
 
         <Lifestyles message="You can also check out:"></Lifestyles>
 
-        <Footer></Footer>
       </div>
     </div>
   );
