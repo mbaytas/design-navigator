@@ -27,44 +27,29 @@ export default function Lifestyles(props) {
   const { message } = props;
 
   return (
-    <aside className="grid grid-cols-5 items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
+    <aside className="flex flex-wrap flex-row justify-center items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
       <div className="w-full text-center text-sm opacity-40 col-span-full">
         {message}
       </div>
       <LifestyleLink
         label="Freelancer"
         href="/freelancer"
-        icon={<Calendar size="32" />}
+        icon={<Calendar size="24" />}
       />
       <LifestyleLink
         label="Employee"
         href="/employee"
-        icon={<Portfolio size="32" />}
+        icon={<Portfolio size="24" />}
       />
-      {/* <LifestyleLink
-        label="Founder"
-        href="/founder"
-        icon={<Analytics size="32" />}
-      /> */}
       <LifestyleLink
         label="Startupper"
         href="/startupper"
-        icon={<Rocket size="32" />}
+        icon={<Rocket size="24" />}
       />
       <LifestyleLink
         label="Creator"
         href="/creator"
-        icon={<PenFountain size="32" />}
-      />
-      {/* <LifestyleLink
-        label="Agency Owner"
-        href="/agency-owner"
-        icon={<Building size="32" />}
-      /> */}
-      <LifestyleLink
-        label="Scholar"
-        href="/scholar"
-        icon={<Microscope size="32" />}
+        icon={<PenFountain size="24" />}
       />
     </aside>
   );

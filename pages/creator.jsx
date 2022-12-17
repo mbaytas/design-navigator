@@ -6,17 +6,12 @@ import ResourceCard from "../components/resourceCard";
 import book from "../public/book_embedded.png";
 import course from "../public/course_buildonce.png";
 import podcast from "../public/podcast_indie.png";
-import blog from "../public/blog_blank.png";
-import yt from "../public/yt_garrytan.png";
+import blog from "../public/blog_interested.png";
+import yt from "../public/yt_ali.png";
 
 import {
   ArrowDown,
-  Blog,
-  Book,
-  Course,
   Calendar,
-  Radio,
-  Video,
 } from "@carbon/icons-react";
 
 import Header from "../components/header";
@@ -80,20 +75,20 @@ export default function Creator() {
             <ResourceCard
               type="blog"
               img_src={blog}
-              title="Steve Blank"
-              caption="An OG who was among the first to codify methodologies for startups, Steve Blank continues to teach new lessons on his blog."
+              title="For The Interested"
+              caption="Ideas to help you produce, promote, and profit from your creations."
               price="Free"
               time="5 minutes"
-              url="https://steveblank.com/"
+              url="https://fortheinterested.com/"
             />
             <ResourceCard
               type="channel"
               img_src={yt}
-              title="Garry Tan"
-              caption="Designer, engineer, and investor Garry Tan shares insights from a carreer spanning some of the most successul startups in the world."
+              title="Ali Abdaal"
+              caption="Doctor-turned entrepreneur Ali Abdaal shares evidence-based strategies and tools to be more productive, and build a life we love."
               price="Free"
-              time="10 minutes"
-              url="https://www.youtube.com/@GarryTan"
+              time="15 minutes"
+              url="https://www.youtube.com/@aliabdaal"
             />
           </div>
         </div>

@@ -289,21 +289,21 @@ export default function Home() {
   return (
     <div className="bg-black text-white w-full min-w-[100vw] max-w-[100vw] overflow-x-hidden">
       <Head>
-        <title>Designer Lifestyles</title>
+        <title>Designer Life</title>
         <meta name="description" content="Discover the best path for you." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-col justify-between items-center min-h-screen">
+      <div className="flex flex-col justify-between items-center min-h-screen gap-8">
         <Header></Header>
 
-        <aside className="h-[2px] bg-white/20 w-96 flex flex-row justify-start items-center">
+        <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
           <div
             className="progress bg-white h-full transition-[width]"
             style={{ width: (step * 100) / 15 + "%" }}
           ></div>
         </aside>
 
-        <main className="border-2 border-white/40 w-96 h-[30rem] flex flex-col justify-between">
+        <main className="border-2 border-white/40 w-full max-w-sm h-[30rem] flex flex-col justify-between">
           <div
             className={
               "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +

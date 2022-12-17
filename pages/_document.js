@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head />
       <body className="">
-        <Main />
+        <Main className="" />
         <NextScript />
       </body>
     </Html>

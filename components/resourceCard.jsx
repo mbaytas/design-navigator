@@ -44,6 +44,7 @@ export default function ResourceCard(props) {
             className="h-full w-full object-cover shadow-spt"
             src={img_src}
             placeholder="blur"
+            alt={title}
           ></Image>
         </div>
         <div className="flex flex-col gap-2 w-full">
