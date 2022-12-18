@@ -342,10 +342,10 @@ export default function Home() {
         <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
           <button
             onClick={handleClickPrev}
-            className={`${step === 0 ? "invisible" : "visible"}
+            className={`${step === 0 ? "opacity-0 cursor-default" : "opacity-100"}
               btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
-          transition-[background-color,transform]
+          transition-[background-color,transform,opacity]
           bg-white/80
           hover:bg-white/100 hover:scale-105
           active:bg-white/60 active:scale-95 active:-rotate-2

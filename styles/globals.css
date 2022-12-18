@@ -38,6 +38,18 @@
     }
 }
 
+@layer components {
+    .anchor {
+        @apply underline hover:text-cyan-100 active:text-cyan-200 transition-colors;
+    }
+    .secret-button {
+        @apply px-3 py-2 rounded-lg hover:opacity-100 hover:bg-white/10 active:animate-ping transition-[opacity,background-color] cursor-pointer;
+    }
+    .hinted-button {
+        @apply px-3 py-2 rounded-lg bg-white/10 hover:opacity-100 hover:bg-white/20 active:bg-white/20 active:opacity-50 transition-[opacity,background-color] cursor-pointer;
+    }
+}
+
 @font-face {
     font-family: "neue-haas-grotesk-display";
     src: url("https://use.typekit.net/af/99b799/00000000000000007735bb38/30/l?primer=66eab40ab701d8f34f803a711b9899ef5b6958f7c94f82c09df802365e52aa9d&fvd=n2&v=3")

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Head from "next/head";
 
 import Lifestyles from "../components/lifestyles";
@@ -16,12 +18,15 @@ import personMalewicz from "../public/personMalewicz.png";
 import personArvidKahl from "../public/personArvid.png";
 
 import { ArrowDown, Calendar } from "@carbon/icons-react";
+import LibraryPopover from "../components/libraryPopover";
 
 export default function Creator() {
-  return (
-    <div className="bg-black text-white">
-      <div className="flex flex-col justify-between items-center min-h-screen gap-24 p-6">
 
+  return (
+    <>
+      <LibraryPopover />
+
+      <div className="flex flex-col justify-between items-center min-h-screen gap-24 p-6">
         <div className="w-full max-w-md flex flex-col justify-center gap-3 min-h-[38vh]">
           <Calendar size="32" className="opacity-80" />
           <p className="text-r1 opacity-60">We think you'll thrive as a...</p>
@@ -201,26 +206,8 @@ export default function Creator() {
           </div>
         </div>
 
-        <div className="z-50 fixed bottom-6 left-6 max-w-md w-full rounded-xl bg-black/80 backdrop-blur-lg p-6 flex flex-col gap-3">
-          <h1 className="font-display text-r3">
-            Enter the Library
-          </h1>
-          <p className="text-r1 opacity-50 mb-3">
-            The full library of Design Navigator with 100+ resources is available
-            to all Design Disciplin members.
-          </p>
-          <a
-            href="https://www.designdisciplin.com/#/portal/signup"
-            target="_blank"
-            className="font-display font-medium uppercase border-2 border-cyan-400 text-cyan-400 rounded-full px-6 py-3 w-max hover:border-white hover:text-white transition-colors"
-          >
-            Join Design Disciplin
-          </a>
-        </div>
-
         <Lifestyles message="You can also check out:"></Lifestyles>
-
       </div>
-    </div>
+    </>
   );
 }

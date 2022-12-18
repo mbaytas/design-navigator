@@ -4,12 +4,12 @@ export default function Footer() {
   return (
     <footer className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full">
       <p className="w-full max-w-xs leading-tight">
-        <span className="text-r1 opacity-80">Created by</span>
+        <span className="text-r1 opacity-80 font-display">Created by</span>
         <br />
         <a
           href="https://www.designdisciplin.com/"
           target="_blank"
-          className="font-display font-bold text-r2 opacity-80 hover:opacity-100"
+          className="font-bold text-r2 opacity-80 hover:opacity-100 transition-opacity"
         >
           Design Disciplin
         </a>
@@ -19,7 +19,7 @@ export default function Footer() {
         <a
           href="https://www.weatherlight.com/"
           target="_blank"
-          className="underline"
+          className="anchor"
         >
           WEATHERLIGHT
         </a>{" "}

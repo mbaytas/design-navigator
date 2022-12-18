@@ -14,7 +14,7 @@ function LifestyleLink(props) {
   const { icon, label, href } = props;
   return (
     <Link
-      className="flex flex-col justify-end items-center gap-1 opacity-50 hover:opacity-100 transition-[opacity,background-color] rounded-lg p-3 hover:bg-white/10 active:bg-white/20"
+      className="secret-button flex flex-col justify-end items-center gap-1 opacity-50 hover:opacity-100"
       href={href}
     >
       {icon}
