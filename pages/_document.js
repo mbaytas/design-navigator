@@ -19,7 +19,7 @@ export default function Document() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-black text-white w-full min-w-[100vw] max-w-[100vw] overflow-x-hidden">
+      <body className="bg-black text-white w-screen max-w-[100vw] overflow-x-clip">
         <div className=" flex flex-col justify-between items-center min-h-screen">
           <Header setIsAboutDialogOpen={setIsAboutDialogOpen}></Header>
 
