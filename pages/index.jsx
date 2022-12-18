@@ -270,7 +270,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col justify-evenly items-center gap-24 w-full">
+    <div className="flex flex-col justify-evenly items-center gap-12 w-full">
       <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
         <div
           className="progress bg-white h-full transition-[width]"

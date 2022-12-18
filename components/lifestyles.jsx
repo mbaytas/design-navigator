@@ -14,11 +14,11 @@ function LifestyleLink(props) {
   const { icon, label, href } = props;
   return (
     <Link
-      className="flex flex-col justify-end items-center gap-1 opacity-40 hover:opacity-100 hover:scale-105 transition-[opacity,transform]"
+      className="flex flex-col justify-end items-center gap-1 opacity-50 hover:opacity-100 transition-[opacity,background-color] rounded-lg p-3 hover:bg-white/10 active:bg-white/20"
       href={href}
     >
       {icon}
-      <p className="font-display font-medium">{label}</p>
+      <p className="font-display font-medium text-r1">{label}</p>
     </Link>
   );
 }
@@ -27,8 +27,8 @@ export default function Lifestyles(props) {
   const { message } = props;
 
   return (
-    <aside className="flex flex-wrap flex-row justify-center items-end max-w-5xl mx-auto gap-x-6 gap-y-6">
-      <div className="w-full text-center text-sm opacity-40 col-span-full">
+    <aside className="flex flex-wrap flex-row justify-center items-end max-w-5xl mx-auto gap-1">
+      <div className="w-full text-center text-r1 opacity-40 col-span-full">
         {message}
       </div>
       <LifestyleLink

@@ -2,24 +2,30 @@ import { Information } from "@carbon/icons-react";
 
 export default function Footer() {
   return (
-    <footer className="px-8 py-4 flex flex-row flex-wrap justify-between items-center w-full">
-      <p className="w-full max-w-xs">
-        <Information size='32'className="opacity-60 hover:opacity-100 transition-opacity cursor-pointer"/>
-      </p>
-      <p className="w-full max-w-xs">
-        <span className="text-xs">Created by</span>
+    <footer className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full">
+      <p className="w-full max-w-xs leading-tight">
+        <span className="text-r1 opacity-80">Created by</span>
         <br />
         <a
           href="https://www.designdisciplin.com/"
-          className="font-display font-bold"
+          target="_blank"
+          className="font-display font-bold text-r2 opacity-80 hover:opacity-100"
         >
           Design Disciplin
         </a>
       </p>
-      <p className="w-full max-w-xs text-xs opacity-60">
-        Links to products on this website may utilize affiliate
-        programs where we receive a commission at no extra cost to you if you
-        make a purchase using them.
+      <p className="w-full max-w-xs text-xs opacity-40">
+        &copy; 2022{" "}
+        <a
+          href="https://www.weatherlight.com/"
+          target="_blank"
+          className="underline"
+        >
+          WEATHERLIGHT
+        </a>{" "}
+        d/b/a Design Disciplin
+        <br />
+        Commissions may be earned from links on this website.
       </p>
     </footer>
   );
