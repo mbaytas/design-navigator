@@ -7,7 +7,7 @@ export default function AboutDialog(props) {
     <Dialog
       open={props.isAboutDialogOpen}
       onClose={() => props.setIsAboutDialogOpen(false)}
-      className="z-50 fixed min-w-full min-h-full w-screen h-screen top-0 left-0 bg-transparent text-white backdrop-blur-xl flex flex-col justify-center items-center p-6 gap-3"
+      className="z-50 fixed w-screen h-screen top-0 left-0 bg-transparent text-white backdrop-blur-xl flex flex-col justify-center items-center p-6 gap-3"
     >
       <div className="flex w-full max-w-lg justify-end">
         <div className="p-6 cursor-pointer opacity-40 hover:opacity-100 transition-opacity">
