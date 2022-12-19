@@ -53,7 +53,7 @@
         @apply flex flex-col justify-between items-center min-h-screen gap-24;
         header {
             &.career-header {
-                @apply w-full max-w-lg flex flex-col justify-center gap-3 min-h-[38vh] p-6;
+                @apply z-10 w-full max-w-lg flex flex-col justify-center gap-3 min-h-[38vh] p-6;
             }
         }
         section {

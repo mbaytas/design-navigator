@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
@@ -17,6 +19,8 @@ import personMalewicz from "../public/personMalewicz.png";
 import personArvid from "../public/personArvid.png";
 import personOliur from "../public/personOliur.png";
 
+import bg from "../public/bg_Creator.png";
+
 import { PenFountain } from "@carbon/icons-react";
 
 export default function Creator() {
@@ -24,13 +28,27 @@ export default function Creator() {
     <>
       <LibraryPopover />
 
+      <div className="bg-div z-0 absolute -top-12 left-1/2 -translate-x-1/2 w-full max-w-7xl aspect-[24/10]">
+        <Image
+          placeholder="blur"
+          alt="Content creator working in her home office decorated with designer furniture, imagined by Midjourney"
+          src={bg}
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+
       <div className="career-container">
         <header className="career-header">
-          <PenFountain size="32" className="opacity-80" />
-          <p className="text-r1 font-display font-medium opacity-60">
-            We think you'll thrive as a...
-          </p>
-          <h1 className="font-display text-r4 font-bold mb-3">Creator</h1>
+          <div className="flex gap-6 justify-between items-center">
+            <div className="">
+              <p className="text-r1 font-display font-medium opacity-50 mb-1">
+                You would do well as a...
+              </p>
+              <h1 className="font-display text-r4 font-bold mb-3">Creator</h1>
+            </div>
+            <PenFountain size="54" className="opacity-80" />
+          </div>
           <p className="opacity-80 text-r2">
             Creator-designers build media, products, and services for an online
             audience, using the internet to develop business from their craft.
