@@ -1,3 +1,4 @@
+import CareerBackground from "../components/careerBackground";
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
@@ -16,12 +17,19 @@ import personChesky from "../public/personChesky.png";
 import personPG from "../public/personPG.png";
 import personSinger from "../public/personSinger.png";
 
+import bg from "../public/bg_Founder.png";
+
 import { Rocket } from "@carbon/icons-react";
 
 export default function Founder() {
   return (
     <>
       <LibraryPopover />
+
+      <CareerBackground
+        src={bg}
+        alt="Content creator working in her home office, imagined by Midjourney"
+      ></CareerBackground>
 
       <div className="career-container">
         <header className="career-header">

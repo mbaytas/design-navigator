@@ -28,7 +28,7 @@ export default function ToolCard(props) {
         <p className="text-xs uppercase opacity-50 group-hover:opacity-100 transition-opacity font-medium">
           {handle}
         </p>
-        <p className="text-sm opacity-40 hidden sd:block mt-1">{caption}</p>
+        <p className="text-sm opacity-40 mt-1">{caption}</p>
       </div>
     </a>
   );

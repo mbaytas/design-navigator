@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    body {
+        @apply bg-black;
+        * {
+            @apply border-white/40;
+        }
+    }
+
+    .material-card {
+        @apply rounded-xl bg-black/40 backdrop-blur p-6 flex flex-col justify-center gap-3;
+    }
+}
+
 @layer utilities {
     .text-r1 {
         @apply text-sm 
@@ -53,11 +66,11 @@
         @apply flex flex-col justify-between items-center min-h-screen gap-24;
         header {
             &.career-header {
-                @apply z-10 w-full max-w-lg flex flex-col justify-center gap-3 min-h-[38vh] p-6;
+                @apply z-10 w-full max-w-lg flex flex-col justify-center gap-3 min-h-[38vh];
             }
         }
         section {
-            @apply w-full mx-auto flex flex-col items-center justify-center gap-6;
+            @apply z-10 w-full mx-auto flex flex-col items-center justify-center gap-6;
             &.section-character {
                 @apply max-w-4xl min-h-[24vh];
             }

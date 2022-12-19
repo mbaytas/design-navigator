@@ -21,7 +21,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-black text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
+      <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
         <Header
           isAboutDialogOpen={isAboutDialogOpen}
           setIsAboutDialogOpen={setIsAboutDialogOpen}

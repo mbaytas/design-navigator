@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
@@ -17,6 +19,9 @@ import personGleb from "../public/personGleb.png";
 import personMalewicz from "../public/personMalewicz.png";
 import personFons from "../public/personFons.png";
 import personMds from "../public/personMds.png";
+import personBaytas from "../public/personBaytas.png";
+
+import bg from "../public/bg_Freelancer.png";
 
 import { Calendar } from "@carbon/icons-react";
 
@@ -25,13 +30,31 @@ export default function Freelancer() {
     <>
       <LibraryPopover />
 
+      <div className="bg-div z-0 absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl aspect-[24/10]">
+        <Image
+          placeholder="blur"
+          alt="Content creator working in her home office, imagined by Midjourney"
+          src={bg}
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+
       <div className="career-container">
         <header className="career-header">
-          <Calendar size="32" className="opacity-80" />
-          <p className="text-r1 font-display font-medium opacity-60">
-            We think you'll thrive as a...
-          </p>{" "}
-          <h1 className="font-display text-r4 font-bold mb-3">Freelancer</h1>
+          <div className="flex gap-6 justify-between items-center">
+            <div className="">
+              <p className="text-r1 font-display font-medium opacity-50 mb-1">
+                You would do well as a...
+              </p>
+              <h1 className="font-display text-r4 font-bold mb-3">
+                Freelancer
+              </h1>
+            </div>
+            <div className="rounded-lg p-3 bg-black/10 backdrop-blur">
+              <Calendar size="48" className="opacity-80" />
+            </div>
+          </div>
           <p className="opacity-80 text-r2">
             Freelancers are self-employed, usually taking up short-term projects
             rather than long-term employment.
@@ -215,6 +238,13 @@ export default function Freelancer() {
               caption="Designer, Educator"
               url="https://twitter.com/mds"
               img_src={personMds}
+            ></PersonCard>
+            <PersonCard
+              title="Mehmet Aydın Baytaş"
+              handle="@doctorbaytas"
+              caption="Design Disciplin"
+              url="https://twitter.com/doctorbaytas"
+              img_src={personBaytas}
             ></PersonCard>
             <PersonCard
               title="Michal Malewicz"

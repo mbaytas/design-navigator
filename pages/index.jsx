@@ -258,7 +258,7 @@ export default function Home() {
       >
         {({ checked }) => (
           <div
-            className={`w-full h-full p-8 flex items-center justify-start text-white bg-black transition-colors ${
+            className={`w-full h-full p-3 flex items-center justify-start text-white bg-black transition-colors ${
               checked ? "bg-white text-black" : ""
             }`}
           >

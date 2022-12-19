@@ -1,3 +1,4 @@
+import CareerBackground from "../components/careerBackground";
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
@@ -17,12 +18,20 @@ import personSho from "../public/personSho.png";
 import personPorcini from "../public/personPorcini.png";
 import personMalewicz from "../public/personMalewicz.png";
 import personMds from "../public/personMds.png";
+
+import bg from "../public/bg_Employee.png";
+
 import { Portfolio } from "@carbon/icons-react";
 
 export default function Employee() {
   return (
     <>
       <LibraryPopover />
+
+      <CareerBackground
+        src={bg}
+        alt="Content creator working in her home office, imagined by Midjourney"
+      ></CareerBackground>
 
       <div className="career-container">
         <header className="career-header">

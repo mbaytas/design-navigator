@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import CareerBackground from "../components/careerBackground";
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
@@ -18,6 +19,7 @@ import personJackButcher from "../public/personJackButcher.png";
 import personMalewicz from "../public/personMalewicz.png";
 import personArvid from "../public/personArvid.png";
 import personOliur from "../public/personOliur.png";
+import personBaytas from "../public/personBaytas.png";
 
 import bg from "../public/bg_Creator.png";
 
@@ -28,15 +30,10 @@ export default function Creator() {
     <>
       <LibraryPopover />
 
-      <div className="bg-div z-0 absolute -top-12 left-1/2 -translate-x-1/2 w-full max-w-7xl aspect-[24/10]">
-        <Image
-          placeholder="blur"
-          alt="Content creator working in her home office decorated with designer furniture, imagined by Midjourney"
-          src={bg}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-black"></div>
-      </div>
+      <CareerBackground
+        src={bg}
+        alt="Content creator working in her home office, imagined by Midjourney"
+      ></CareerBackground>
 
       <div className="career-container">
         <header className="career-header">
@@ -47,7 +44,9 @@ export default function Creator() {
               </p>
               <h1 className="font-display text-r4 font-bold mb-3">Creator</h1>
             </div>
-            <PenFountain size="54" className="opacity-80" />
+            <div className="material p-3 rounded backdrop-blur-lg">
+              <PenFountain size="36" className="opacity-80" />
+            </div>
           </div>
           <p className="opacity-80 text-r2">
             Creator-designers build media, products, and services for an online
@@ -63,7 +62,7 @@ export default function Creator() {
         {/* CHARACTER */}
         <section className="section-character">
           <SectionHeading title="Characteristics" />
-          <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
+          <div className="material-card grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20">
             <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
               <p>
                 Creators often work alone and rely on self-learning. You cannot
@@ -225,6 +224,13 @@ export default function Creator() {
               caption="Visualize Value"
               url="https://twitter.com/jackbutcher"
               img_src={personJackButcher}
+            ></PersonCard>
+            <PersonCard
+              title="Mehmet Aydın Baytaş"
+              handle="@doctorbaytas"
+              caption="Design Disciplin"
+              url="https://twitter.com/doctorbaytas"
+              img_src={personBaytas}
             ></PersonCard>
             <PersonCard
               title="Michal Malewicz"
