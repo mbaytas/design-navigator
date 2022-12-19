@@ -18,7 +18,7 @@ export default function AboutDialog(props) {
     >
       <Dialog
         onClose={() => props.setIsAboutDialogOpen(false)}
-        className="z-50 fixed inset-0 w-screen h-screen bg-transparent text-white backdrop-blur-xl flex flex-col justify-start items-center p-6 gap-3 overflow-y-scroll"
+        className="z-50 fixed inset-0 w-screen h-screen bg-transparent text-white backdrop-blur-xl flex flex-col justify-start items-center p-6 gap-3 overflow-y-scroll overflow-x-clip"
       >
         <div className="flex w-full max-w-lg justify-end">
           <div className="secret-button opacity-50">

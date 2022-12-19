@@ -121,7 +121,7 @@ export default function Home() {
       id: "q3",
       radioValue: social3,
       radioOnChange: setSocial3,
-      text: "Your inbox is...",
+      text: "Your DMs are...",
       a1: "Open",
       a2: "Private",
       val1: 1,
