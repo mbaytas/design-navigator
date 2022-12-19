@@ -46,7 +46,7 @@ export default function ResourceCard(props) {
           ></Image>
         </div>
         <div className="flex flex-col gap-3 w-full self-center sd:self-end">
-          <h4 className="font-display font-bold text-xl">{title}</h4>
+          <h4 className="font-display font-bold text-xl leading-tight">{title}</h4>
           <div className="flex flex-wrap gap-y-1 gap-x-3 text-sm items-center opacity-50">
             <div className="flex gap-1 items-center">
               <Currency size="16" />
