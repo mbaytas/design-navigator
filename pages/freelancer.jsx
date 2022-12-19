@@ -12,9 +12,10 @@ import podcast_double from "../public/podcast_double.jpg";
 import blog_futur from "../public/blog_futur.jpeg";
 import yt_mizko from "../public/yt_mizko.jpg";
 
-import person1 from "../public/personJackButcher.png";
-import person2 from "../public/personMalewicz.png";
-import person3 from "../public/personArvid.png";
+import personChrisDo from "../public/personChrisDo.png";
+import personGleb from "../public/personGleb.png";
+import personMalewicz from "../public/personMalewicz.png";
+import personFons from "../public/personFons.png"
 
 import { Calendar } from "@carbon/icons-react";
 
@@ -46,12 +47,12 @@ export default function Freelancer() {
           <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
             <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
               <p>
-                Creators often work alone, and must rely on self-learning. You
-                cannot go to school to become a creator.
+                The challenge of freelancing is that it requires double mastery
+                over craft and business.
               </p>
               <p>
-                Fortunately, the internet is abundant with resources, tools, and
-                communities for creators.
+                Successful freelancers often graduate to being agency owners or
+                highly focused specialists.
               </p>
             </div>
             <Progressbar value={"38%"} label="progressive" />
@@ -120,6 +121,25 @@ export default function Freelancer() {
           <SectionHeading title="Tools to Learn" />
 
           <div className="flex flex-row flex-wrap justify-center gap-3">
+            <ToolCard title="Calendly" url="https://www.calendly.com/">
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_18_82)">
+                  <path
+                    d="M8.19463 16C10.149 16 11.7168 15.4416 12.7906 14.3893C13.8859 13.3154 14.6161 11.5973 14.6376 10.0725H12.7262C12.5329 12.3275 11.1584 14.3034 8.25906 14.3034C5.05906 14.3034 2.97584 11.7691 2.97584 8.01074C2.97584 4.40268 4.86577 1.67517 8.23758 1.67517C10.6644 1.67517 12.1893 2.98523 12.5544 4.89664H14.4443C14.0362 2.06174 11.8671 0 8.28054 0C3.70604 0 1 3.50067 1 8.01074C1 12.6711 3.8349 16 8.19463 16Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_18_82">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </ToolCard>
             <ToolCard title="Figma" url="https://figma.com/">
               <svg
                 viewBox="0 0 16 16"
@@ -139,55 +159,27 @@ export default function Freelancer() {
                 </defs>
               </svg>
             </ToolCard>
-            <ToolCard title="Gumroad" url="https://www.gumroad.com/">
+            <ToolCard title="Notion" url="https://www.notion.com">
               <svg
-                width="716"
-                height="716"
-                viewBox="0 0 716 716"
+                width="800"
+                height="800"
+                viewBox="0 0 800 800"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_12_12)">
+                <g clip-path="url(#clip0_13_6)">
                   <path
-                    d="M472.09 449.603C512.656 449.603 512.656 510.329 472.09 510.329C431.659 510.329 431.659 449.603 472.09 449.603ZM636.3 33.0927C676.732 33.0927 676.732 93.8185 636.3 93.8185C595.734 93.8185 595.734 33.0927 636.3 33.0927V33.0927ZM99.0542 92.655H579.893C586.547 105.529 597.402 115.742 610.657 121.6C623.912 127.458 638.772 128.61 652.771 124.863C666.771 121.117 679.069 112.697 687.627 101.002C696.184 89.3062 700.487 75.0368 699.822 60.56C699.156 46.0832 693.562 32.2688 683.968 21.4077C674.373 10.5465 661.354 3.29128 647.07 0.845041C632.786 -1.6012 618.095 0.908569 605.433 7.95813C592.771 15.0077 582.899 26.1735 577.454 39.6039H99.0766C52.6932 39.6039 16.2219 74.9116 16.2219 119.908V631.736C16.2219 677.426 54.2147 716 99.0766 716H610.905C656.013 716 692.596 678.231 692.596 631.736V328.04C692.596 282.35 656.013 245.185 610.905 245.185H307.321C260.937 245.185 221.781 283.178 221.781 328.04V423.492C221.781 467.772 260.132 503.796 307.321 503.796H413.378C418.102 515.503 426.219 525.531 436.684 532.592C447.15 539.653 459.488 543.424 472.113 543.422C488.96 543.422 505.117 536.729 517.03 524.816C528.943 512.904 535.635 496.746 535.635 479.899C535.635 463.052 528.943 446.895 517.03 434.982C505.117 423.069 488.96 416.376 472.113 416.376C460.48 416.392 449.075 419.607 439.147 425.668C429.218 431.73 421.147 440.405 415.817 450.744H307.321C291.703 450.744 274.81 440.362 274.81 423.469V328.018C274.81 312.4 290.316 298.192 307.321 298.192H610.905C626.992 298.192 639.567 311.371 639.567 328.018V631.713C639.567 648.607 626.388 662.949 610.905 662.949H99.0766C83.2351 662.949 69.2507 648.271 69.2507 631.713V119.885C69.2507 104.379 82.1834 92.7221 99.0766 92.7221L99.0542 92.655Z"
+                    d="M148.7 140.225C173.45 160.4 182.825 158.975 229.55 155.85L670.05 129.425C679.425 129.425 671.625 120.05 668.475 118.475L595.3 65.6001C581.375 54.6501 562.625 42.3001 526.8 45.2751L100.375 76.5251C84.75 77.9501 81.625 85.7751 87.875 92.0251L148.7 140.225ZM175.125 242.975V706.375C175.125 731.25 187.5 740.625 215.5 739.05L699.625 711.05C727.625 709.475 730.875 692.425 730.875 672.125V211.85C730.875 191.525 723.05 180.725 705.875 182.3L200.025 211.85C181.275 213.425 175.15 222.65 175.15 242.85L175.125 242.975ZM653 267.7C656.125 281.775 653 295.7 638.925 297.4L615.625 302.1V644.15C595.3 655.1 576.7 661.35 561.2 661.35C536.2 661.35 529.95 653.525 511.325 630.225L358.725 390.65V622.425L407.025 633.375C407.025 633.375 407.025 661.375 368.1 661.375L260.675 667.625C257.55 661.375 260.675 645.75 271.625 642.75L299.625 634.925V328.55L260.7 325.425C257.575 311.35 265.4 291.175 287.125 289.625L402.35 281.8L561.2 524.5V309.775L520.7 305.075C517.575 288.025 529.95 275.525 545.575 274.075L653 267.7ZM64.575 34.5001L508.2 1.82506C562.625 -2.87493 576.7 0.250066 610.925 25.1251L752.6 124.725C775.9 141.775 783.725 146.475 783.725 165.1V711.075C783.725 745.325 771.225 765.5 727.725 768.625L212.35 799.75C179.8 801.325 164.175 796.625 146.975 774.875L42.675 639.45C24.05 614.575 16.25 595.95 16.25 574.225V88.9501C16.25 60.9501 28.75 37.6501 64.55 34.5251L64.575 34.5001Z"
                     fill="white"
                   />
                 </g>
                 <defs>
-                  <clipPath id="clip0_12_12">
-                    <rect width="716" height="716" fill="white" />
+                  <clipPath id="clip0_13_6">
+                    <rect width="800" height="800" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
-            </ToolCard>
-            <ToolCard
-              title="Premiere"
-              url="https://www.adobe.com/products/premiere.html"
-            >
-              <svg
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1_97)">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.08128 8.61829C7.61684 9.2685 6.96662 9.75617 6.2119 10.0348C5.42235 10.3251 4.55152 10.4296 3.59942 10.4296L3.01887 10.418L2.51959 10.4064V14.1335C2.52289 14.1527 2.52212 14.1724 2.51733 14.1913C2.51255 14.2102 2.50386 14.2278 2.49183 14.2432C2.47979 14.2585 2.46468 14.2711 2.44746 14.2802C2.43024 14.2893 2.41131 14.2947 2.39187 14.2961H0.139333C0.0464444 14.2961 0 14.2496 0 14.1451V2.19739C0 2.11611 0.0348334 2.06967 0.116111 2.06967L0.766329 2.05806L1.64877 2.03483L2.65893 2.01161L3.71553 2C4.66763 2 5.45718 2.11611 6.1074 2.35994C6.68795 2.55733 7.22206 2.88244 7.66328 3.31205C8.03483 3.6836 8.32511 4.13643 8.51089 4.6357C8.68505 5.12337 8.77794 5.62264 8.77794 6.14514C8.77794 7.14369 8.54572 7.96807 8.08128 8.61829ZM3.79681 4.28737C4.26462 4.26969 4.73105 4.34874 5.16691 4.51959C5.50525 4.64849 5.79303 4.88301 5.98754 5.18838C6.18206 5.49375 6.27295 5.85369 6.24673 6.2148C6.24673 6.72569 6.13062 7.12046 5.88679 7.41074C5.63135 7.70102 5.30624 7.92162 4.93469 8.02612C4.50508 8.16546 4.05225 8.23512 3.59942 8.23512H2.98404L2.53121 8.2119V4.31059C2.95261 4.28631 3.3748 4.27856 3.79681 4.28737Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M16 4.96081V7.22496C16 7.31785 15.9419 7.35269 15.8142 7.35269C15.0481 7.32486 14.2858 7.47177 13.5849 7.78229C13.3643 7.88679 13.1553 8.02613 12.9927 8.2119V14.1335C12.9927 14.2496 12.9463 14.2961 12.8418 14.2961H10.5544C10.5331 14.2994 10.5112 14.2983 10.4903 14.2931C10.4693 14.2878 10.4496 14.2784 10.4323 14.2654C10.415 14.2525 10.4004 14.2362 10.3895 14.2175C10.3786 14.1988 10.3715 14.1782 10.3687 14.1567V7.67779L10.357 6.80697L10.3338 5.90131C10.3338 5.64495 10.3124 5.3993 10.2902 5.1438L10.2874 5.11176C10.2834 5.08427 10.2894 5.05626 10.3043 5.03283C10.3192 5.00939 10.3421 4.99208 10.3687 4.98403H12.4354C12.5515 4.98403 12.6444 5.06531 12.6676 5.16981C12.7726 5.516 12.8235 5.87631 12.8186 6.23803C13.1669 5.83164 13.5965 5.49492 14.0726 5.23948C14.6123 4.93967 15.2201 4.78373 15.8374 4.78665C15.9187 4.77504 15.9884 4.83309 16 4.91437V4.96081Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_97">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </ToolCard>
+            </ToolCard>{" "}
           </div>
         </section>
 
@@ -196,25 +188,32 @@ export default function Freelancer() {
           <SectionHeading title="People to Follow" />
           <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
             <PersonCard
-              title="Jack Butcher"
-              handle="@jackbutcher"
-              caption="Visualize Value"
-              url="https://twitter.com/jackbutcher"
-              img_src={person1}
+              title="Chris Do"
+              handle="@thechristo"
+              caption="The Futur"
+              url="https://twitter.com/thechrisdo"
+              img_src={personChrisDo}
+            ></PersonCard>
+             <PersonCard
+              title="Fons Mans"
+              handle="@FonsMans"
+              caption="Designer, Author, YouTuber"
+              url="https://twitter.com/FonsMans"
+              img_src={personFons}
             ></PersonCard>
             <PersonCard
+              title="Gleb Kuznetsov"
+              handle="@glebich"
+              caption="Milkinside"
+              url="https://twitter.com/glebich"
+              img_src={personGleb}
+            ></PersonCard>
+              <PersonCard
               title="Michal Malewicz"
               handle="@michalmalewicz"
               caption="Designer, Author, YouTuber"
               url="https://twitter.com/michalmalewicz"
-              img_src={person2}
-            ></PersonCard>
-            <PersonCard
-              title="Arvid Kahl"
-              handle="@arvidkahl"
-              caption="The Bootstrapped Founder"
-              url="https://twitter.com/arvidkahl"
-              img_src={person3}
+              img_src={personMalewicz}
             ></PersonCard>
           </div>
         </section>

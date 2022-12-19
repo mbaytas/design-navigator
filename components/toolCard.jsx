@@ -18,7 +18,7 @@ export default function ToolCard(props) {
       <div className="h-12 w-12 overflow-hidden flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
         {children}
       </div>
-      <h4 className="font-display font-medium text-xl">{title}</h4>
+      <h4 className="font-display font-medium text-base leading-tight">{title}</h4>
     </a>
   );
 }

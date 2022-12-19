@@ -12,9 +12,10 @@ import podcast from "../public/podcast_indie.png";
 import blog from "../public/blog_interested.png";
 import yt from "../public/yt_ali.png";
 
-import person1 from "../public/personJackButcher.png";
-import person2 from "../public/personMalewicz.png";
-import person3 from "../public/personArvid.png";
+import personJackButcher from "../public/personJackButcher.png";
+import personMalewicz from "../public/personMalewicz.png";
+import personArvid from "../public/personArvid.png";
+import personOliur from "../public/personOliur.png";
 
 import { PenFountain } from "@carbon/icons-react";
 
@@ -194,25 +195,32 @@ export default function Creator() {
           <SectionHeading title="People to Follow" />
           <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
             <PersonCard
+              title="Arvid Kahl"
+              handle="@arvidkahl"
+              caption="The Bootstrapped Founder"
+              url="https://twitter.com/arvidkahl"
+              img_src={personArvid}
+            ></PersonCard>
+            <PersonCard
               title="Jack Butcher"
               handle="@jackbutcher"
               caption="Visualize Value"
               url="https://twitter.com/jackbutcher"
-              img_src={person1}
+              img_src={personJackButcher}
             ></PersonCard>
             <PersonCard
               title="Michal Malewicz"
               handle="@michalmalewicz"
               caption="Designer, Author, YouTuber"
               url="https://twitter.com/michalmalewicz"
-              img_src={person2}
+              img_src={personMalewicz}
             ></PersonCard>
             <PersonCard
-              title="Arvid Kahl"
-              handle="@arvidkahl"
-              caption="The Bootstrapped Founder"
-              url="https://twitter.com/arvidkahl"
-              img_src={person3}
+              title="Oliur"
+              handle="@UltraLinx"
+              caption="Designer and Creator"
+              url="https://twitter.com/UltraLinx"
+              img_src={personOliur}
             ></PersonCard>
           </div>
         </section>
