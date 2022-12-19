@@ -15,7 +15,8 @@ import yt_mizko from "../public/yt_mizko.jpg";
 import personChrisDo from "../public/personChrisDo.png";
 import personGleb from "../public/personGleb.png";
 import personMalewicz from "../public/personMalewicz.png";
-import personFons from "../public/personFons.png"
+import personFons from "../public/personFons.png";
+import personMds from "../public/personMds.png";
 
 import { Calendar } from "@carbon/icons-react";
 
@@ -194,7 +195,7 @@ export default function Freelancer() {
               url="https://twitter.com/thechrisdo"
               img_src={personChrisDo}
             ></PersonCard>
-             <PersonCard
+            <PersonCard
               title="Fons Mans"
               handle="@FonsMans"
               caption="Designer, Author, YouTuber"
@@ -208,7 +209,14 @@ export default function Freelancer() {
               url="https://twitter.com/glebich"
               img_src={personGleb}
             ></PersonCard>
-              <PersonCard
+            <PersonCard
+              title="Matt D. Smith"
+              handle="@mds"
+              caption="Designer, Educator"
+              url="https://twitter.com/mds"
+              img_src={personMds}
+            ></PersonCard>
+            <PersonCard
               title="Michal Malewicz"
               handle="@michalmalewicz"
               caption="Designer, Author, YouTuber"
