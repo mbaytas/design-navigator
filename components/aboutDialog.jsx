@@ -18,7 +18,7 @@ export default function AboutDialog(props) {
     >
       <Dialog
         onClose={() => props.setIsAboutDialogOpen(false)}
-        className="z-50 fixed w-screen h-screen top-0 left-0 bg-transparent text-white backdrop-blur-xl flex flex-col justify-center items-center p-6 gap-3"
+        className="z-50 fixed inset-0 w-screen h-screen bg-transparent text-white backdrop-blur-xl flex flex-col justify-start items-center p-6 gap-3 overflow-y-scroll"
       >
         <div className="flex w-full max-w-lg justify-end">
           <div className="secret-button opacity-50">
@@ -73,19 +73,19 @@ export default function AboutDialog(props) {
 
             <div className="flex flex-col">
               <p className="leading-relaxed opacity-50 mb-2">Sincerely,</p>
-              <p className="font-display text-r2 font-bold leading-normal">
-                dr. Mehmet Aydın Baytaş{" "}
-                <span className="font-normal opacity-80">
-                  {" "}
-                  |{" "}
-                  <a
-                    href="https://twitter.com/doctorBaytas"
-                    target="_blank"
-                    className="text-r1 anchor font-normal"
-                  >
-                    @DOCTORBAYTAS
-                  </a>
-                </span>
+              <p className="font-display text-r2 font-bold leading-normal overflow-ellipsis overflow-hidden whitespace-nowrap">
+                  dr. Mehmet Aydın Baytaş{" "}
+                  <span className="font-normal opacity-80">
+                    {" "}
+                    |{" "}
+                    <a
+                      href="https://twitter.com/doctorBaytas"
+                      target="_blank"
+                      className="text-r1 anchor font-normal"
+                    >
+                      @DOCTORBAYTAS
+                    </a>
+                  </span>
               </p>
               <p className="font-display text-r2 opacity-50 mt-1">
                 Founder + Editor-in-Chief, Design Disciplin
