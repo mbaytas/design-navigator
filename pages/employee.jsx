@@ -16,7 +16,7 @@ import personFemke from "../public/personFemke.png";
 import personSho from "../public/personSho.png";
 import personPorcini from "../public/personPorcini.png";
 import personMalewicz from "../public/personMalewicz.png";
-
+import personMds from "../public/personMds.png";
 import { Portfolio } from "@carbon/icons-react";
 
 export default function Employee() {
@@ -199,6 +199,13 @@ export default function Employee() {
               caption="Chief Design Officer, PepsiCo"
               url="https://twitter.com/MauroPorcini"
               img_src={personPorcini}
+            ></PersonCard>
+             <PersonCard
+              title="Matt D. Smith"
+              handle="@mds"
+              caption="Designer, Educator"
+              url="https://twitter.com/mds"
+              img_src={personMds}
             ></PersonCard>
             <PersonCard
               title="Michal Malewicz"
