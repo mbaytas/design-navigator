@@ -253,7 +253,7 @@ export default function Home() {
     const { value, label } = props;
     return (
       <RadioGroup.Option
-        className="flex flex-row items-center justify-start text-base leading-tight h-16 border rounded-xl w-full cursor-pointer overflow-hidden"
+        className="flex flex-row items-center justify-start text-base leading-tight h-16 border-2 border-white/80 rounded-lg w-full cursor-pointer overflow-hidden"
         value={value}
       >
         {({ checked }) => (
@@ -271,13 +271,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-evenly items-center gap-12 w-full">
-      <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
-        <div
-          className="progress bg-white h-full transition-[width]"
-          style={{ width: (step * 100) / 15 + "%" }}
-        ></div>
-      </aside>
-
       <main className="border-2 border-white/40 w-full max-w-sm h-[30rem] flex flex-col justify-between">
         <div
           className={
@@ -321,7 +314,7 @@ export default function Home() {
                 value={question.radioValue}
                 onChange={question.radioOnChange}
               >
-                <p className="text-sm opacity-60">{idx + 1}/15</p>
+                <p className="text-r1 opacity-50">{idx + 1}/15</p>
                 <RadioGroup.Label className="text-base">
                   {question.text}
                 </RadioGroup.Label>
@@ -342,7 +335,9 @@ export default function Home() {
         <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
           <button
             onClick={handleClickPrev}
-            className={`${step === 0 ? "opacity-0 cursor-default" : "opacity-100"}
+            className={`${
+              step === 0 ? "opacity-0 cursor-default" : "opacity-100"
+            }
               btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
           transition-[background-color,transform,opacity]
@@ -392,6 +387,13 @@ export default function Home() {
           </button>
         </div>
       </main>
+
+      <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
+        <div
+          className="progress bg-white h-full transition-[width]"
+          style={{ width: (step * 100) / 15 + "%" }}
+        ></div>
+      </aside>
 
       <Lifestyles message="...or jump to the resources:"></Lifestyles>
     </div>

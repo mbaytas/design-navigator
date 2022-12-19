@@ -1,10 +1,9 @@
-import { useState } from "react";
-
-import Head from "next/head";
-
+import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";
+import Progressbar from "../components/progressbar";
 import ResourceCard from "../components/resourceCard";
+import SectionHeading from "../components/sectionHeading";
 import ToolCard from "../components/toolCard";
 
 import book from "../public/book_embedded.png";
@@ -13,45 +12,64 @@ import podcast from "../public/podcast_indie.png";
 import blog from "../public/blog_interested.png";
 import yt from "../public/yt_ali.png";
 
-import personJackButcher from "../public/personJackButcher.png";
-import personMalewicz from "../public/personMalewicz.png";
-import personArvidKahl from "../public/personArvid.png";
+import person1 from "../public/personJackButcher.png";
+import person2 from "../public/personMalewicz.png";
+import person3 from "../public/personArvid.png";
 
-import { ArrowDown, Calendar } from "@carbon/icons-react";
-import LibraryPopover from "../components/libraryPopover";
+import { PenFountain } from "@carbon/icons-react";
 
 export default function Creator() {
-
   return (
     <>
       <LibraryPopover />
 
-      <div className="flex flex-col justify-between items-center min-h-screen gap-24 p-6">
-        <div className="w-full max-w-md flex flex-col justify-center gap-3 min-h-[38vh]">
-          <Calendar size="32" className="opacity-80" />
-          <p className="text-r1 opacity-60">We think you'll thrive as a...</p>
-          <h1 className="font-display text-r4 font-bold">Creator</h1>
-          <p className="opacity-60">
-            Creator-designers build media, products, and services for an online
-            audience. Creators often work alone, using an army of digital tools
-            to build their craft into a business. The creator lifestyle can
-            provide a lot of freedom and fulfillment, but requires substantial
-            time and effort to build if you're starting from scratch.
+      <div className="career-container">
+        <header className="career-header">
+          <PenFountain size="32" className="opacity-80" />
+          <p className="text-r1 font-display font-medium opacity-60">
+            We think you'll thrive as a...
           </p>
-        </div>
+          <h1 className="font-display text-r4 font-bold mb-3">Creator</h1>
+          <p className="opacity-80 text-r2">
+            Creator-designers build media, products, and services for an online
+            audience, using the internet to develop business from their craft.
+          </p>
+          <p className="opacity-50 text-r1">
+            The creator lifestyle can provide a lot of freedom and fulfillment,
+            but requires substantial time and effort to build if you're starting
+            from scratch.
+          </p>
+        </header>
 
-        <div className="w-full max-w-4xl flex flex-col gap-6 mih-h-[62vh]">
-          <h2 className="font-display uppercase text-center flex gap-2 justify-center items-center mx-auto">
-            <ArrowDown size="16" />
-            Suggested Resources
-            <ArrowDown size="16" />
-          </h2>
-          <div className="flex flex-col gap-3">
+        {/* CHARACTER */}
+        <section className="section-character">
+          <SectionHeading title="Characteristics" />
+          <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
+            <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
+              <p>
+                Creators often work alone and rely on self-learning. You cannot
+                go to school to become a creator.
+              </p>
+              <p>
+                Fortunately, the internet is abundant with resources, tools, and
+                communities for creators.
+              </p>
+            </div>
+            <Progressbar value={"85%"} label="progressive" />
+            <Progressbar value={"38%"} label="social" />
+            <Progressbar value={"62%"} label="strategic" />
+          </div>
+        </section>
+
+        {/* RESOURCES */}
+        <section className="section-resources">
+          <SectionHeading title="Suggested Resources" />
+          <div className="flex flex-col gap-3 w-full">
             <ResourceCard
               type="book"
               img_src={book}
               title="The Embedded Entrepreneur"
-              caption="Instead of building solutions looking for customers, Arvid Kahl described how to find customers first, and build a solution with them."
+              caption="Instead of building solutions looking for customers, Arvid Kahl describes how to find customers first, and build a solution with them."
               price="$25"
               time="308 pages"
               url="https://geni.us/embedded-entrepreneur"
@@ -93,15 +111,12 @@ export default function Creator() {
               url="https://www.youtube.com/@aliabdaal"
             />
           </div>
-        </div>
+        </section>
 
         {/* TOOLS */}
-        <div className="w-full max-w-7xl flex flex-col justify-center gap-6 min-h-[38vh]">
-          <h2 className="font-display uppercase text-center flex gap-2 justify-center items-center mx-auto">
-            <ArrowDown size="16" />
-            Tools to Learn
-            <ArrowDown size="16" />
-          </h2>
+        <section className="section-tools">
+          <SectionHeading title="Tools to Learn" />
+
           <div className="flex flex-row flex-wrap justify-center gap-3">
             <ToolCard title="Figma" url="https://figma.com/">
               <svg
@@ -172,41 +187,37 @@ export default function Creator() {
               </svg>
             </ToolCard>
           </div>
-        </div>
+        </section>
 
         {/* PEOPLE */}
-        <div className="w-full max-w-7xl flex flex-col justify-center gap-6 min-h-[38vh]">
-          <h2 className="font-display uppercase text-center flex gap-2 justify-center items-center mx-auto">
-            <ArrowDown size="16" />
-            People to Follow
-            <ArrowDown size="16" />
-          </h2>
-          <div className="flex flex-row flex-wrap justify-center gap-3">
+        <section className="section-people">
+          <SectionHeading title="People to Follow" />
+          <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
             <PersonCard
               title="Jack Butcher"
               handle="@jackbutcher"
               caption="Visualize Value"
               url="https://twitter.com/jackbutcher"
-              img_src={personJackButcher}
+              img_src={person1}
             ></PersonCard>
             <PersonCard
               title="Michal Malewicz"
               handle="@michalmalewicz"
               caption="Designer, Author, YouTuber"
               url="https://twitter.com/michalmalewicz"
-              img_src={personMalewicz}
+              img_src={person2}
             ></PersonCard>
             <PersonCard
               title="Arvid Kahl"
               handle="@arvidkahl"
               caption="The Bootstrapped Founder"
               url="https://twitter.com/arvidkahl"
-              img_src={personArvidKahl}
+              img_src={person3}
             ></PersonCard>
           </div>
-        </div>
+        </section>
 
-        <Lifestyles message="You can also check out:"></Lifestyles>
+        <Lifestyles message="...also check out:"></Lifestyles>
       </div>
     </>
   );
