@@ -50,7 +50,10 @@ export default function Employee() {
                 To thrive in established companies requires high empathy and
                 collaboration skills.
               </p>
-              <p>Be a good citizen, make friends, and enjoy the ride.</p>
+              <p>
+                Make sure you find the right culture for you. Be a good citizen,
+                make friends, and enjoy the ride.
+              </p>
             </div>
             <Progressbar value={"38%"} label="progressive" />
             <Progressbar value={"85%"} label="social" />
@@ -200,7 +203,7 @@ export default function Employee() {
               url="https://twitter.com/MauroPorcini"
               img_src={personPorcini}
             ></PersonCard>
-             <PersonCard
+            <PersonCard
               title="Matt D. Smith"
               handle="@mds"
               caption="Designer, Educator"
