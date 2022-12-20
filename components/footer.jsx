@@ -9,23 +9,24 @@ export default function Footer() {
         <a
           href="https://www.designdisciplin.com/"
           target="_blank"
-          className="font-bold text-r2 opacity-80 hover:opacity-100 transition-opacity"
+          className="anchor-plain font-bold text-r2 opacity-80"
         >
           Design Disciplin
         </a>
       </p>
-      <p className="w-full max-w-xs text-xs opacity-40">
-        &copy; 2022{" "}
+      <p className="w-full max-w-xs text-xs">
+        <span className="opacity-40">&copy; 2022</span>{" "}
         <a
           href="https://www.weatherlight.com/"
           target="_blank"
-          className="anchor"
+          className="anchor-plain opacity-40"
         >
-          WEATHERLIGHT
-        </a>{" "}
-        d/b/a Design Disciplin
+          WEATHERLIGHT d/b/a Design Disciplin
+        </a>
         <br />
-        Commissions may be earned from links on this website.
+        <span className="opacity-40">
+          Commissions may be earned from links on this website.
+        </span>
       </p>
     </footer>
   );

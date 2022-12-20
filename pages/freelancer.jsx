@@ -1,3 +1,4 @@
+import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
@@ -40,24 +41,13 @@ export default function Freelancer() {
         ></CareerHeader>
 
         {/* CHARACTER */}
-        <section className="section-character">
-          <SectionHeading title="Characteristics" />
-          <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
-            <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
-              <p>
-                The challenge of freelancing is that it requires double mastery
-                over craft and business.
-              </p>
-              <p>
-                Successful freelancers often graduate to being agency owners or
-                highly focused specialists.
-              </p>
-            </div>
-            <Progressbar value={"38%"} label="progressive" />
-            <Progressbar value={"62%"} label="social" />
-            <Progressbar value={"85%"} label="strategic" />
-          </div>
-        </section>
+        <CareerCharacter
+          p1="The challenge of freelancing is that it requires double mastery over craft and business."
+          p2="Successful freelancers often graduate to being agency owners or highly focused specialists."
+          progressive="38%"
+          social="62%"
+          strategic="85%"
+        />
 
         {/* RESOURCES */}
         <section className="section-resources">
@@ -214,13 +204,6 @@ export default function Freelancer() {
               img_src={personMds}
             ></PersonCard>
             <PersonCard
-              title="Mehmet Aydın Baytaş"
-              handle="@doctorbaytas"
-              caption="Design Disciplin"
-              url="https://twitter.com/doctorbaytas"
-              img_src={personBaytas}
-            ></PersonCard>
-            <PersonCard
               title="Michal Malewicz"
               handle="@michalmalewicz"
               caption="Designer, Author, YouTuber"
@@ -230,7 +213,7 @@ export default function Freelancer() {
           </div>
         </section>
 
-        <CareerSelector message="...also check out:"></CareerSelector>
+        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
       </div>
     </>
   );

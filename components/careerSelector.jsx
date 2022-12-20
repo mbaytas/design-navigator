@@ -5,11 +5,9 @@ import SecretButton from "./secretButton";
 import {
   Calendar,
   Portfolio,
-  Analytics,
   Rocket,
   PenFountain,
-  Building,
-  Microscope,
+  Repeat,
 } from "@carbon/icons-react";
 
 function CareerLink(props) {
@@ -30,6 +28,17 @@ export default function CareerSelector(props) {
 
   return (
     <aside className="grid grid-cols-4 items-end max-w-5xl mx-auto gap-1">
+      {props.repeatButton && (
+        <div className="w-full col-span-full flex itemx-center justify-center mb-6">
+          <Link
+            href="/"
+            className="hinted-button flex flex-row items-center gap-2 font-display text-r1 font-medium opacity-80 cursor-pointer"
+          >
+            <Repeat size={20}></Repeat>
+            Repeat the Test
+          </Link>
+        </div>
+      )}
       <div className="w-full text-center text-r1 opacity-40 col-span-full">
         {message}
       </div>

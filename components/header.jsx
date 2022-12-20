@@ -9,7 +9,7 @@ export default function Header(props) {
     <header className="z-50 sticky top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 py-2 border-b-2">
       <Link
         href="/"
-        className="font-display text-2xl opacity-80 hover:opacity-100 active:opacity-70 transition-opacity"
+        className="anchor-plain font-display text-2xl opacity-80"
       >
         <strong>Design</strong> Navigator
       </Link>

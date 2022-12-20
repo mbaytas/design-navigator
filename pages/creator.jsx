@@ -1,3 +1,4 @@
+import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
@@ -33,30 +34,19 @@ export default function Creator() {
           title="Creator"
           Icon={PenFountain}
           p1="Creator-designers build media, products, and services for an online audience, using the internet to develop business from their craft."
-          p2="The creator lifestyle can provide a lot of freedom and fulfillment, but requires substantial time and effort to build if you're starting from scratch."
+          p2="The creator lifestyle can provide freedom and fulfillment, but requires substantial time and effort to build if you're starting from scratch."
           bg_src={bg}
           bg_alt="Content creator working in her home office, imagined by Midjourney"
         ></CareerHeader>
 
         {/* CHARACTER */}
-        <section className="section-character">
-          <SectionHeading title="Characteristics" />
-          <div className="material-card grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20">
-            <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
-              <p>
-                Creators often work alone and rely on self-learning. You cannot
-                go to school to become a creator.
-              </p>
-              <p>
-                Fortunately, the internet is abundant with resources, tools, and
-                communities for creators.
-              </p>
-            </div>
-            <Progressbar value={"85%"} label="progressive" />
-            <Progressbar value={"38%"} label="social" />
-            <Progressbar value={"62%"} label="strategic" />
-          </div>
-        </section>
+        <CareerCharacter
+          p1="Creators often work alone and rely on self-learning. You cannot go to school to become a creator."
+          p2="Fortunately, the internet is abundant with resources, tools, and communities for creators."
+          progressive="85%"
+          social="38%"
+          strategic="62%"
+        />
 
         {/* RESOURCES */}
         <section className="section-resources">
@@ -228,7 +218,7 @@ export default function Creator() {
           </div>
         </section>
 
-        <CareerSelector message="...also check out:"></CareerSelector>
+        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
       </div>
     </>
   );

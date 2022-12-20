@@ -1,3 +1,4 @@
+import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
@@ -33,30 +34,19 @@ export default function Employee() {
           title="Employee"
           Icon={Portfolio}
           p1="Employment at an established company provides stability and peace of mind, as well as opportunities for long-term, large-scale projects."
-          p2="Larger companies offer well-defined carreer paths where you can thrive for many years while growing your expertise and influence."
+          p2="Larger companies offer well-defined carreer paths where you can grow your expertise and influence for many years."
           bg_src={bg}
           bg_alt="The design department of a Silicon Valley tech company, imagined by Midjourney"
         ></CareerHeader>
 
         {/* CHARACTER */}
-        <section className="section-character">
-          <SectionHeading title="Characteristics" />
-          <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
-            <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
-              <p>
-                To thrive in established companies requires high empathy and
-                collaboration skills.
-              </p>
-              <p>
-                Make sure you find the right culture for you. Be a good citizen,
-                make friends, and enjoy the ride.
-              </p>
-            </div>
-            <Progressbar value={"38%"} label="progressive" />
-            <Progressbar value={"85%"} label="social" />
-            <Progressbar value={"62%"} label="strategic" />
-          </div>
-        </section>
+        <CareerCharacter
+          p1="To thrive in teams at corporations requires high empathy and collaboration skills."
+          p2="Make sure you find the right culture for you. Be a good citizen, make friends, and enjoy the ride."
+          progressive="38%"
+          social="85%"
+          strategic="62%"
+        />
 
         <section className="section-resources">
           <SectionHeading title="Suggested Resources" />
@@ -224,7 +214,7 @@ export default function Employee() {
           </div>
         </section>
 
-        <CareerSelector message="...also check out:"></CareerSelector>
+        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
       </div>
     </>
   );

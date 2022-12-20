@@ -1,3 +1,4 @@
+import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
@@ -38,25 +39,13 @@ export default function Founder() {
         ></CareerHeader>
 
         {/* CHARACTER */}
-        <section className="section-character">
-          <SectionHeading title="Characteristics" />
-          <div className="grid sd:grid-cols-3 items-center gap-x-6 gap-y-6 mx-auto w-full border border-white/20 rounded-xl p-6">
-            <div className="opacity-80 text-r1 col-span-full max-w-md mb-3 flex flex-col gap-3">
-              <p>
-                Founders operate in dynamic environments with high risk and high
-                potential for extraordinary results.
-              </p>
-              <p>
-                Startups can be leveraged or bootstrapped. What both have in
-                common is the necessity to use resources effectively. Strategy
-                makes the difference between life and death.
-              </p>
-            </div>
-            <Progressbar value={"62%"} label="progressive" />
-            <Progressbar value={"85%"} label="social" />
-            <Progressbar value={"85%"} label="strategic" />
-          </div>
-        </section>
+        <CareerCharacter
+          p1="Founders operate in dynamic environments with high risk and high potential for extraordinary results."
+          p2="Startups can be leveraged or bootstrapped. What both have in common is the necessity to use resources effectively. Strategy makes the difference between life and death."
+          progressive="62%"
+          social="85%"
+          strategic="85%"
+        />
 
         {/* RESOURCES */}
         <section className="section-resources">
@@ -212,7 +201,7 @@ export default function Founder() {
           </div>
         </section>
 
-        <CareerSelector message="...also check out:"></CareerSelector>
+        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
       </div>
     </>
   );
