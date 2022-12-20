@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
 import AboutDialog from "../components/aboutDialog";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Lifestyles from "../components/lifestyles";
+import CareerSelector from "../components/careerSelector";
 
 import { RadioGroup } from "@headlessui/react";
 
@@ -395,7 +395,7 @@ export default function Home() {
         ></div>
       </aside>
 
-      <Lifestyles message="...or jump to the resources:"></Lifestyles>
+      <CareerSelector message="...or jump to the resources:"></CareerSelector>
     </div>
   );
 }

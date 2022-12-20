@@ -16,6 +16,9 @@ module.exports = {
         hd: "1800px",
         "4k": "2800px",
       },
+      transitionDuration: {
+        DEFAULT: "300ms",
+      },
     },
     fontFamily: {
       display: [
@@ -36,12 +39,6 @@ module.exports = {
         "ui-sans-serif",
         "system-ui",
       ],
-    },
-    transitionDuration: {
-      DEFAULT: "300ms",
-      300: "300ms",
-      500: "500ms",
-      1000: "1000ms",
     },
   },
   plugins: [],

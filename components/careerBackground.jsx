@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function CareerBackground(props) {
   const { scrollY } = useScroll();
-  let yVal = useTransform(scrollY, [0, 1], [0, -0.5], { clamp: false });
+  let yVal = useTransform(scrollY, [0, 1], [0, -0.62], { clamp: false });
 
   return (
     <motion.div

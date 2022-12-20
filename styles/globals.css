@@ -52,11 +52,12 @@
 }
 
 @layer components {
+    
     .anchor {
-        @apply underline hover:text-cyan-100 active:text-cyan-200 transition-colors;
+        @apply underline hover:text-cyan-100 active:text-cyan-200 active:transition-none transition-colors;
     }
     .secret-button {
-        @apply px-3 py-2 rounded-lg hover:opacity-100 hover:bg-white/10 active:animate-ping transition-[opacity,background-color] cursor-pointer;
+        @apply px-3 py-2 rounded-lg hover:opacity-100 hover:bg-white/10 active:bg-white/5 active:transition-none transition-[opacity,background-color] cursor-pointer;
     }
     .hinted-button {
         @apply px-3 py-2 rounded-lg bg-white/10 hover:opacity-100 hover:bg-white/20 active:bg-white/20 active:opacity-50 transition-[opacity,background-color] cursor-pointer;

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import SecretButton from "./secretButton";
+
 import {
   Calendar,
   Portfolio,
@@ -10,7 +12,7 @@ import {
   Microscope,
 } from "@carbon/icons-react";
 
-function LifestyleLink(props) {
+function CareerLink(props) {
   const { icon, label, href } = props;
   return (
     <Link
@@ -18,12 +20,12 @@ function LifestyleLink(props) {
       href={href}
     >
       {icon}
-      <p className="font-display font-medium text-r1">{label}</p>
+      <p className="font-display font-medium text-r1 leading-none">{label}</p>
     </Link>
   );
 }
 
-export default function Lifestyles(props) {
+export default function CareerSelector(props) {
   const { message } = props;
 
   return (
@@ -31,26 +33,22 @@ export default function Lifestyles(props) {
       <div className="w-full text-center text-r1 opacity-40 col-span-full">
         {message}
       </div>
-      <LifestyleLink
+      <CareerLink
         label="Creator"
         href="/creator"
         icon={<PenFountain size="24" />}
       />
-      <LifestyleLink
+      <CareerLink
         label="Employee"
         href="/employee"
         icon={<Portfolio size="24" />}
       />
-      <LifestyleLink
+      <CareerLink
         label="Freelancer"
         href="/freelancer"
         icon={<Calendar size="24" />}
       />
-      <LifestyleLink
-        label="Founder"
-        href="/founder"
-        icon={<Rocket size="24" />}
-      />
+      <CareerLink label="Founder" href="/founder" icon={<Rocket size="24" />} />
     </aside>
   );
 }

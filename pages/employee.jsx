@@ -1,6 +1,6 @@
-import CareerBackground from "../components/careerBackground";
+import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
-import Lifestyles from "../components/lifestyles";
+import CareerSelector from "../components/careerSelector";
 import PersonCard from "../components/personCard";
 import Progressbar from "../components/progressbar";
 import ResourceCard from "../components/resourceCard";
@@ -28,27 +28,15 @@ export default function Employee() {
     <>
       <LibraryPopover />
 
-      <CareerBackground
-        src={bg}
-        alt="Content creator working in her home office, imagined by Midjourney"
-      ></CareerBackground>
-
       <div className="career-container">
-        <header className="career-header">
-          <Portfolio size="32" className="opacity-80" />
-          <p className="text-r1 font-display font-medium opacity-60">
-            We think you'll thrive as a...
-          </p>{" "}
-          <h1 className="font-display text-r4 font-bold mb-3">Employee</h1>
-          <p className="opacity-80 text-r2">
-            Employment at an established company provides stability and peace of
-            mind, as well as opportunities for long-term, large-scale projects.{" "}
-          </p>
-          <p className="opacity-50 text-r1">
-            Larger companies offer well-defined carreer paths where you can
-            thrive for many years while growing your expertise and influence.
-          </p>
-        </header>
+        <CareerHeader
+          title="Employee"
+          Icon={Portfolio}
+          p1="Employment at an established company provides stability and peace of mind, as well as opportunities for long-term, large-scale projects."
+          p2="Larger companies offer well-defined carreer paths where you can thrive for many years while growing your expertise and influence."
+          bg_src={bg}
+          bg_alt="The design department of a Silicon Valley tech company, imagined by Midjourney"
+        ></CareerHeader>
 
         {/* CHARACTER */}
         <section className="section-character">
@@ -66,7 +54,7 @@ export default function Employee() {
             </div>
             <Progressbar value={"38%"} label="progressive" />
             <Progressbar value={"85%"} label="social" />
-            <Progressbar value={"38%"} label="strategic" />
+            <Progressbar value={"62%"} label="strategic" />
           </div>
         </section>
 
@@ -153,7 +141,7 @@ export default function Employee() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_13_8)">
+                <g clipPath="url(#clip0_13_8)">
                   <path
                     d="M1413.1 489.432C1413.1 489.191 1412.86 488.717 1412.86 488.476C1411.43 484.652 1409.03 481.311 1406.41 478.21C1406.17 477.969 1406.17 477.736 1405.94 477.495L971.422 11.4632C964.738 4.29763 955.187 0 945.162 0H293.864C233.704 0 184.516 48.9468 184.516 109.347V1490.49C184.516 1550.65 233.463 1599.84 293.864 1599.84H1306.15C1366.31 1599.84 1415.49 1550.89 1415.49 1490.49L1415.48 502.084C1415.48 497.553 1414.53 493.496 1413.1 489.432L1413.1 489.432ZM979.773 125.584L1297.31 466.035H1017.5C996.722 466.035 979.771 449.085 979.771 428.311L979.773 125.584ZM1343.86 1490.49C1343.86 1511.27 1326.91 1528.22 1306.14 1528.22H293.855C273.082 1528.22 256.131 1511.27 256.131 1490.49V109.588C256.131 88.8149 273.081 71.8639 293.855 71.8639H908.148V428.55C908.148 488.71 957.095 537.897 1017.5 537.897H1343.86V1490.49Z"
                     fill="white"
@@ -178,7 +166,7 @@ export default function Employee() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_13_6)">
+                <g clipPath="url(#clip0_13_6)">
                   <path
                     d="M148.7 140.225C173.45 160.4 182.825 158.975 229.55 155.85L670.05 129.425C679.425 129.425 671.625 120.05 668.475 118.475L595.3 65.6001C581.375 54.6501 562.625 42.3001 526.8 45.2751L100.375 76.5251C84.75 77.9501 81.625 85.7751 87.875 92.0251L148.7 140.225ZM175.125 242.975V706.375C175.125 731.25 187.5 740.625 215.5 739.05L699.625 711.05C727.625 709.475 730.875 692.425 730.875 672.125V211.85C730.875 191.525 723.05 180.725 705.875 182.3L200.025 211.85C181.275 213.425 175.15 222.65 175.15 242.85L175.125 242.975ZM653 267.7C656.125 281.775 653 295.7 638.925 297.4L615.625 302.1V644.15C595.3 655.1 576.7 661.35 561.2 661.35C536.2 661.35 529.95 653.525 511.325 630.225L358.725 390.65V622.425L407.025 633.375C407.025 633.375 407.025 661.375 368.1 661.375L260.675 667.625C257.55 661.375 260.675 645.75 271.625 642.75L299.625 634.925V328.55L260.7 325.425C257.575 311.35 265.4 291.175 287.125 289.625L402.35 281.8L561.2 524.5V309.775L520.7 305.075C517.575 288.025 529.95 275.525 545.575 274.075L653 267.7ZM64.575 34.5001L508.2 1.82506C562.625 -2.87493 576.7 0.250066 610.925 25.1251L752.6 124.725C775.9 141.775 783.725 146.475 783.725 165.1V711.075C783.725 745.325 771.225 765.5 727.725 768.625L212.35 799.75C179.8 801.325 164.175 796.625 146.975 774.875L42.675 639.45C24.05 614.575 16.25 595.95 16.25 574.225V88.9501C16.25 60.9501 28.75 37.6501 64.55 34.5251L64.575 34.5001Z"
                     fill="white"
@@ -236,7 +224,7 @@ export default function Employee() {
           </div>
         </section>
 
-        <Lifestyles message="...also check out:"></Lifestyles>
+        <CareerSelector message="...also check out:"></CareerSelector>
       </div>
     </>
   );
