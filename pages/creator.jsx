@@ -44,7 +44,7 @@ export default function Creator() {
               </p>
               <h1 className="font-display text-r4 font-bold mb-3">Creator</h1>
             </div>
-            <div className="material p-3 rounded backdrop-blur-lg">
+            <div className="bg-black/40 backdrop-blur p-6 rounded-full">
               <PenFountain size="36" className="opacity-80" />
             </div>
           </div>

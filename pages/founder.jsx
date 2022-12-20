@@ -13,6 +13,7 @@ import podcast from "../public/podcast_masters.png";
 import blog from "../public/blog_blank.png";
 import yt from "../public/yt_garrytan.png";
 
+import personApril from "../public/personApril.png";
 import personChesky from "../public/personChesky.png";
 import personPG from "../public/personPG.png";
 import personSinger from "../public/personSinger.png";
@@ -193,6 +194,13 @@ export default function Founder() {
         <section className="section-people">
           <SectionHeading title="People to Follow" />
           <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
+          <PersonCard
+              title="April Dunford"
+              handle="@aprildunford"
+              caption="Positioning Expert"
+              url="https://twitter.com/aprildunford"
+              img_src={personApril}
+            ></PersonCard>
             <PersonCard
               title="Brian Chesky"
               handle="@bchesky"

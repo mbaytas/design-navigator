@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import CareerBackground from "../components/careerBackground";
 import LibraryPopover from "../components/libraryPopover";
 import Lifestyles from "../components/lifestyles";
 import PersonCard from "../components/personCard";

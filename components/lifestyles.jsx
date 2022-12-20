@@ -27,7 +27,7 @@ export default function Lifestyles(props) {
   const { message } = props;
 
   return (
-    <aside className="flex flex-wrap flex-row justify-center items-end max-w-5xl mx-auto gap-1">
+    <aside className="grid grid-cols-4 items-end max-w-5xl mx-auto gap-1">
       <div className="w-full text-center text-r1 opacity-40 col-span-full">
         {message}
       </div>
