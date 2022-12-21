@@ -9,7 +9,7 @@ import { Information } from "@carbon/icons-react";
 export default function Header(props) {
   return (
     <motion.header
-      className="z-50 sticky top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 py-2 border-b-2"
+      className="z-50 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
     >

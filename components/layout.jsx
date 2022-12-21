@@ -34,6 +34,8 @@ export default function Layout({ children }) {
           setIsAboutDialogOpen={setIsAboutDialogOpen}
         />
 
+        <div className="ghost h-12"></div>
+
         <main className="px-3 relative">{children}</main>
 
         <Footer />
