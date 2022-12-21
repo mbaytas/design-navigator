@@ -3,6 +3,8 @@ import { useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
 
+import { MotionConfig } from "framer-motion";
+
 import AboutDialog from "./aboutDialog";
 import Header from "./header";
 import Footer from "./footer";
@@ -11,7 +13,7 @@ export default function Layout({ children }) {
   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
-    <>
+    <MotionConfig transition={{ duration: 0.6 }}>
       <Head>
         <title>Design Navigator</title>
         <meta
@@ -41,6 +43,6 @@ export default function Layout({ children }) {
         data-domain="designdisciplin.com"
         src="https://plausible.io/js/plausible.js"
       ></Script>
-    </>
+    </MotionConfig>
   );
 }

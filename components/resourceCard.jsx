@@ -32,7 +32,7 @@ export default function ResourceCard(props) {
         }
         <h3 className="text-sm capitalize">Best {type}</h3>
       </div>
-      <div className="w-full grid grid-cols-[6rem_1fr] sd:grid-cols-[12rem_1fr] gap-4 rounded-xl bg-white/5 group-hover:bg-white/10 transition-colors p-3 relative">
+      <div className="w-full grid grid-cols-[6rem_1fr] sd:grid-cols-[12rem_1fr] gap-4 rounded-xl bg-white/5 group-hover:bg-white/10 group-active:bg-white/20 group-active:transition-none transition-colors p-3 relative">
         <Launch
           size="16"
           className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 transition-[opacity,transform] group-hover:translate-x-0 group-hover:translate-y-0"
@@ -46,7 +46,9 @@ export default function ResourceCard(props) {
           ></Image>
         </div>
         <div className="flex flex-col gap-3 w-full self-center sd:self-end">
-          <h4 className="font-display font-bold text-xl leading-tight">{title}</h4>
+          <h4 className="font-display font-bold text-xl leading-tight">
+            {title}
+          </h4>
           <div className="flex flex-wrap gap-y-1 gap-x-3 text-sm items-center opacity-50">
             <div className="flex gap-1 items-center">
               <Currency size="16" />
@@ -58,7 +60,9 @@ export default function ResourceCard(props) {
             </div>
           </div>
         </div>
-          <p className="col-span-2 sd:col-span-1 sd:col-start-2 opacity-80 max-w-sm w-full leading-snug text-sm sd:mt-2">{caption}</p>
+        <p className="col-span-2 sd:col-span-1 sd:col-start-2 opacity-80 max-w-sm w-full leading-snug text-sm sd:mt-2">
+          {caption}
+        </p>
       </div>
     </a>
   );

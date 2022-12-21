@@ -4,7 +4,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { ArrowLeft, ArrowRight, Number_0 } from "@carbon/icons-react";
 
 import AboutDialog from "../components/aboutDialog";
 import Footer from "../components/footer";
@@ -12,9 +14,6 @@ import Header from "../components/header";
 import CareerSelector from "../components/careerSelector";
 
 import { RadioGroup } from "@headlessui/react";
-
-import styles from "../styles/Home.module.css";
-import { Router } from "@carbon/icons-react";
 
 export default function Home() {
   let [step, setStep] = useState(0);
@@ -269,9 +268,30 @@ export default function Home() {
     );
   }
 
+  // Motion
+  const childVariants = {
+    hidden: { opacity: 0, y: 8 },
+    show: { opacity: 1, y: 0 },
+  };
+  const childTransition = {
+    duration: 0.3,
+  };
+
   return (
-    <div className="flex flex-col justify-evenly items-center gap-12 w-full">
-      <main className="border-2 border-white/40 w-full max-w-sm h-[30rem] flex flex-col justify-between">
+    <motion.div
+      className="flex flex-col justify-evenly items-center gap-12 w-full"
+      initial="hidden"
+      animate="show"
+      transition={{
+        staggerChildren: 0.2,
+        duration: 0.1,
+      }}
+    >
+      <motion.main
+        className="material-static w-full max-w-sm h-[30rem] flex flex-col justify-between"
+        variants={childVariants}
+        transition={childTransition}
+      >
         <div
           className={
             "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
@@ -386,16 +406,26 @@ export default function Home() {
             <ArrowRight size="24" />
           </button>
         </div>
-      </main>
+      </motion.main>
 
-      <aside className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center">
+      <motion.aside
+        className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center"
+        variants={childVariants}
+        transition={childTransition}
+      >
         <div
           className="progress bg-white h-full transition-[width]"
           style={{ width: (step * 100) / 15 + "%" }}
         ></div>
-      </aside>
+      </motion.aside>
 
-      <CareerSelector message="...or jump to the resources:"></CareerSelector>
-    </div>
+      <motion.div
+        className="div"
+        variants={childVariants}
+        transition={childTransition}
+      >
+        <CareerSelector message="...or jump to the resources:"></CareerSelector>
+      </motion.div>
+    </motion.div>
   );
 }
