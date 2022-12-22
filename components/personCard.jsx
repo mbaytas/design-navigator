@@ -13,7 +13,7 @@ export default function ToolCard(props) {
     >
       <Launch
         size="16"
-        className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100  group-hover:translate-x-0 group-hover:translate-y-0 group-active:opacity-100  group-active:translate-x-0 group-active:translate-y-0 transition-[opacity,transform]"
+        className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100  group-hover:translate-x-0 group-hover:translate-y-0 group-active:opacity-100  group-active:translate-x-0 group-active:translate-y-0 transition-[opacity,transform] group-active:transition-none"
       />
       <div className="h-[4.5rem] w-full rounded-full overflow-hidden flex justify-center items-center shrink-0">
         <Image
@@ -25,7 +25,7 @@ export default function ToolCard(props) {
       </div>
       <div className="flex flex-col gap-1 shrink">
         <h4 className="font-display font-medium text-base">{title}</h4>
-        <p className="text-xs uppercase opacity-50 group-hover:opacity-100 group-active:opacity-100 transition-opacity font-medium">
+        <p className="text-xs font-medium uppercase opacity-50 group-hover:opacity-100 group-active:opacity-100 transition-opacity group-active:transition-none">
           {handle}
         </p>
         <p className="text-sm opacity-40 mt-1">{caption}</p>
