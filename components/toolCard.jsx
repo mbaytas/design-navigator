@@ -15,7 +15,7 @@ export default function ToolCard(props) {
         size="16"
         className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 transition-[opacity,transform] group-hover:translate-x-0 group-hover:translate-y-0"
       />
-      <div className="h-12 w-12 overflow-hidden flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+      <div className="h-9 w-9 overflow-hidden flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
         {children}
       </div>
       <h4 className="font-display font-medium text-base leading-tight">
