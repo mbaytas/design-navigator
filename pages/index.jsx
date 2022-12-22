@@ -67,18 +67,18 @@ export default function Home() {
     console.log(strategicScore);
     console.log(socialScore);
 
-    if (progressiveScore >= 4 && socialScore >= 4 && strategicScore >= 4) {
+    if (progressiveScore >= 3 && socialScore >= 3 && strategicScore >= 4) {
       router.push("/founder");
     } else if (
       progressiveScore >= 4 &&
       socialScore >= 0 &&
-      strategicScore >= 4
+      strategicScore >= 3
     ) {
       router.push("/creator");
     } else if (
-      progressiveScore >= 3 &&
+      progressiveScore >= 2 &&
       socialScore >= 1 &&
-      strategicScore >= 2
+      strategicScore >= 3
     ) {
       router.push("/freelancer");
     } else {
@@ -92,10 +92,10 @@ export default function Home() {
     2: `[&>:nth-child(3)]:opacity-100 [&>:nth-child(3)]:pointer-events-auto`,
     3: `[&>:nth-child(4)]:opacity-100 [&>:nth-child(4)]:pointer-events-auto`,
     4: `[&>:nth-child(5)]:opacity-100 [&>:nth-child(5)]:pointer-events-auto`,
-    5: `[&>:nth-child(6)]:opacity-100 [&>:nth-child(6)]:pointer-events-auto]`,
-    6: `[&>:nth-child(7)]:opacity-100 [&>:nth-child(7)]:pointer-events-auto]`,
-    7: `[&>:nth-child(8)]:opacity-100 [&>:nth-child(8)]:pointer-events-auto]`,
-    8: `[&>:nth-child(9)]:opacity-100 [&>:nth-child(9)]:pointer-events-auto]`,
+    5: `[&>:nth-child(6)]:opacity-100 [&>:nth-child(6)]:pointer-events-auto`,
+    6: `[&>:nth-child(7)]:opacity-100 [&>:nth-child(7)]:pointer-events-auto`,
+    7: `[&>:nth-child(8)]:opacity-100 [&>:nth-child(8)]:pointer-events-auto`,
+    8: `[&>:nth-child(9)]:opacity-100 [&>:nth-child(9)]:pointer-events-auto`,
     9: `[&>:nth-child(10)]:opacity-100 [&>:nth-child(10)]:pointer-events-auto`,
     10: `[&>:nth-child(11)]:opacity-100 [&>:nth-child(11)]:pointer-events-auto`,
     11: `[&>:nth-child(12)]:opacity-100 [&>:nth-child(12)]:pointer-events-auto`,
@@ -210,7 +210,7 @@ export default function Home() {
       id: "q11",
       radioValue: strategic1,
       radioOnChange: setStrategic1,
-      text: "Are you as comfortable with Excel as you are with Photoshop or Figma?",
+      text: "Are you as comfortable with Excel as you are with Figma?",
       a1: "Yes",
       a2: "No",
       val1: 1,
