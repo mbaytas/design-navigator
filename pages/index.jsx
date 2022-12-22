@@ -7,10 +7,15 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
 
 import CareerSelector from "../components/careerSelector";
+import Layout from "../components/layout";
 
 import { RadioGroup } from "@headlessui/react";
 
 import { motionVars } from "../utils/consts";
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
 
 export default function Home() {
   const questionnaireContainer = useRef(null);

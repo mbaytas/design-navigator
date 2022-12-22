@@ -1,9 +1,10 @@
+import CareerPage from "../components/careerPage";
+
 import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
 import PersonCard from "../components/personCard";
-import Progressbar from "../components/progressbar";
 import ResourceCard from "../components/resourceCard";
 import SectionHeading from "../components/sectionHeading";
 import ToolCard from "../components/toolCard";
