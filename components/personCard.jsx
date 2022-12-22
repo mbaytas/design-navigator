@@ -24,7 +24,7 @@ export default function ToolCard(props) {
         ></Image>
       </div>
       <div className="flex flex-col gap-1 shrink">
-        <h4 className="font-display font-medium text-lg">{title}</h4>
+        <h4 className="font-display font-medium text-base">{title}</h4>
         <p className="text-xs uppercase opacity-50 group-hover:opacity-100 transition-opacity font-medium">
           {handle}
         </p>
