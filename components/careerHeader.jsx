@@ -1,13 +1,15 @@
-import CareerBackground from "./careerBackground";
+import { motion } from "framer-motion";
+
+import { motionVars } from "../utils/consts";
 
 export default function CareerHeader(props) {
   return (
     <>
-      <CareerBackground
-        src={props.bg_src}
-        alt={props.bg_alt}
-      ></CareerBackground>
-      <header className="career-header">
+      <motion.header
+        className="career-header"
+        variants={motionVars.childVariants}
+        transition={motionVars.childTransition}
+      >
         <div className="flex gap-6 justify-between items-center mb-3">
           <div className="">
             <p className="text-r1 font-display font-sem opacity-50 mb-3">
@@ -23,7 +25,7 @@ export default function CareerHeader(props) {
         </div>
         <p className="opacity-80 text-r2">{props.p1}</p>
         <p className="opacity-50 text-r1">{props.p2}</p>
-      </header>
+      </motion.header>
     </>
   );
 }

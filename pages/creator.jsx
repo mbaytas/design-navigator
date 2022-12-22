@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
+
+import CareerBackground from "../components/careerBackground";
 import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
 import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
 import PersonCard from "../components/personCard";
-import Progressbar from "../components/progressbar";
 import ResourceCard from "../components/resourceCard";
 import SectionHeading from "../components/sectionHeading";
 import ToolCard from "../components/toolCard";
@@ -24,12 +26,26 @@ import bg from "../public/bg_Creator.png";
 
 import { PenFountain } from "@carbon/icons-react";
 
+import { motionVars } from "../utils/consts";
+
 export default function Creator() {
   return (
     <>
       <LibraryPopover />
 
-      <div className="career-container">
+      <motion.div
+        className="career-container"
+        initial="initial"
+        animate="animate"
+        transition={motionVars.parentTransition}
+      >
+        {/* BG */}
+        <CareerBackground
+          src={bg}
+          alt="Content creator working in her home office, imagined by Midjourney"
+        ></CareerBackground>
+
+        {/* HEADER */}
         <CareerHeader
           title="Creator"
           Icon={PenFountain}
@@ -49,7 +65,11 @@ export default function Creator() {
         />
 
         {/* RESOURCES */}
-        <section className="section-resources">
+        <motion.section
+          className="section-resources"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">
             <ResourceCard
@@ -98,10 +118,37 @@ export default function Creator() {
               url="https://www.youtube.com/@aliabdaal"
             />
           </div>
-        </section>
+        </motion.section>
+
+        {/* UPSELL */}
+        <motion.div
+          className="material-static flex items-end justify-between w-full max-w-4xl  p-6 gap-3 text-white"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <div className="flex flex-col gap-6">
+            <h1 className="font-display text-r3">Discover More Resources</h1>
+            <p className="text-r1 opacity-50 max-w-sm">
+              Access to the full Design Navigator Library with 100+ resources is
+              available to purchase, as well as open to all Design Disciplin
+              members.
+            </p>
+          </div>
+          <a
+            href="https://www.designdisciplin.com/#/portal/signup"
+            target="_blank"
+            className="font-display font-medium uppercase border-2 border-cyan-400 text-cyan-400 rounded-full px-6 py-3 w-max hover:border-white hover:text-white transition-colors"
+          >
+            Purchase Library Access
+          </a>
+        </motion.div>
 
         {/* TOOLS */}
-        <section className="section-tools">
+        <motion.section
+          className="section-tools"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
           <SectionHeading title="Tools to Learn" />
 
           <div className="flex flex-row flex-wrap justify-center gap-3">
@@ -174,10 +221,14 @@ export default function Creator() {
               </svg>
             </ToolCard>
           </div>
-        </section>
+        </motion.section>
 
         {/* PEOPLE */}
-        <section className="section-people">
+        <motion.section
+          className="section-people"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
           <SectionHeading title="People to Follow" />
           <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
             <PersonCard
@@ -216,10 +267,13 @@ export default function Creator() {
               img_src={personOliur}
             ></PersonCard>
           </div>
-        </section>
+        </motion.section>
 
-        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
-      </div>
+        <CareerSelector
+          repeatButton
+          message="...or check out:"
+        ></CareerSelector>
+      </motion.div>
     </>
   );
 }

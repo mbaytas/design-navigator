@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import SecretButton from "./secretButton";
+import { motion } from "framer-motion";
 
 import {
   Calendar,
@@ -9,6 +9,8 @@ import {
   PenFountain,
   Repeat,
 } from "@carbon/icons-react";
+
+import { motionVars } from "../utils/consts";
 
 function CareerLink(props) {
   const { icon, label, href } = props;
@@ -27,7 +29,11 @@ export default function CareerSelector(props) {
   const { message } = props;
 
   return (
-    <aside className="grid grid-cols-4 items-end max-w-5xl mx-auto gap-1">
+    <motion.aside
+      className="grid grid-cols-4 items-end max-w-5xl mx-auto gap-1"
+      variants={motionVars.childVariants}
+      transition={motionVars.childTransition}
+    >
       {props.repeatButton && (
         <div className="w-full col-span-full flex itemx-center justify-center mb-6">
           <Link
@@ -58,6 +64,6 @@ export default function CareerSelector(props) {
         icon={<Calendar size="24" />}
       />
       <CareerLink label="Founder" href="/founder" icon={<Rocket size="24" />} />
-    </aside>
+    </motion.aside>
   );
 }

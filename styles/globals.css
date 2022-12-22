@@ -62,7 +62,7 @@
     }
 
     .material-static {
-        @apply border-2 bg-black/40 backdrop-blur;
+        @apply border-2 bg-black/50 backdrop-blur;
     }
 
     .career-container {

@@ -15,6 +15,8 @@ import CareerSelector from "../components/careerSelector";
 
 import { RadioGroup } from "@headlessui/react";
 
+import { motionVars } from "../utils/consts";
+
 export default function Home() {
   let [step, setStep] = useState(0);
 
@@ -268,29 +270,17 @@ export default function Home() {
     );
   }
 
-  // Motion
-  const childVariants = {
-    hidden: { opacity: 0, y: 8 },
-    show: { opacity: 1, y: 0 },
-  };
-  const childTransition = {
-    duration: 0.3,
-  };
-
   return (
     <motion.div
       className="flex flex-col justify-evenly items-center gap-12 w-full"
-      initial="hidden"
-      animate="show"
-      transition={{
-        staggerChildren: 0.2,
-        duration: 0.1,
-      }}
+      initial="initial"
+      animate="animate"
+      transition={motionVars.parentTransition}
     >
       <motion.main
         className="material-static w-full max-w-sm h-[30rem] flex flex-col justify-between"
-        variants={childVariants}
-        transition={childTransition}
+        variants={motionVars.childVariants}
+        transition={motionVars.childTransition}
       >
         <div
           className={
@@ -410,8 +400,8 @@ export default function Home() {
 
       <motion.aside
         className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center"
-        variants={childVariants}
-        transition={childTransition}
+        variants={motionVars.childVariants}
+        transition={motionVars.childTransition}
       >
         <div
           className="progress bg-white h-full transition-[width]"
@@ -421,8 +411,8 @@ export default function Home() {
 
       <motion.div
         className="div"
-        variants={childVariants}
-        transition={childTransition}
+        variants={motionVars.childVariants}
+        transition={motionVars.childTransition}
       >
         <CareerSelector message="...or jump to the resources:"></CareerSelector>
       </motion.div>
