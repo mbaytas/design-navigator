@@ -59,11 +59,15 @@ export default function CareerSelector(props) {
         icon={<Portfolio size="24" />}
       />
       <CareerLink
+        label="Founder"
+        href="/founder"
+        icon={<Rocket size="24" />}
+      />
+      <CareerLink
         label="Freelancer"
         href="/freelancer"
         icon={<Calendar size="24" />}
       />
-      <CareerLink label="Founder" href="/founder" icon={<Rocket size="24" />} />
     </motion.aside>
   );
 }

@@ -106,9 +106,12 @@ export default function Employee() {
           <SectionHeading title="Tools to Learn" />
 
           <div className="flex flex-row flex-wrap justify-center gap-3">
-            <ToolCard title="Figma" url="https://figma.com/">
+            <ToolCard
+              title="Figma"
+              url="https://figma.com/"
+            >
               <svg
-                width="800"
+                width="100%"
                 height="800"
                 viewBox="0 0 800 800"
                 fill="none"
@@ -143,12 +146,19 @@ export default function Employee() {
                 </g>
                 <defs>
                   <clipPath id="clip0_13_8">
-                    <rect width="1600" height="1600" fill="white" />
+                    <rect
+                      width="1600"
+                      height="1600"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
             </ToolCard>
-            <ToolCard title="Notion" url="https://www.notion.com">
+            <ToolCard
+              title="Notion"
+              url="https://www.notion.com"
+            >
               <svg
                 width="800"
                 height="800"
@@ -164,7 +174,11 @@ export default function Employee() {
                 </g>
                 <defs>
                   <clipPath id="clip0_13_6">
-                    <rect width="800" height="800" fill="white" />
+                    <rect
+                      width="800"
+                      height="800"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -214,7 +228,10 @@ export default function Employee() {
           </div>
         </section>
 
-        <CareerSelector repeatButton message="...or check out:"></CareerSelector>
+        <CareerSelector
+          repeatButton
+          message="...or check out:"
+        ></CareerSelector>
       </div>
     </>
   );
