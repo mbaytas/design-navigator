@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -18,7 +18,20 @@ import { RadioGroup } from "@headlessui/react";
 import { motionVars } from "../utils/consts";
 
 export default function Home() {
+  const questionnaireContainer = useRef(null);
+
   let [step, setStep] = useState(0);
+  let [containerWidth, setContainerWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    setContainerWidth(questionnaireContainer.current.clientWidth);
+    const getContainerWidth = () => {
+      setContainerWidth(questionnaireContainer.current.clientWidth);
+    };
+    window.addEventListener("resize", getContainerWidth);
+    // remove the event listener before the component gets unmounted
+    return () => window.removeEventListener("resize", getContainerWidth);
+  }, []);
 
   let [progressive1, setProgressive1] = useState(null);
   let [progressive2, setProgressive2] = useState(null);
@@ -79,22 +92,22 @@ export default function Home() {
   }
 
   const stepClasses = {
-    0: "[&>:nth-child(1)]:opacity-100 [&>:nth-child(1)]:pointer-events-auto translate-x-0 ",
-    1: "[&>:nth-child(2)]:opacity-100 [&>:nth-child(2)]:pointer-events-auto translate-x-[-24rem] ",
-    2: "[&>:nth-child(3)]:opacity-100 [&>:nth-child(3)]:pointer-events-auto translate-x-[-48rem]",
-    3: "[&>:nth-child(4)]:opacity-100 [&>:nth-child(4)]:pointer-events-auto translate-x-[-72rem]",
-    4: "[&>:nth-child(5)]:opacity-100 [&>:nth-child(5)]:pointer-events-auto translate-x-[-96rem]",
-    5: "[&>:nth-child(6)]:opacity-100 [&>:nth-child(6)]:pointer-events-auto translate-x-[-120rem]",
-    6: "[&>:nth-child(7)]:opacity-100 [&>:nth-child(7)]:pointer-events-auto translate-x-[-144rem]",
-    7: "[&>:nth-child(8)]:opacity-100 [&>:nth-child(8)]:pointer-events-auto translate-x-[-168rem]",
-    8: "[&>:nth-child(9)]:opacity-100 [&>:nth-child(9)]:pointer-events-auto translate-x-[-192rem]",
-    9: "[&>:nth-child(10)]:opacity-100 [&>:nth-child(10)]:pointer-events-auto translate-x-[-216rem]",
-    10: "[&>:nth-child(11)]:opacity-100 [&>:nth-child(11)]:pointer-events-auto translate-x-[-240rem]",
-    11: "[&>:nth-child(12)]:opacity-100 [&>:nth-child(12)]:pointer-events-auto translate-x-[-264rem]",
-    12: "[&>:nth-child(13)]:opacity-100 [&>:nth-child(13)]:pointer-events-auto translate-x-[-288rem]",
-    13: "[&>:nth-child(14)]:opacity-100 [&>:nth-child(14)]:pointer-events-auto translate-x-[-312rem]",
-    14: "[&>:nth-child(15)]:opacity-100 [&>:nth-child(15)]:pointer-events-auto translate-x-[-336rem]",
-    15: "[&>:nth-child(16)]:opacity-100 [&>:nth-child(16)]:pointer-events-auto translate-x-[-360rem]",
+    0: `[&>:nth-child(1)]:opacity-100 [&>:nth-child(1)]:pointer-events-auto`,
+    1: `[&>:nth-child(2)]:opacity-100 [&>:nth-child(2)]:pointer-events-auto`,
+    2: `[&>:nth-child(3)]:opacity-100 [&>:nth-child(3)]:pointer-events-auto`,
+    3: `[&>:nth-child(4)]:opacity-100 [&>:nth-child(4)]:pointer-events-auto`,
+    4: `[&>:nth-child(5)]:opacity-100 [&>:nth-child(5)]:pointer-events-auto`,
+    5: `[&>:nth-child(6)]:opacity-100 [&>:nth-child(6)]:pointer-events-auto]`,
+    6: `[&>:nth-child(7)]:opacity-100 [&>:nth-child(7)]:pointer-events-auto]`,
+    7: `[&>:nth-child(8)]:opacity-100 [&>:nth-child(8)]:pointer-events-auto]`,
+    8: `[&>:nth-child(9)]:opacity-100 [&>:nth-child(9)]:pointer-events-auto]`,
+    9: `[&>:nth-child(10)]:opacity-100 [&>:nth-child(10)]:pointer-events-auto`,
+    10: `[&>:nth-child(11)]:opacity-100 [&>:nth-child(11)]:pointer-events-auto`,
+    11: `[&>:nth-child(12)]:opacity-100 [&>:nth-child(12)]:pointer-events-auto`,
+    12: `[&>:nth-child(13)]:opacity-100 [&>:nth-child(13)]:pointer-events-auto`,
+    13: `[&>:nth-child(14)]:opacity-100 [&>:nth-child(14)]:pointer-events-auto`,
+    14: `[&>:nth-child(15)]:opacity-100 [&>:nth-child(15)]:pointer-events-auto`,
+    15: `[&>:nth-child(16)]:opacity-100 [&>:nth-child(16)]:pointer-events-auto`,
   };
 
   const questions = [
@@ -279,6 +292,7 @@ export default function Home() {
     >
       <motion.main
         className="material-static w-full max-w-sm h-[30rem] flex flex-col justify-between"
+        ref={questionnaireContainer}
         variants={motionVars.childVariants}
         transition={motionVars.childTransition}
       >
@@ -287,12 +301,16 @@ export default function Home() {
             "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
             stepClasses[step]
           }
+          style={{
+            transform: `translate(${-step * containerWidth}px`,
+          }}
         >
           <div
             id="intro"
-            className={
-              "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity"
-            }
+            className={`px-8 py-12 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity`}
+            style={{
+              width: containerWidth,
+            }}
           >
             <h1 className="text-xl font-display font-bold">
               Discover the best path{" "}
@@ -314,8 +332,11 @@ export default function Home() {
               key={question.id}
               id={question.id}
               className={
-                "px-8 py-12 w-96 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
+                "px-8 py-12 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
               }
+              style={{
+                width: containerWidth,
+              }}
             >
               <RadioGroup
                 className={

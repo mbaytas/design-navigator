@@ -9,7 +9,7 @@ export default function ToolCard(props) {
     <a
       href={url}
       target="_blank"
-      className="flex flex-col justify-between gap-4 rounded-xl bg-white/5 hover:bg-white/10 active:bg-white/20 active:transition-none transition-colors w-36 p-6 relative group cursor-pointer"
+      className="flex flex-col justify-between gap-4 rounded-xl bg-gradient-to-b from-white/10 via-white/5 to-white/5 hover:bg-white/10 active:bg-white/20 active:transition-none transition-colors w-36 p-6 relative group cursor-pointer"
     >
       <Launch
         size="16"
@@ -18,7 +18,9 @@ export default function ToolCard(props) {
       <div className="h-12 w-12 overflow-hidden flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
         {children}
       </div>
-      <h4 className="font-display font-medium text-base leading-tight">{title}</h4>
+      <h4 className="font-display font-medium text-base leading-tight">
+        {title}
+      </h4>
     </a>
   );
 }
