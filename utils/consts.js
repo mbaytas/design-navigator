@@ -1,15 +1,20 @@
 // Motion
 export const motionVars = {
+  defaultTransition: { duration: 0.5 },
   childVariants: {
-    initial: { opacity: 0, y: 8 },
+    initial: { opacity: 0, y: 24 },
     animate: { opacity: 1, y: 0 },
   },
   childTransition: {
-    duration: 0.6,
+    duration: 0.5,
+  },
+  footerTransition: { delay: 1, duration: 0.5 },
+  headerVariants: {
+    initial: { opacity: 0, y: -10 },
+    animate: { opacity: 1, y: 0 },
   },
   parentTransition: {
-    staggerChildren: 0.2,
-    duration: 0.1,
-    delay: 0.6,
+    delayChildren: 0.5,
+    staggerChildren: 0.3,
   },
 };

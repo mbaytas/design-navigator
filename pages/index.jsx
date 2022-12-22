@@ -1,16 +1,11 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
-import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-import { ArrowLeft, ArrowRight, Number_0 } from "@carbon/icons-react";
+import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
 
-import AboutDialog from "../components/aboutDialog";
-import Footer from "../components/footer";
-import Header from "../components/header";
 import CareerSelector from "../components/careerSelector";
 
 import { RadioGroup } from "@headlessui/react";
@@ -291,14 +286,14 @@ export default function Home() {
       transition={motionVars.parentTransition}
     >
       <motion.main
-        className="material-static w-full max-w-sm h-[30rem] flex flex-col justify-between"
+        className="material-static w-full max-w-sm h-[30rem] flex flex-col gap-6 justify-between"
         ref={questionnaireContainer}
         variants={motionVars.childVariants}
         transition={motionVars.childTransition}
       >
         <div
           className={
-            "transition-transform flex flex-row h-full [&>*]:opacity-10 [&>*]:pointer-events-none " +
+            "transition-transform flex flex-row h-96 [&>*]:opacity-10 [&>*]:pointer-events-none " +
             stepClasses[step]
           }
           style={{
@@ -307,7 +302,7 @@ export default function Home() {
         >
           <div
             id="intro"
-            className={`px-8 py-12 h-full flex flex-col items-start justify-evenly gap-4 shrink-0 transition-opacity`}
+            className={`p-6 h-full flex flex-col items-start justify-center gap-12 shrink-0 transition-opacity`}
             style={{
               width: containerWidth,
             }}
@@ -332,7 +327,7 @@ export default function Home() {
               key={question.id}
               id={question.id}
               className={
-                "px-8 py-12 h-full flex flex-col items-start justify-evenly gap-4 shrink-0  transition-opacity"
+                "p-6 h-full flex items-center justify-center shrink-0  transition-opacity"
               }
               style={{
                 width: containerWidth,
@@ -340,16 +335,16 @@ export default function Home() {
             >
               <RadioGroup
                 className={
-                  "flex flex-col justify-between items-start h-full w-full"
+                  "flex flex-col justify-center items-start h-full w-full gap-6"
                 }
                 value={question.radioValue}
                 onChange={question.radioOnChange}
               >
-                <p className="text-r1 opacity-50">{idx + 1}/15</p>
+                <p className="text-r1 opacity-50 mb-6">{idx + 1}/15</p>
                 <RadioGroup.Label className="text-base">
                   {question.text}
                 </RadioGroup.Label>
-                <div className="flex flex-row gap-2 w-full justify-between">
+                <div className="flex flex-col xs:flex-row gap-2 w-full justify-between">
                   <ChoiceButton
                     value={question.val1}
                     label={question.a1}
@@ -363,13 +358,13 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="px-8 py-12 flex flex-row gap-4 justify-between items-center w-full">
+        <div className="px-6 pb-12 flex flex-row gap-3 justify-between items-center w-full">
           <button
             onClick={handleClickPrev}
             className={`${
               step === 0 ? "opacity-0 cursor-default" : "opacity-100"
             }
-              btn text-black py-2 px-8 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
+              btn text-black p-2 px-6 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
           cursor-pointer
           transition-[background-color,transform,opacity]
           bg-white/80
@@ -378,13 +373,13 @@ export default function Home() {
           disabled:bg-white/40 disabled:scale-95 disabled:cursor-default
           `}
           >
-            <ArrowLeft size="24" />
+            <ArrowLeft size="20" />
           </button>
           <button
             onClick={handleClickNext}
             className={`${step === 15 ? "hidden" : "flex"}
-              btn text-black py-2 px-8 h-12 rounded-full  flex flex-row justify-center items-center gap-2
-              font-display text-xl font-medium
+              btn text-black py-2 px-6 h-12 rounded-full  flex flex-row justify-center items-center gap-2
+              font-display text-r2 font-medium
               leading-none
           cursor-pointer
           transition-[background-color,transform]
@@ -396,13 +391,13 @@ export default function Home() {
             <span>
               <nobr>Next Step</nobr>
             </span>
-            <ArrowRight size="24" />
+            <ArrowRight size="20" />
           </button>
           <button
             onClick={handleResults}
             className={`${step === 15 ? "flex" : "hidden"}
-               btn text-black py-2 px-8 h-12 rounded-full flex-row justify-center items-center gap-2
-              font-display text-xl font-medium
+               btn text-black py-2 px-6 h-12 rounded-full flex-row justify-center items-center gap-2
+              font-display text-r2 font-medium
               leading-none
           cursor-pointer
           transition-[background-color,transform]
@@ -414,7 +409,7 @@ export default function Home() {
             <span className="">
               <nobr>See Results</nobr>
             </span>
-            <ArrowRight size="24" />
+            <ArrowRight size="20" />
           </button>
         </div>
       </motion.main>

@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 
+import { motionVars } from "../utils/consts";
+
 export default function Footer() {
   return (
     <motion.footer
       className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.6, duration: 0.6 }}
+      initial="initial"
+      animate="animate"
+      transition={motionVars.footerTransition}
+      variants={motionVars.childVariants}
     >
       <p className="w-full max-w-xs leading-tight">
         <span className="text-r1 opacity-80 font-display">Created by</span>

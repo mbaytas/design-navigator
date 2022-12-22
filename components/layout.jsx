@@ -9,18 +9,23 @@ import AboutDialog from "./aboutDialog";
 import Header from "./header";
 import Footer from "./footer";
 
+import { motionVars } from "../utils/consts";
+
 export default function Layout({ children }) {
   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
-    <MotionConfig transition={{ duration: 0.6 }}>
+    <MotionConfig transition={motionVars.defaultTransition}>
       <Head>
         <title>Design Navigator</title>
         <meta
           name="description"
           content="A tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+        />
       </Head>
 
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
