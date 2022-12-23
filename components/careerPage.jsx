@@ -65,12 +65,16 @@ export default function CareerPage(props) {
         >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
-          <button className="highlight-button mt-3">
+          <a
+            className="highlight-button mt-3"
+            target="_blank"
+            href="https://designdisciplin.gumroad.com/l/navigator-library"
+          >
             <DataVis_1 size={24}></DataVis_1>
             <span>Discover More Resources</span>
-          </button>
+          </a>
         </motion.section>
-       
+
         {/* TOOLS */}
         <motion.section
           className="section-tools"
@@ -94,10 +98,14 @@ export default function CareerPage(props) {
           </div>
         </motion.section>
 
-        <button className="highlight-button">
+        <a
+          className="highlight-button"
+          target="_blank"
+          href="https://designdisciplin.gumroad.com/l/navigator-library"
+        >
           <DataVis_1 size={24}></DataVis_1>
           <span>Discover More</span>
-        </button>
+        </a>
 
         <CareerSelector
           repeatButton
