@@ -1,35 +1,18 @@
-import { Children } from "react";
-import Link from "next/link";
+import Image from "next/image";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-import CareerBackground from "../components/careerBackground";
 import CareerCharacter from "../components/careerCharacter";
 import CareerHeader from "../components/careerHeader";
-import LibraryPopover from "../components/libraryPopover";
 import CareerSelector from "../components/careerSelector";
-import PersonCard from "../components/personCard";
-import ResourceCard from "../components/resourceCard";
 import SectionHeading from "../components/sectionHeading";
-import ToolCard from "../components/toolCard";
-
-import book from "../public/book_embedded.png";
-import course from "../public/course_buildonce.png";
-import podcast from "../public/podcast_indie.png";
-import blog from "../public/blog_interested.png";
-import yt from "../public/yt_ali.png";
-
-import personJackButcher from "../public/personJackButcher.png";
-import personMalewicz from "../public/personMalewicz.png";
-import personArvid from "../public/personArvid.png";
-import personOliur from "../public/personOliur.png";
-import personBaytas from "../public/personBaytas.png";
-
-import { PenFountain } from "@carbon/icons-react";
 
 import { motionVars } from "../utils/consts";
 
 export default function CareerPage(props) {
+  const { scrollY } = useScroll();
+  let yVal = useTransform(scrollY, [0, 1], [0, -0.38], { clamp: false });
+
   return (
     <>
       <motion.div
@@ -39,10 +22,24 @@ export default function CareerPage(props) {
         transition={motionVars.parentTransition}
       >
         {/* BG */}
-        <CareerBackground
-          src={props.bg_src}
-          alt="bg_alt"
-        ></CareerBackground>
+        <motion.div
+          className="bg-div z-0 fixed top-0 left-1/2 w-full max-w-7xl aspect-[24/10]"
+          style={{ x: "-50%", y: yVal }}
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={motionVars.childTransition}
+        >
+          <Image
+            placeholder="blur"
+            alt={props.bg_alt}
+            src={props.bg_src}
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/0 to-black shadow-inner"></div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/0 via-black/0 to-black shadow-inner"></div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-l from-black/0 via-black/0 to-black shadow-inner"></div>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/0 via-black/0 to-black shadow-inner"></div>
+        </motion.div>
 
         {/* HEADER */}
         <CareerHeader
