@@ -62,10 +62,9 @@ export default function Layout({ children }) {
 
         <motion.footer
           className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full"
-          initial="initial"
-          animate="animate"
-          transition={motionVars.footerTransition}
-          variants={motionVars.childVariants}
+          transition={{ delay: 1, duration: 0.5 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
         >
           <p className="w-full max-w-xs leading-tight">
             <span className="text-r1 opacity-80 font-display">Created by</span>
