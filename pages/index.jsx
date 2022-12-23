@@ -291,14 +291,14 @@ export default function Home() {
       transition={motionVars.parentTransition}
     >
       <motion.main
-        className="material-static w-full max-w-sm h-[30rem] flex flex-col gap-12 justify-between"
+        className="material-static w-full max-w-sm flex flex-col gap-12 justify-between"
         ref={questionnaireContainer}
         variants={motionVars.childVariants}
         transition={motionVars.childTransition}
       >
         <div
           className={
-            "transition-transform flex flex-row h-96 [&>*]:opacity-10 [&>*]:pointer-events-none " +
+            "transition-transform flex flex-row h-[21rem] [&>*]:opacity-10 [&>*]:pointer-events-none " +
             stepClasses[step]
           }
           style={{
