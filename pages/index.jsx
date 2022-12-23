@@ -291,7 +291,7 @@ export default function Home() {
       transition={motionVars.parentTransition}
     >
       <motion.main
-        className="material-static w-full max-w-sm h-[30rem] flex flex-col gap-6 justify-between"
+        className="material-static w-full max-w-sm h-[30rem] flex flex-col gap-12 justify-between"
         ref={questionnaireContainer}
         variants={motionVars.childVariants}
         transition={motionVars.childTransition}
@@ -340,12 +340,12 @@ export default function Home() {
             >
               <RadioGroup
                 className={
-                  "flex flex-col justify-center items-start h-full w-full gap-6"
+                  "flex flex-col justify-between items-start h-full w-full gap-3"
                 }
                 value={question.radioValue}
                 onChange={question.radioOnChange}
               >
-                <p className="text-r1 opacity-50 mb-6">{idx + 1}/15</p>
+                <p className="text-r1 opacity-50 mb-3">{idx + 1}/15</p>
                 <RadioGroup.Label className="text-base">
                   {question.text}
                 </RadioGroup.Label>
@@ -373,9 +373,9 @@ export default function Home() {
           cursor-pointer
           transition-[background-color,transform,opacity]
           bg-white/80
-          hover:bg-white/100 hover:scale-105
-          active:bg-white/60 active:scale-95 active:-rotate-2
-          disabled:bg-white/40 disabled:scale-95 disabled:cursor-default
+          hover:bg-white/100
+          active:bg-white/60 active:-rotate-2 active:transition-none
+          disabled:bg-white/40 disabled:cursor-default
           `}
           >
             <ArrowLeft size="20" />
@@ -389,8 +389,8 @@ export default function Home() {
           cursor-pointer
           transition-[background-color,transform]
           bg-white/80
-          hover:bg-white/100 hover:scale-105
-          active:bg-white/60 active:scale-95 active:rotate-2
+          hover:bg-white/100 
+          active:bg-white/60 active:rotate-2 active:transition-none
           `}
           >
             <span>
@@ -407,8 +407,8 @@ export default function Home() {
           cursor-pointer
           transition-[background-color,transform]
           bg-white/80
-          hover:bg-white/100 hover:scale-105
-          active:bg-white/60 active:scale-95 active:rotate-2
+          hover:bg-white/100 
+          active:bg-white/60 active:rotate-2 active:transition-none
           `}
           >
             <span className="">
