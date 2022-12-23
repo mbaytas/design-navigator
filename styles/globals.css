@@ -80,9 +80,6 @@
             &.section-resources {
                 @apply max-w-3xl min-h-screen;
             }
-            &.section-upsell {
-                @apply max-w-3xl min-h-[14vh];
-            }
             &.section-tools {
                 @apply max-w-7xl min-h-[24vh];
             }

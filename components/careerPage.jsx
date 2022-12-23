@@ -69,22 +69,10 @@ export default function CareerPage(props) {
         >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
-        </motion.section>
-
-        {/* UPSELL */}
-        <motion.section
-          className="section-upsell"
-          variants={motionVars.childVariants}
-          transition={motionVars.childTransition}
-        >
-          <div className="w-full col-span-full flex itemx-center justify-center mb-6">
-            <Link
-              href="/"
-              className="hinted-button flex flex-row items-center gap-2 font-display text-r2 px-6 py-3 font-medium opacity-80 cursor-pointer"
-            >
-              Discover More Resources
-            </Link>
-          </div>
+          {/* UPSELL */}
+          <button className="hinted-button mt-6 flex flex-row items-center gap-2 font-display text-r2 px-6 py-3 font-medium opacity-80 bg-orange-400/20 cursor-pointer">
+            Discover More Resources
+          </button>
         </motion.section>
 
         {/* <motion.div
