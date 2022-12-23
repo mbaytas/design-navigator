@@ -32,8 +32,6 @@ import { motionVars } from "../utils/consts";
 export default function CareerPage(props) {
   return (
     <>
-      <LibraryPopover />
-
       <motion.div
         className="career-container"
         initial="initial"
@@ -64,17 +62,31 @@ export default function CareerPage(props) {
         />
 
         {/* RESOURCES */}
-        {props.children[0]}
+        <motion.section
+          className="section-resources"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <SectionHeading title="Suggested Resources" />
+          <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
+        </motion.section>
 
         {/* UPSELL */}
-        <div className="w-full col-span-full flex itemx-center justify-center mb-6">
-          <Link
-            href="/"
-            className="hinted-button flex flex-row items-center gap-2 font-display text-r1 font-medium opacity-80 cursor-pointer"
-          >
-            Discover More Resources
-          </Link>
-        </div>
+        <motion.section
+          className="section-upsell"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <div className="w-full col-span-full flex itemx-center justify-center mb-6">
+            <Link
+              href="/"
+              className="hinted-button flex flex-row items-center gap-2 font-display text-r1 font-medium opacity-80 cursor-pointer"
+            >
+              Discover More Resources
+            </Link>
+          </div>
+        </motion.section>
+
         {/* <motion.div
           className="material-static flex items-end justify-between w-full max-w-4xl  p-6 gap-3 text-white"
           variants={motionVars.childVariants}
@@ -98,10 +110,29 @@ export default function CareerPage(props) {
         </motion.div> */}
 
         {/* TOOLS */}
-        {props.children[1]}
+        <motion.section
+          className="section-tools"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <SectionHeading title="Tools to Learn" />
+
+          <div className="flex flex-row flex-wrap justify-center gap-3">
+            {props.children[1]}
+          </div>
+        </motion.section>
 
         {/* PEOPLE */}
-        {props.children[2]}
+        <motion.section
+          className="section-people"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <SectionHeading title="People to Follow" />
+          <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
+            {props.children[2]}
+          </div>
+        </motion.section>
 
         <CareerSelector
           repeatButton

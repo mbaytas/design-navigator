@@ -6,7 +6,7 @@ export default function CareerHeader(props) {
   return (
     <>
       <motion.header
-        className="career-header"
+        className="z-10 w-full max-w-lg flex flex-col justify-center gap-3 min-h-[38vh] px-6"
         variants={motionVars.childVariants}
         transition={motionVars.childTransition}
       >
