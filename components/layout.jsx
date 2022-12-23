@@ -32,9 +32,8 @@ export default function Layout({ children }) {
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
         <motion.header
           className="z-50 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
-          variants={motionVars.headerVariants}
-          initial="initial"
-          animate="animate"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={motionVars.defaultTransition}
         >
           <Link
