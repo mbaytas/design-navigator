@@ -80,7 +80,7 @@ export default function CareerPage(props) {
           <div className="w-full col-span-full flex itemx-center justify-center mb-6">
             <Link
               href="/"
-              className="hinted-button flex flex-row items-center gap-2 font-display text-r1 font-medium opacity-80 cursor-pointer"
+              className="hinted-button flex flex-row items-center gap-2 font-display text-r2 px-6 py-3 font-medium opacity-80 cursor-pointer"
             >
               Discover More Resources
             </Link>

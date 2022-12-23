@@ -55,10 +55,10 @@
         @apply underline hover:text-cyan-100 active:text-cyan-200 active:transition-none transition-colors;
     }
     .secret-button {
-        @apply px-3 py-2 rounded-lg bg-white/0  hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color] cursor-pointer;
+        @apply px-3 py-2 rounded-lg bg-white/0  hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .hinted-button {
-        @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/5 bg-white/5 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color] cursor-pointer;
+        @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/5 bg-white/5 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
 
     .material-static {
@@ -81,7 +81,7 @@
                 @apply max-w-3xl min-h-screen;
             }
             &.section-upsell {
-                @apply max-w-3xl min-h-[38vh];
+                @apply max-w-3xl min-h-[14vh];
             }
             &.section-tools {
                 @apply max-w-7xl min-h-[24vh];

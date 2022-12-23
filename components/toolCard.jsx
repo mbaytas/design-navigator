@@ -9,7 +9,7 @@ export default function ToolCard(props) {
     <a
       href={url}
       target="_blank"
-      className="flex flex-col justify-between gap-4 rounded-xl bg-gradient-to-b from-white/10 via-white/5 to-white/5 hover:bg-white/10 active:bg-white/20 active:transition-none transition-colors w-36 p-6 relative group cursor-pointer"
+      className="flex flex-col justify-between gap-4 rounded-xl bg-gradient-to-b from-white/10 via-white/5 to-white/5 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[background-color,background-image] w-36 p-6 relative group cursor-pointer"
     >
       <Launch
         size="16"
