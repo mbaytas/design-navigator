@@ -61,7 +61,7 @@
         @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/5 bg-white/5 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .highlight-button {
-        @apply bg-orange-400 hover:bg-orange-300 active:bg-orange-400 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-black font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
+        @apply bg-orange-500 hover:bg-orange-400 active:bg-orange-300 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-black font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
     }
 
     .material-static {
