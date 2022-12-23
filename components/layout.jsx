@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
-    <MotionConfig transition={motionVars.defaultTransition}>
+    <>
       <Head>
         <title>Design Navigator</title>
         <meta
@@ -35,6 +35,7 @@ export default function Layout({ children }) {
           variants={motionVars.headerVariants}
           initial="initial"
           animate="animate"
+          transition={motionVars.defaultTransition}
         >
           <Link
             href="/"
@@ -51,12 +52,15 @@ export default function Layout({ children }) {
             <span className="hidden sd:block">About</span>
           </div>
         </motion.header>
+
         <AboutDialog
           isAboutDialogOpen={isAboutDialogOpen}
           setIsAboutDialogOpen={setIsAboutDialogOpen}
         />
         <div className="ghost h-12"></div>
+
         <main className="px-3 relative">{children}</main>
+
         <motion.footer
           className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full"
           initial="initial"
@@ -96,6 +100,6 @@ export default function Layout({ children }) {
         data-domain="designdisciplin.com"
         src="https://plausible.io/js/plausible.js"
       ></Script>
-    </MotionConfig>
+    </>
   );
 }
