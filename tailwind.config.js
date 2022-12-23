@@ -25,7 +25,6 @@ module.exports = {
     },
     fontFamily: {
       display: [
-        // "montreal",
         "neue-haas-grotesk-display",
         "Helvetica Neue",
         "Helvetica",
@@ -35,7 +34,6 @@ module.exports = {
         "system-ui",
       ],
       sans: [
-        "montreal",
         "neue-haas-grotesk-text",
         "Helvetica Neue",
         "Helvetica",
