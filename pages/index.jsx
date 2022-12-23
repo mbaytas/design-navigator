@@ -369,8 +369,9 @@ export default function Home() {
             className={`${
               step === 0 ? "opacity-0 cursor-default" : "opacity-100"
             }
-              highlight-button  transition-[background-color,transform,opacity]
-              bg-white/80 hover:bg-white/100 active:bg-white/60
+              highlight-button
+              transition-[background-color,transform,opacity]
+              bg-white/80 hover:bg-white/100 active:bg-white/60 text-black
               active:-rotate-2
           `}
           >
@@ -382,9 +383,10 @@ export default function Home() {
             ${
               [0, 15].includes(step)
                 ? ""
-                : "bg-white/80 hover:bg-white/100 active:bg-white/60 "
+                : "bg-white/80 hover:bg-white/100 active:bg-white/60 text-black"
             }
-              highlight-button active:rotate-2
+              highlight-button
+              active:rotate-2
           `}
           >
             <span>
@@ -398,24 +400,6 @@ export default function Home() {
             </span>
             <ArrowRight size="20" />
           </button>
-          <button
-            onClick={handleResults}
-            className={`hidden
-               btn 
-               bg-orange-900 text-white py-2 px-6 h-12 rounded-full flex-row justify-center items-center gap-2
-              font-display text-r2 font-medium
-              leading-none
-          cursor-pointer
-          transition-[background-color,transform]
-          hover:bg-white/100 hover:text-black
-          active:bg-white/60 active:rotate-2 active:transition-none
-          `}
-          >
-            <span className="">
-              <nobr>See Results</nobr>
-            </span>
-            <ArrowRight size="20" />
-          </button>
         </div>
       </motion.main>
 
@@ -425,7 +409,7 @@ export default function Home() {
         transition={motionVars.childTransition}
       >
         <div
-          className="progress bg-orange-500 h-full transition-[width]"
+          className="progress bg-accent h-full transition-[width]"
           style={{ width: (step * 100) / 15 + "%" }}
         ></div>
       </motion.aside>

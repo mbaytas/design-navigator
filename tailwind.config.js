@@ -10,6 +10,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        accent: "#43897B",
+      },
       screens: {
         xs: "360px",
         sd: "800px",
