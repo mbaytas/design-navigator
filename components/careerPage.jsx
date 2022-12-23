@@ -7,6 +7,8 @@ import CareerHeader from "../components/careerHeader";
 import CareerSelector from "../components/careerSelector";
 import SectionHeading from "../components/sectionHeading";
 
+import { DataVis_1 } from "@carbon/icons-react";
+
 import { motionVars } from "../utils/consts";
 
 export default function CareerPage(props) {
@@ -40,7 +42,6 @@ export default function CareerPage(props) {
           <div className="absolute inset-0 w-full h-full bg-gradient-to-l from-black/0 via-black/0 to-black shadow-inner"></div>
           <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/0 via-black/0 to-black shadow-inner"></div>
         </motion.div>
-
         {/* HEADER */}
         <CareerHeader
           title={props.title}
@@ -48,7 +49,6 @@ export default function CareerPage(props) {
           p1={props.header_p1}
           p2={props.header_p2}
         ></CareerHeader>
-
         {/* CHARACTER */}
         <CareerCharacter
           p1={props.char_p1}
@@ -57,7 +57,6 @@ export default function CareerPage(props) {
           social={props.char_social}
           strategic={props.char_strategic}
         />
-
         {/* RESOURCES */}
         <motion.section
           className="section-resources"
@@ -66,12 +65,11 @@ export default function CareerPage(props) {
         >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
-          {/* UPSELL */}
-          <button className="hinted-button mt-6 flex flex-row items-center gap-2 font-display text-r2 px-6 py-3 font-medium opacity-80 bg-orange-400/20 cursor-pointer">
-            Discover More Resources
+          <button className="highlight-button">
+            <DataVis_1 size={24}></DataVis_1>
+            <span>Discover More Resources</span>
           </button>
         </motion.section>
-
         {/* <motion.div
           className="material-static flex items-end justify-between w-full max-w-4xl  p-6 gap-3 text-white"
           variants={motionVars.childVariants}
@@ -93,7 +91,6 @@ export default function CareerPage(props) {
             Purchase Library Access
           </a>
         </motion.div> */}
-
         {/* TOOLS */}
         <motion.section
           className="section-tools"
@@ -101,12 +98,10 @@ export default function CareerPage(props) {
           transition={motionVars.childTransition}
         >
           <SectionHeading title="Tools to Learn" />
-
           <div className="flex flex-row flex-wrap justify-center gap-3">
             {props.children[1]}
           </div>
         </motion.section>
-
         {/* PEOPLE */}
         <motion.section
           className="section-people"
@@ -118,6 +113,11 @@ export default function CareerPage(props) {
             {props.children[2]}
           </div>
         </motion.section>
+
+        <button className="highlight-button">
+          <DataVis_1 size={24}></DataVis_1>
+          <span>Discover More</span>
+        </button>
 
         <CareerSelector
           repeatButton

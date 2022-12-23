@@ -369,45 +369,45 @@ export default function Home() {
             className={`${
               step === 0 ? "opacity-0 cursor-default" : "opacity-100"
             }
-              btn text-black p-2 px-6 h-12 rounded-full font-display text-xl font-medium flex flex-row justify-center items-center gap-2
-          cursor-pointer
-          transition-[background-color,transform,opacity]
-          bg-white/80
-          hover:bg-white/100
-          active:bg-white/60 active:-rotate-2 active:transition-none
-          disabled:bg-white/40 disabled:cursor-default
+              highlight-button  transition-[background-color,transform,opacity]
+              bg-white/80 hover:bg-white/100 active:bg-white/60
+              active:-rotate-2
           `}
           >
             <ArrowLeft size="20" />
           </button>
           <button
-            onClick={handleClickNext}
-            className={`${step === 15 ? "hidden" : "flex"}
-              btn text-black py-2 px-6 h-12 rounded-full  flex flex-row justify-center items-center gap-2
-              font-display text-r2 font-medium
-              leading-none
-          cursor-pointer
-          transition-[background-color,transform]
-          bg-white/80
-          hover:bg-white/100 
-          active:bg-white/60 active:rotate-2 active:transition-none
+            onClick={step === 15 ? handleResults : handleClickNext}
+            className={`
+            ${
+              [0, 15].includes(step)
+                ? ""
+                : "bg-white/80 hover:bg-white/100 active:bg-white/60 "
+            }
+              highlight-button active:rotate-2
           `}
           >
             <span>
-              <nobr>Next Step</nobr>
+              <nobr>
+                {step === 0
+                  ? "Get Started"
+                  : step === 15
+                  ? "See Results"
+                  : "Next Step"}
+              </nobr>
             </span>
             <ArrowRight size="20" />
           </button>
           <button
             onClick={handleResults}
-            className={`${step === 15 ? "flex" : "hidden"}
-               btn text-black py-2 px-6 h-12 rounded-full flex-row justify-center items-center gap-2
+            className={`hidden
+               btn 
+               bg-orange-900 text-white py-2 px-6 h-12 rounded-full flex-row justify-center items-center gap-2
               font-display text-r2 font-medium
               leading-none
           cursor-pointer
           transition-[background-color,transform]
-          bg-white/80
-          hover:bg-white/100 
+          hover:bg-white/100 hover:text-black
           active:bg-white/60 active:rotate-2 active:transition-none
           `}
           >
