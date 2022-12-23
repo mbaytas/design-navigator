@@ -425,7 +425,7 @@ export default function Home() {
         transition={motionVars.childTransition}
       >
         <div
-          className="progress bg-orange-500 h-full transition-[width]"
+          className="progress bg-orange-400 h-full transition-[width]"
           style={{ width: (step * 100) / 15 + "%" }}
         ></div>
       </motion.aside>
