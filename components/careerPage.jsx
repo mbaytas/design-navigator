@@ -14,6 +14,7 @@ import { motionVars } from "../utils/consts";
 export default function CareerPage(props) {
   const { scrollY } = useScroll();
   let yVal = useTransform(scrollY, [0, 1], [0, -0.38], { clamp: false });
+  let oVal = useTransform(scrollY, [0, 0.5], [1, 0], { clamp: false });
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function CareerPage(props) {
         {/* BG */}
         <motion.div
           className="bg-div z-0 fixed top-0 left-1/2 w-full max-w-7xl aspect-video"
-          style={{ x: "-50%", y: yVal }}
+          style={{ x: "-50%", y: yVal, opacity: oVal }}
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={motionVars.childTransition}
@@ -71,13 +72,42 @@ export default function CareerPage(props) {
             href="https://designdisciplin.gumroad.com/l/navigator-library"
           >
             {/* <DataVis_1 size={24}></DataVis_1> */}
-            <svg width="24" height="24" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M276.649 316.413L216.762 300.366L234.72 472.893L276.649 316.413Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
-<path d="M242.644 203.774L302.531 219.82L284.573 47.2937L242.644 203.774Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
-<path d="M315.965 243.091L299.918 302.978L472.445 285.019L315.965 243.091Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
-<path d="M203.326 277.096L219.373 217.209L46.8458 235.167L203.326 277.096Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
-</svg>
-
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 520 520"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M276.649 316.413L216.762 300.366L234.72 472.893L276.649 316.413Z"
+                fill="white"
+                stroke="white"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M242.644 203.774L302.531 219.82L284.573 47.2937L242.644 203.774Z"
+                fill="white"
+                stroke="white"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M315.965 243.091L299.918 302.978L472.445 285.019L315.965 243.091Z"
+                fill="white"
+                stroke="white"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+              />
+              <path
+                d="M203.326 277.096L219.373 217.209L46.8458 235.167L203.326 277.096Z"
+                fill="white"
+                stroke="white"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+              />
+            </svg>
 
             <span>Discover More Resources</span>
           </a>
