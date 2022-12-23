@@ -13,7 +13,7 @@ import AboutDialog from "./aboutDialog";
 import { motionVars } from "../utils/consts";
 
 export default function Layout({ children }) {
-  let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
+//   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
     <>
@@ -52,10 +52,10 @@ export default function Layout({ children }) {
           </div>
         </motion.header>
 
-        <AboutDialog
+        {/* <AboutDialog
           isAboutDialogOpen={isAboutDialogOpen}
           setIsAboutDialogOpen={setIsAboutDialogOpen}
-        />
+        /> */}
         <div className="ghost h-12"></div>
 
         <main className="px-3 relative">{children}</main>
