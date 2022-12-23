@@ -65,32 +65,12 @@ export default function CareerPage(props) {
         >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
-          <button className="highlight-button">
+          <button className="highlight-button mt-3">
             <DataVis_1 size={24}></DataVis_1>
             <span>Discover More Resources</span>
           </button>
         </motion.section>
-        {/* <motion.div
-          className="material-static flex items-end justify-between w-full max-w-4xl  p-6 gap-3 text-white"
-          variants={motionVars.childVariants}
-          transition={motionVars.childTransition}
-        >
-          <div className="flex flex-col gap-6">
-            <h1 className="font-display text-r3">Discover More Resources</h1>
-            <p className="text-r1 opacity-50 max-w-sm">
-              Access to the full Design Navigator Library with 100+ resources is
-              available to purchase, as well as open to all Design Disciplin
-              members.
-            </p>
-          </div>
-          <a
-            href="https://www.designdisciplin.com/#/portal/signup"
-            target="_blank"
-            className="font-display font-medium uppercase border-2 border-cyan-400 text-cyan-400 rounded-full px-6 py-3 w-max hover:border-white hover:text-white transition-colors"
-          >
-            Purchase Library Access
-          </a>
-        </motion.div> */}
+       
         {/* TOOLS */}
         <motion.section
           className="section-tools"
