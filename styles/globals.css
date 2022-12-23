@@ -58,10 +58,10 @@
         @apply px-3 py-2 rounded-lg bg-white/0  hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .hinted-button {
-        @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/5 bg-white/5 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
+        @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/7 bg-white/7 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .highlight-button {
-        @apply bg-accent/80 hover:bg-accent/90 active:bg-accent/100 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-white font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
+        @apply bg-gradient-to-bl from-accent/80 to-accent/70 hover:bg-accent/90 active:bg-accent/100 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-white font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
     }
 
     .material-static {

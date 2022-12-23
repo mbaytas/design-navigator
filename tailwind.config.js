@@ -13,6 +13,10 @@ module.exports = {
       colors: {
         accent: "#43897B",
       },
+      opacity: {
+        7: ".07",
+        8: ".08",
+      },
       screens: {
         xs: "360px",
         sd: "800px",

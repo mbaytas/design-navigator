@@ -9,7 +9,7 @@ export default function ToolCard(props) {
     <a
       href={url}
       target="_blank"
-      className="grid grid-cols-[6rem_1fr] items-center gap-3 rounded-xl bg-gradient-to-b from-white/10 via-white/5 to-white/5 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[background-color,background-image] w-full max-w-sm p-3 relative group cursor-pointer"
+      className="grid grid-cols-[6rem_1fr] items-center gap-3 rounded-xl bg-gradient-to-b from-white/10 via-white/7 to-white/7 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[background-color,background-image] w-full max-w-sm p-3 relative group cursor-pointer"
     >
       <Launch
         size="16"

@@ -371,7 +371,7 @@ export default function Home() {
             }
               highlight-button
               transition-[background-color,transform,opacity]
-              bg-white/80 hover:bg-white/100 active:bg-white/60 text-black
+              bg-none bg-white/80 hover:bg-white/100 active:bg-white/60 text-black
               active:-rotate-2
           `}
           >
@@ -383,7 +383,7 @@ export default function Home() {
             ${
               [0, 15].includes(step)
                 ? ""
-                : "bg-white/80 hover:bg-white/100 active:bg-white/60 text-black"
+                : "bg-none bg-white/80 hover:bg-white/100 active:bg-white/60 text-black"
             }
               highlight-button
               active:rotate-2

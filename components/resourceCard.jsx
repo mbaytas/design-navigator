@@ -32,7 +32,7 @@ export default function ResourceCard(props) {
         }
         <h3 className="text-sm capitalize">Best {type}</h3>
       </div>
-      <div className="w-full grid grid-cols-[6rem_1fr] sd:grid-cols-[12rem_1fr] gap-4 rounded-xl bg-gradient-to-b from-white/10 via-white/5 to-white/5 group-hover:bg-white/10 group-active:bg-white/20 group-active:transition-none transition-[background-color,background-image] p-3 relative">
+      <div className="w-full grid grid-cols-[6rem_1fr] sd:grid-cols-[12rem_1fr] gap-4 rounded-xl bg-gradient-to-b from-white/10 via-white/7 to-white/7 group-hover:bg-white/10 group-active:bg-white/20 group-active:transition-none transition-[background-color,background-image] p-3 relative">
         <Launch
           size="16"
           className="absolute top-4 right-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 group-active:opacity-100 group-active:translate-x-0 group-active:translate-y-0 transition-[opacity,transform]  group-active:transition-none"
