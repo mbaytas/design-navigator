@@ -14,7 +14,7 @@ import { motionVars } from "../utils/consts";
 export default function CareerPage(props) {
   const { scrollY } = useScroll();
   let yVal = useTransform(scrollY, [0, 1], [0, -0.38], { clamp: false });
-  let oVal = useTransform(scrollY, [0, 0.5], [1, 0], { clamp: false });
+  let oVal = useTransform(scrollY, [0, 800], [1, 0], { clamp: true });
 
   return (
     <>
