@@ -24,7 +24,7 @@ export default function CareerHeader(props) {
           </div>
         </div>
         <p className="opacity-80 text-r2">{props.p1}</p>
-        <p className="opacity-50 text-r1">{props.p2}</p>
+        <p className="opacity-60 text-r1">{props.p2}</p>
       </motion.header>
     </>
   );
