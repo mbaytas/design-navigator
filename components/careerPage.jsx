@@ -70,7 +70,15 @@ export default function CareerPage(props) {
             target="_blank"
             href="https://designdisciplin.gumroad.com/l/navigator-library"
           >
-            <DataVis_1 size={24}></DataVis_1>
+            {/* <DataVis_1 size={24}></DataVis_1> */}
+            <svg width="24" height="24" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M276.649 316.413L216.762 300.366L234.72 472.893L276.649 316.413Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
+<path d="M242.644 203.774L302.531 219.82L284.573 47.2937L242.644 203.774Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
+<path d="M315.965 243.091L299.918 302.978L472.445 285.019L315.965 243.091Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
+<path d="M203.326 277.096L219.373 217.209L46.8458 235.167L203.326 277.096Z" fill="white" stroke="white" stroke-width="10" stroke-linejoin="bevel"/>
+</svg>
+
+
             <span>Discover More Resources</span>
           </a>
         </motion.section>
