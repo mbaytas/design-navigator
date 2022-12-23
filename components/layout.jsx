@@ -13,7 +13,7 @@ import AboutDialog from "./aboutDialog";
 import { motionVars } from "../utils/consts";
 
 export default function Layout({ children }) {
-//   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
+  let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
   return (
     <>
@@ -32,9 +32,10 @@ export default function Layout({ children }) {
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
         <motion.header
           className="z-50 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          variants={motionVars.headerVariants}
+          initial="initial"
+          animate="animate"
+          transition={motionVars.defaultTransition}
         >
           <Link
             href="/"
@@ -52,19 +53,20 @@ export default function Layout({ children }) {
           </div>
         </motion.header>
 
-        {/* <AboutDialog
+        <AboutDialog
           isAboutDialogOpen={isAboutDialogOpen}
           setIsAboutDialogOpen={setIsAboutDialogOpen}
-        /> */}
+        />
         <div className="ghost h-12"></div>
 
         <main className="px-3 relative">{children}</main>
 
         <motion.footer
           className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full"
-          transition={{ delay: 1, duration: 0.5 }}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial="initial"
+          animate="animate"
+          transition={motionVars.footerTransition}
+          variants={motionVars.childVariants}
         >
           <p className="w-full max-w-xs leading-tight">
             <span className="text-r1 opacity-80 font-display">Created by</span>
