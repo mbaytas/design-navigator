@@ -23,7 +23,7 @@ export default function CareerPage(props) {
       >
         {/* BG */}
         <motion.div
-          className="bg-div z-0 fixed top-0 left-1/2 w-full max-w-7xl aspect-[24/10]"
+          className="bg-div z-0 fixed top-0 left-1/2 w-full max-w-7xl aspect-video"
           style={{ x: "-50%", y: yVal }}
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
