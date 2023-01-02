@@ -58,6 +58,12 @@ export default function Layout({ children }) {
           name="theme-color"
           content="#00000"
         />
+
+        <script
+          defer
+          data-domain="navigator.designdisciplin.com"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
 
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
