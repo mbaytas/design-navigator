@@ -5,7 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 
 import { motion, MotionConfig } from "framer-motion";
-import splitbee from '@splitbee/web';
+import splitbee from "@splitbee/web";
 
 import { Information } from "@carbon/icons-react";
 
@@ -16,7 +16,9 @@ import { motionVars } from "../utils/consts";
 export default function Layout({ children }) {
   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
 
-  splitbee.init()
+  splitbee.init({
+    token: "VERHYXAM3LQL",
+  });
 
   return (
     <>
