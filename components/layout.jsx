@@ -64,6 +64,10 @@ export default function Layout({ children }) {
           data-domain="navigator.designdisciplin.com"
           src="https://plausible.io/js/script.js"
         ></script>
+        <script
+          async
+          src="https://cdn.splitbee.io/sb.js"
+        ></script>
       </Head>
 
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
