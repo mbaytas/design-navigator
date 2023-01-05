@@ -366,6 +366,7 @@ export default function Home() {
         <div className="px-6 pb-12 flex flex-row gap-3 justify-between items-center w-full">
           <button
             onClick={handleClickPrev}
+            data-splitbee-event="Click Previous Step Button"
             className={`${
               step === 0 ? "opacity-0 cursor-default" : "opacity-100"
             }
@@ -379,6 +380,7 @@ export default function Home() {
           </button>
           <button
             onClick={step === 15 ? handleResults : handleClickNext}
+            data-splitbee-event="Click Next Step Button"
             className={`
             ${
               [0, 15].includes(step)
