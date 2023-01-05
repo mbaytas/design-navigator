@@ -5,6 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 
 import { motion, MotionConfig } from "framer-motion";
+import splitbee from '@splitbee/web';
 
 import { Information } from "@carbon/icons-react";
 
@@ -14,6 +15,8 @@ import { motionVars } from "../utils/consts";
 
 export default function Layout({ children }) {
   let [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
+
+  splitbee.init()
 
   return (
     <>
@@ -63,10 +66,6 @@ export default function Layout({ children }) {
           defer
           data-domain="navigator.designdisciplin.com"
           src="https://plausible.io/js/script.js"
-        ></script>
-        <script
-          async
-          src="https://cdn.splitbee.io/sb.js"
         ></script>
       </Head>
 
