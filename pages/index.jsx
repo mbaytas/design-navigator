@@ -353,10 +353,12 @@ export default function Home() {
                   <ChoiceButton
                     value={question.val1}
                     label={question.a1}
+                    data-splitbee-event="Click First Choice Button"
                   ></ChoiceButton>
                   <ChoiceButton
                     value={question.val2}
                     label={question.a2}
+                    data-splitbee-event="Click Second Choice Button"
                   ></ChoiceButton>
                 </div>
               </RadioGroup>
