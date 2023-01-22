@@ -73,7 +73,7 @@ export default function Layout({ children }) {
 
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
         <motion.header
-          className="z-50 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
+          className="z-30 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
           variants={motionVars.headerVariants}
           initial="initial"
           animate="animate"
@@ -88,7 +88,7 @@ export default function Layout({ children }) {
           <div
             href="#"
             className="secret-button flex flex-row items-center gap-2 font-display text-r1 font-medium uppercase opacity-80 cursor-pointer"
-            // onClick={setIsAboutDialogOpen(true)}
+            onClick={() => setIsAboutDialogOpen(true)}
           >
             <Information size="20"></Information>{" "}
             <span className="hidden sd:block">About</span>
