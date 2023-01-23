@@ -84,9 +84,9 @@ export default function AboutDialog(props) {
                     </p>
                     <p className="leading-relaxed opacity-50">
                       It's possible to have great success in any of these
-                      worlds. And the way to achieve success is commitment. The
-                      skills, resources, and connections you accumulate compound
-                      over time. But move between worlds, and you start over.
+                      worlds. And what brings success is commitment. The skills,
+                      resources, and connections you accumulate compound over
+                      time. But move between worlds, and you start over.
                     </p>
                     <p className="leading-relaxed opacity-80">
                       Sounds simple. But it took me 20 years to figure it out.
@@ -103,7 +103,7 @@ export default function AboutDialog(props) {
                   </Dialog.Description>
 
                   <div className="flex flex-col">
-                    <p className="leading-relaxed opacity-50 mb-2 font-display font-medium">
+                    <p className="leading-relaxed opacity-50 mb-3 font-display font-medium">
                       Sincerely,
                     </p>
                     <p className="font-display text-r2 font-bold leading-normal overflow-ellipsis overflow-hidden whitespace-nowrap">

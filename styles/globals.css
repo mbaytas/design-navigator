@@ -78,10 +78,10 @@
         section {
             @apply z-10 w-full mx-auto flex flex-col items-center justify-center gap-6;
             &.section-character {
-                @apply max-w-4xl min-h-[24vh];
+                @apply max-w-4xl min-h-[14vh];
             }
             &.section-resources {
-                @apply max-w-3xl min-h-screen;
+                @apply max-w-3xl min-h-[62vh];
             }
             &.section-tools {
                 @apply max-w-7xl min-h-[24vh];

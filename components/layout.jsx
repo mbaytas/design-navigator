@@ -7,7 +7,18 @@ import Link from "next/link";
 import { motion, MotionConfig } from "framer-motion";
 import splitbee from "@splitbee/web";
 
-import { Information } from "@carbon/icons-react";
+import { Popover, Transition } from "@headlessui/react";
+
+import {
+  Checkmark,
+  Copy,
+  Information,
+  Link as LinkIcon,
+  LogoFacebook,
+  LogoLinkedin,
+  LogoTwitter,
+  Share,
+} from "@carbon/icons-react";
 
 import AboutDialog from "./aboutDialog";
 
@@ -85,26 +96,74 @@ export default function Layout({ children }) {
           >
             <strong>Design</strong> Navigator
           </Link>
-          <div
-            href="#"
-            className="secret-button flex flex-row items-center gap-2 font-display text-r1 font-medium uppercase opacity-80 cursor-pointer"
-            onClick={() => setIsAboutDialogOpen(true)}
-          >
-            <Information size="20"></Information>{" "}
-            <span className="hidden sd:block">About</span>
-          </div>
+          <Popover>
+            <Popover.Button className="secret-button flex flex-row items-center gap-2 font-display text-r1 font-medium uppercase opacity-80 cursor-pointer">
+              <Share size="20" /> <span className="hidden sd:block">Share</span>
+            </Popover.Button>
+            <Transition
+              enter="transition duration-300 ease-out transform"
+              enterFrom="translate-x-24 opacity-0"
+              enterTo="translate-x-0 opacity-90"
+              leave="transition duration-300 ease-out transform"
+              leaveFrom="translate-x-0 opacity-90"
+              leaveTo="translate-x-24 opacity-0"
+            >
+              <Popover.Panel className="absolute top-3 p-3 right-0 rounded-xl bg-gradient-to-b from-white/10 via-white/7 to-white/7">
+                <div className="flex gap-1 items-center">
+                  <a
+                    href="http://twitter.com/share?url=Check%20out%20Design%20Navigator%20by%20@designdisciplin%20–%20a%20great%20tool%20and%20resource%20for%20designers!%0Ahttps://navigator.designdisciplin.com"
+                    target="_blank"
+                    className="secret-button"
+                  >
+                    <LogoTwitter size="24" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://navigator.designdisciplin.com"
+                    target="_blank"
+                    className="secret-button"
+                  >
+                    <LogoLinkedin size="24" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://navigator.designdisciplin.com"
+                    target="_blank"
+                    className="secret-button"
+                  >
+                    <LogoFacebook size="24" />
+                  </a>
+                  <button
+                    className="relative secret-button group w-12 h-10"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        "http://navigator.designdisciplin.com"
+                      );
+                    }}
+                  >
+                    <LinkIcon
+                      className="absolute top-1/2 -translate-y-1/2 group-hover:opacity-0 group-active:opacity-0 transition-opacity group-active:transition-none"
+                      size="24"
+                    />
+                    <Copy
+                      className="absolute top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-active:opacity-0 transition-opacity group-active:transition-none"
+                      size="24"
+                    />
+                    <Checkmark
+                      className="absolute top-1/2 -translate-y-1/2 opacity-0 group-active:opacity-100 transition-opacity group-active:transition-none"
+                      size="24"
+                    />
+                  </button>
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
         </motion.header>
 
-        <AboutDialog
-          isAboutDialogOpen={isAboutDialogOpen}
-          setIsAboutDialogOpen={setIsAboutDialogOpen}
-        />
         <div className="ghost h-12"></div>
 
         <main className="px-3 relative">{children}</main>
 
         <motion.footer
-          className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-center w-full"
+          className="px-3 py-6 flex flex-row gap-3 flex-wrap justify-between items-end w-full"
           initial="initial"
           animate="animate"
           transition={motionVars.footerTransition}
@@ -121,7 +180,14 @@ export default function Layout({ children }) {
               Design Disciplin
             </a>
           </p>
-          <p className="w-full max-w-xs text-xs">
+          <button
+            className="secret-button flex flex-row items-center gap-2 font-display text-r1 font-medium uppercase opacity-80 cursor-pointer"
+            onClick={() => setIsAboutDialogOpen(true)}
+          >
+            <Information size="32"></Information>{" "}
+            <span className="hidden">About</span>
+          </button>
+          {/* <p className="w-full max-w-xs text-xs">
             <span className="opacity-40">&copy; 2022</span>{" "}
             <a
               href="https://www.weatherlight.com/"
@@ -134,9 +200,14 @@ export default function Layout({ children }) {
             <span className="opacity-40">
               Commissions may be earned from links on this website.
             </span>
-          </p>
+          </p> */}
         </motion.footer>
       </div>
+
+      <AboutDialog
+        isAboutDialogOpen={isAboutDialogOpen}
+        setIsAboutDialogOpen={setIsAboutDialogOpen}
+      />
 
       <Script
         data-domain="designdisciplin.com"
