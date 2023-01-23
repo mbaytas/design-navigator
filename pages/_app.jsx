@@ -8,6 +8,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <DefaultSeo
+        title={undefined}
         titleTemplate="%s | Design Navigator"
         defaultTitle="Design Navigator"
         description="A tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
@@ -18,13 +19,13 @@ export default function MyApp({ Component, pageProps }) {
           siteName: "Design Navigator",
           images: [
             {
-              url: 'https://navigator.designdisciplin.com/card.png',
+              url: "https://navigator.designdisciplin.com/card.png",
               width: 1920,
               height: 1080,
-              alt: 'Design Navigator',
+              alt: "Design Navigator",
             },
           ],
-          siteName: 'Design Navigator',
+          siteName: "Design Navigator",
         }}
         twitter={{
           handle: "@designdisciplin",
