@@ -7,8 +7,6 @@ import CareerHeader from "../components/careerHeader";
 import CareerSelector from "../components/careerSelector";
 import SectionHeading from "../components/sectionHeading";
 
-import { DataVis_1 } from "@carbon/icons-react";
-
 import { motionVars } from "../utils/consts";
 
 export default function CareerPage(props) {
@@ -50,6 +48,7 @@ export default function CareerPage(props) {
           p1={props.header_p1}
           p2={props.header_p2}
         ></CareerHeader>
+
         {/* CHARACTER */}
         <CareerCharacter
           p1={props.char_p1}
