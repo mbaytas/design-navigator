@@ -77,12 +77,14 @@ export default function CareerPage(props) {
           transition={motionVars.childTransition}
         >
           <div className="p-6 grid grid-cols-1 sd:grid-cols-2 gap-3 rounded-none mx-auto w-full">
+            <a href="https://designdisciplin.gumroad.com/l/navigator-library" target="_blank" className="anchor-plain opacity-90">
             <Image
               placeholder="blur"
               alt={props.bg_alt}
               src={upsell}
               className="h-full w-full object-cover"
             />
+            </a>
             <div className="flex flex-col gap-3 justify-center">
               <h1 className="font-display text-r3 font-bold">
                 Get the Full Library
