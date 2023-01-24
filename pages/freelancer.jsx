@@ -24,7 +24,19 @@ import { Calendar } from "@carbon/icons-react";
 export default function Freelancer() {
   return (
     <>
-      <NextSeo title="Resources for Freelance Designers" />
+      <NextSeo
+        title="Resources for Freelance Designers"
+        openGraph={{
+          images: [
+            {
+              url: "https://navigator.designdisciplin.com/card_freelancer.png",
+              width: 1920,
+              height: 1080,
+              alt: "Resources for Freelance Designers | Curated by Design Navigator",
+            },
+          ],
+        }}
+      />{" "}
       <CareerPage
         title="Freelancer"
         icon={Calendar}

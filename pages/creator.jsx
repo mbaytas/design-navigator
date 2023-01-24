@@ -32,7 +32,19 @@ import { motionVars } from "../utils/consts";
 export default function Creator() {
   return (
     <>
-      <NextSeo title="Resources for Creator-Designers" />
+      <NextSeo
+        title="Resources for Creator Designers"
+        openGraph={{
+          images: [
+            {
+              url: "https://navigator.designdisciplin.com/card_creator.png",
+              width: 1920,
+              height: 1080,
+              alt: "Resources for Creator Designers | Curated by Design Navigator",
+            },
+          ],
+        }}
+      />
       <CareerPage
         title="Creator"
         icon={PenFountain}

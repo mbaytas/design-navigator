@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }) {
           siteName: "Design Navigator",
           images: [
             {
-              url: "https://navigator.designdisciplin.com/card.png",
+              url: "https://navigator.designdisciplin.com/card_default.png",
               width: 1920,
               height: 1080,
               alt: "Design Navigator",

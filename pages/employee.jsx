@@ -24,7 +24,19 @@ import { Portfolio } from "@carbon/icons-react";
 export default function Employee() {
   return (
     <>
-      <NextSeo title="Resources for Employed Designers" />
+       <NextSeo
+        title="Resources for Professional Designers"
+        openGraph={{
+          images: [
+            {
+              url: "https://navigator.designdisciplin.com/card_employee.png",
+              width: 1920,
+              height: 1080,
+              alt: "Resources for Professional Designers | Curated by Design Navigator",
+            },
+          ],
+        }}
+      />
       <CareerPage
         title="Employee"
         icon={Portfolio}

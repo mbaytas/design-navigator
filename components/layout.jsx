@@ -34,12 +34,6 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Design Navigator</title>
-        <meta
-          name="description"
-          content="A tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
-        />
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"

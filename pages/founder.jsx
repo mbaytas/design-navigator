@@ -23,7 +23,19 @@ import { Rocket } from "@carbon/icons-react";
 export default function Founder() {
   return (
     <>
-      <NextSeo title="Resources for Designer Founders" />
+      <NextSeo
+        title="Resources for Founder Designers"
+        openGraph={{
+          images: [
+            {
+              url: "https://navigator.designdisciplin.com/card_founder.png",
+              width: 1920,
+              height: 1080,
+              alt: "Resources for Founder Designers | Curated by Design Navigator",
+            },
+          ],
+        }}
+      />{" "}
       <CareerPage
         title="Founder"
         icon={Rocket}
