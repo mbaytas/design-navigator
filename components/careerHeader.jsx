@@ -15,7 +15,7 @@ import { motionVars } from "../utils/consts";
 
 export default function CareerHeader(props) {
   const router = useRouter();
-  const pageUrl = router.basePath + router.pathname;
+  const pageUrl = "https://navigator.designdisciplin.com" + router.pathname;
 
   return (
     <>
