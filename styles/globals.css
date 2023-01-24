@@ -83,6 +83,9 @@
             &.section-resources {
                 @apply max-w-3xl min-h-[62vh];
             }
+            &.section-upsell {
+                @apply max-w-4xl min-h-[24vh];
+            }
             &.section-tools {
                 @apply max-w-7xl min-h-[24vh];
             }

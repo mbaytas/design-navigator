@@ -7,6 +7,8 @@ import CareerHeader from "../components/careerHeader";
 import CareerSelector from "../components/careerSelector";
 import SectionHeading from "../components/sectionHeading";
 
+import upsell from "../public/upsell.png";
+
 import { motionVars } from "../utils/consts";
 
 export default function CareerPage(props) {
@@ -57,6 +59,7 @@ export default function CareerPage(props) {
           social={props.char_social}
           strategic={props.char_strategic}
         />
+
         {/* RESOURCES */}
         <motion.section
           className="section-resources"
@@ -65,51 +68,74 @@ export default function CareerPage(props) {
         >
           <SectionHeading title="Suggested Resources" />
           <div className="flex flex-col gap-3 w-full">{props.children[0]}</div>
-          <a
-            className="highlight-button mt-3"
-            target="_blank"
-            href="https://designdisciplin.gumroad.com/l/navigator-library"
-          >
-            {/* <DataVis_1 size={24}></DataVis_1> */}
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 520 520"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M276.649 316.413L216.762 300.366L234.72 472.893L276.649 316.413Z"
-                fill="white"
-                stroke="white"
-                stroke-width="10"
-                stroke-linejoin="bevel"
-              />
-              <path
-                d="M242.644 203.774L302.531 219.82L284.573 47.2937L242.644 203.774Z"
-                fill="white"
-                stroke="white"
-                stroke-width="10"
-                stroke-linejoin="bevel"
-              />
-              <path
-                d="M315.965 243.091L299.918 302.978L472.445 285.019L315.965 243.091Z"
-                fill="white"
-                stroke="white"
-                stroke-width="10"
-                stroke-linejoin="bevel"
-              />
-              <path
-                d="M203.326 277.096L219.373 217.209L46.8458 235.167L203.326 277.096Z"
-                fill="white"
-                stroke="white"
-                stroke-width="10"
-                stroke-linejoin="bevel"
-              />
-            </svg>
+        </motion.section>
 
-            <span>Discover More Resources</span>
-          </a>
+        {/* UPSELL */}
+        <motion.section
+          className="section-upsell"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <div className="p-6 grid grid-cols-1 sd:grid-cols-2 gap-3 rounded-none mx-auto w-full">
+            <Image
+              placeholder="blur"
+              alt={props.bg_alt}
+              src={upsell}
+              className="h-full w-full object-cover"
+            />
+            <div className="flex flex-col gap-3 justify-center">
+              <h1 className="font-display text-r3 font-bold">
+                Get the Full Library
+              </h1>
+              <p className="text-r1 opacity-50">
+                The Design Navigator Library contains 100+ resources that help
+                designers excel in their chosen path.
+              </p>
+              <a
+                className="highlight-button mt-3 w-max mx-auto sd:mx-0"
+                target="_blank"
+                href="https://designdisciplin.gumroad.com/l/navigator-library"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 520 520"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M276.649 316.413L216.762 300.366L234.72 472.893L276.649 316.413Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="10"
+                    stroke-linejoin="bevel"
+                  />
+                  <path
+                    d="M242.644 203.774L302.531 219.82L284.573 47.2937L242.644 203.774Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="10"
+                    stroke-linejoin="bevel"
+                  />
+                  <path
+                    d="M315.965 243.091L299.918 302.978L472.445 285.019L315.965 243.091Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="10"
+                    stroke-linejoin="bevel"
+                  />
+                  <path
+                    d="M203.326 277.096L219.373 217.209L46.8458 235.167L203.326 277.096Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="10"
+                    stroke-linejoin="bevel"
+                  />
+                </svg>
+                <span>Discover More Resources</span>
+              </a>
+            </div>
+          </div>
         </motion.section>
 
         {/* TOOLS */}
