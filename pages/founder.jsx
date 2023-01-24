@@ -14,6 +14,7 @@ import yt from "../public/yt_garrytan.png";
 import personApril from "../public/personApril.png";
 import personChesky from "../public/personChesky.png";
 import personPG from "../public/personPG.png";
+import personSB from "../public/personSB.webp";
 import personSinger from "../public/personSinger.png";
 
 import bg from "../public/bg_Founder.png";
@@ -205,6 +206,13 @@ export default function Founder() {
             caption="Y Combinator"
             url="https://twitter.com/paulg"
             img_src={personPG}
+          ></PersonCard>
+          <PersonCard
+            title="Scott Belsky"
+            handle="@scottbelsky"
+            caption="Behance"
+            url="https://twitter.com/scottbelsky"
+            img_src={personSB}
           ></PersonCard>
         </>
       </CareerPage>
