@@ -16,7 +16,7 @@ function CareerLink(props) {
   const { icon, label, href } = props;
   return (
     <Link
-      className="secret-button flex flex-col justify-end items-center gap-1 opacity-50 hover:opacity-100 pt-3"
+      className="secret-button flex flex-col justify-end items-center gap-1 opacity-60 hover:opacity-100 pt-3"
       href={href}
     >
       {icon}
