@@ -163,7 +163,7 @@ export default function Layout({ children }) {
           transition={motionVars.footerTransition}
           variants={motionVars.childVariants}
         >
-          <p className="w-full max-w-xs leading-tight">
+          <p className="w-max max-w-xs leading-tight">
             <span className="text-r1 opacity-80 font-display">Created by</span>
             <br />
             <a
