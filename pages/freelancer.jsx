@@ -34,6 +34,7 @@ export default function Freelancer() {
               width: 1920,
               height: 1080,
               alt: "Resources for Freelance Designers | Curated by Design Navigator",
+              type: "image/png",
             },
           ],
         }}

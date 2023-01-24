@@ -24,7 +24,7 @@ import { Portfolio } from "@carbon/icons-react";
 export default function Employee() {
   return (
     <>
-       <NextSeo
+      <NextSeo
         title="Resources for Professional Designers"
         description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
         openGraph={{
@@ -34,6 +34,7 @@ export default function Employee() {
               width: 1920,
               height: 1080,
               alt: "Resources for Professional Designers | Curated by Design Navigator",
+              type: "image/png",
             },
           ],
         }}

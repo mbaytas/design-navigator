@@ -23,6 +23,7 @@ export default function MyApp({ Component, pageProps }) {
               width: 1920,
               height: 1080,
               alt: "Design Navigator",
+              type: "image/png",
             },
           ],
           siteName: "Design Navigator",

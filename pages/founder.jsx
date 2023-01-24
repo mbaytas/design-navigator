@@ -33,6 +33,7 @@ export default function Founder() {
               width: 1920,
               height: 1080,
               alt: "Resources for Founder Designers | Curated by Design Navigator",
+              type: "image/png",
             },
           ],
         }}

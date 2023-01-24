@@ -42,6 +42,7 @@ export default function Creator() {
               width: 1920,
               height: 1080,
               alt: "Resources for Creator Designers | Curated by Design Navigator",
+              type: "image/png",
             },
           ],
         }}
