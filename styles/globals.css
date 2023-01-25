@@ -87,10 +87,10 @@
                 @apply max-w-4xl min-h-[24vh];
             }
             &.section-tools {
-                @apply max-w-7xl min-h-[24vh];
+                @apply max-w-7xl min-h-[14vh];
             }
             &.section-people {
-                @apply max-w-7xl min-h-[24vh];
+                @apply max-w-7xl min-h-[14vh];
             }
         }
     }
