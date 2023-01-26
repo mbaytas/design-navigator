@@ -96,7 +96,7 @@ export default function CareerPage(props) {
               </h1>
               <p className="text-r1 opacity-50">
                 The Design Navigator Library contains 100+ resources that help
-                designers excel in their chosen path.
+                designers excel in their chosen path
               </p>
               <a
                 className="highlight-button mt-3 w-max mx-auto sd:mx-0"
