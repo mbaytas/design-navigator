@@ -17,9 +17,9 @@ export default function CareerCharacter(props) {
           <p>{props.p1}</p>
           <p>{props.p2}</p>
         </div>
-        <Progressbar value={props.progressive} label="progressive" />
-        <Progressbar value={props.social} label="social" />
-        <Progressbar value={props.strategic} label="strategic" />
+        <Progressbar value={props.progressive} label="progressive" caption="Self-learning and change affinity" />
+        <Progressbar value={props.social} label="social" caption="Empathy and effective communication"/>
+        <Progressbar value={props.strategic} label="strategic" caption="Economic vision and business acumen" />
       </div>
     </motion.section>
   );
