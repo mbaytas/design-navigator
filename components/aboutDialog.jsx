@@ -57,7 +57,7 @@ export default function AboutDialog(props) {
                 <div className="flex flex-col items-start w-full max-w-lg gap-12 p-6 bg-black/90 border-2">
                   <Dialog.Title className="flex flex-col gap-6">
                     <p className="text-r1 font-display opacity-50 font-medium">
-                      January 20, 2023
+                      February 3, 2023
                     </p>
                     <h1 className="text-r3 font-display font-bold">
                       Dear Designer,
