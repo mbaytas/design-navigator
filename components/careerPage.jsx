@@ -82,6 +82,7 @@ export default function CareerPage(props) {
               href="https://designdisciplin.gumroad.com/l/navigator-library"
               target="_blank"
               className="anchor-plain opacity-90"
+              data-splitbee-event="Click Library Upsell"
             >
               <Image
                 placeholder="blur"
@@ -102,6 +103,7 @@ export default function CareerPage(props) {
                 className="highlight-button mt-3 w-max mx-auto sd:mx-0"
                 target="_blank"
                 href="https://designdisciplin.gumroad.com/l/navigator-library"
+                data-splitbee-event="Click Library Upsell"
               >
                 <svg
                   width="24"
@@ -187,6 +189,7 @@ export default function CareerPage(props) {
                 className="highlight-button mt-3 w-max mx-auto sd:mx-0"
                 target="_blank"
                 href="https://www.designdisciplin.com/offerings/"
+                data-splitbee-event="Click Offerings Upsell"
               >
                 <svg
                   width="24"
@@ -209,7 +212,8 @@ export default function CareerPage(props) {
             <a
               href="https://designdisciplin.gumroad.com/l/navigator-library"
               target="_blank"
-              className="anchor-plain opacity-90"
+              className="anchor-plain opacity-90 row-start-1 sd:row-start-auto"
+              data-splitbee-event="Click Offerings Upsell"
             >
               <Image
                 placeholder="blur"
