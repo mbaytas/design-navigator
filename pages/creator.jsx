@@ -34,6 +34,7 @@ export default function Creator() {
     <>
       <NextSeo
         title="Resources for Creator Designers"
+        canonical="https://navigator.designdisciplin.com/creator"
         description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
         openGraph={{
           images: [

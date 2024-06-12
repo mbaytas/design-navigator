@@ -26,6 +26,7 @@ export default function Employee() {
     <>
       <NextSeo
         title="Resources for Professional Designers"
+        canonical="https://navigator.designdisciplin.com/employee"
         description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
         openGraph={{
           images: [
