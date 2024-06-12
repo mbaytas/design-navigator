@@ -1,17 +1,12 @@
 import { useLayoutEffect, useRef, useState } from "react";
-
 import { useRouter } from "next/router";
-
 import { motion } from "framer-motion";
-
 import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
-
 import CareerSelector from "../components/careerSelector";
 import Layout from "../components/layout";
-
 import { RadioGroup } from "@headlessui/react";
-
 import { motionVars } from "../utils/consts";
+import { NextSeo } from "next-seo";
 
 Home.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
@@ -284,106 +279,108 @@ export default function Home() {
   }
 
   return (
-    <motion.div
-      className="flex flex-col justify-evenly items-center gap-12 w-full"
-      initial="initial"
-      animate="animate"
-      transition={motionVars.parentTransition}
-    >
-      <motion.main
-        className="material-static w-full max-w-sm flex flex-col gap-12 justify-between"
-        ref={questionnaireContainer}
-        variants={motionVars.childVariants}
-        transition={motionVars.childTransition}
+    <>
+      <NextSeo canonical="https://navigator.designdisciplin.com" />
+      <motion.div
+        className="flex flex-col justify-evenly items-center gap-12 w-full"
+        initial="initial"
+        animate="animate"
+        transition={motionVars.parentTransition}
       >
-        <div
-          className={
-            "transition-transform flex flex-row h-[21rem] [&>*]:opacity-10 [&>*]:pointer-events-none " +
-            stepClasses[step]
-          }
-          style={{
-            transform: `translate(${-step * containerWidth}px`,
-          }}
+        <motion.main
+          className="material-static w-full max-w-sm flex flex-col gap-12 justify-between"
+          ref={questionnaireContainer}
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
         >
           <div
-            id="intro"
-            className={`p-6 h-full flex flex-col items-start justify-center gap-12 shrink-0 transition-opacity`}
+            className={
+              "transition-transform flex flex-row h-[21rem] [&>*]:opacity-10 [&>*]:pointer-events-none " +
+              stepClasses[step]
+            }
             style={{
-              width: containerWidth,
+              transform: `translate(${-step * containerWidth}px`,
             }}
           >
-            <h1 className="text-xl font-display font-bold">
-              Discover the best path{" "}
-              <span className="underline underline-offset-1 decoration-2 decoration-white/80">
-                for you
-              </span>
-              .
-            </h1>
-            <div className="flex flex-col gap-2">
-              <p className="opacity-80 leading-snug">Answer 15 questions.</p>
-              <p className="opacity-80 leading-snug">
-                Receive your personal list of resources that will make you a
-                great designer.
-              </p>
-            </div>
-          </div>
-          {questions.map((question, idx) => (
             <div
-              key={question.id}
-              id={question.id}
-              className={
-                "p-6 h-full flex items-center justify-center shrink-0  transition-opacity"
-              }
+              id="intro"
+              className={`p-6 h-full flex flex-col items-start justify-center gap-12 shrink-0 transition-opacity`}
               style={{
                 width: containerWidth,
               }}
             >
-              <RadioGroup
-                className={
-                  "flex flex-col justify-between items-start h-full w-full gap-3"
-                }
-                value={question.radioValue}
-                onChange={question.radioOnChange}
-              >
-                <p className="text-r1 opacity-50 mb-3">{idx + 1}/15</p>
-                <RadioGroup.Label className="text-base">
-                  {question.text}
-                </RadioGroup.Label>
-                <div className="flex flex-col xs:flex-row gap-2 w-full justify-between">
-                  <ChoiceButton
-                    value={question.val1}
-                    label={question.a1}
-                    data-splitbee-event="Click First Choice Button"
-                  ></ChoiceButton>
-                  <ChoiceButton
-                    value={question.val2}
-                    label={question.a2}
-                    data-splitbee-event="Click Second Choice Button"
-                  ></ChoiceButton>
-                </div>
-              </RadioGroup>
+              <h1 className="text-xl font-display font-bold">
+                Discover the best path{" "}
+                <span className="underline underline-offset-1 decoration-2 decoration-white/80">
+                  for you
+                </span>
+                .
+              </h1>
+              <div className="flex flex-col gap-2">
+                <p className="opacity-80 leading-snug">Answer 15 questions.</p>
+                <p className="opacity-80 leading-snug">
+                  Receive your personal list of resources that will make you a
+                  great designer.
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="px-6 pb-12 flex flex-row gap-3 justify-between items-center w-full">
-          <button
-            onClick={handleClickPrev}
-            data-splitbee-event="Click Previous Step Button"
-            className={`${
-              step === 0 ? "opacity-0 cursor-default" : "opacity-100"
-            }
+            {questions.map((question, idx) => (
+              <div
+                key={question.id}
+                id={question.id}
+                className={
+                  "p-6 h-full flex items-center justify-center shrink-0  transition-opacity"
+                }
+                style={{
+                  width: containerWidth,
+                }}
+              >
+                <RadioGroup
+                  className={
+                    "flex flex-col justify-between items-start h-full w-full gap-3"
+                  }
+                  value={question.radioValue}
+                  onChange={question.radioOnChange}
+                >
+                  <p className="text-r1 opacity-50 mb-3">{idx + 1}/15</p>
+                  <RadioGroup.Label className="text-base">
+                    {question.text}
+                  </RadioGroup.Label>
+                  <div className="flex flex-col xs:flex-row gap-2 w-full justify-between">
+                    <ChoiceButton
+                      value={question.val1}
+                      label={question.a1}
+                      data-splitbee-event="Click First Choice Button"
+                    ></ChoiceButton>
+                    <ChoiceButton
+                      value={question.val2}
+                      label={question.a2}
+                      data-splitbee-event="Click Second Choice Button"
+                    ></ChoiceButton>
+                  </div>
+                </RadioGroup>
+              </div>
+            ))}
+          </div>
+          <div className="px-6 pb-12 flex flex-row gap-3 justify-between items-center w-full">
+            <button
+              onClick={handleClickPrev}
+              data-splitbee-event="Click Previous Step Button"
+              className={`${
+                step === 0 ? "opacity-0 cursor-default" : "opacity-100"
+              }
               highlight-button
               transition-[background-color,transform,opacity]
               bg-none bg-white/80 hover:bg-white/100 active:bg-white/60 text-black
               active:-rotate-2
           `}
-          >
-            <ArrowLeft size="20" />
-          </button>
-          <button
-            onClick={step === 15 ? handleResults : handleClickNext}
-            data-splitbee-event="Click Next Step Button"
-            className={`
+            >
+              <ArrowLeft size="20" />
+            </button>
+            <button
+              onClick={step === 15 ? handleResults : handleClickNext}
+              data-splitbee-event="Click Next Step Button"
+              className={`
             ${
               [0, 15].includes(step)
                 ? ""
@@ -392,39 +389,40 @@ export default function Home() {
               highlight-button
               active:rotate-2
           `}
-          >
-            <span>
-              <nobr>
-                {step === 0
-                  ? "Get Started"
-                  : step === 15
-                  ? "See Results"
-                  : "Next Step"}
-              </nobr>
-            </span>
-            <ArrowRight size="20" />
-          </button>
-        </div>
-      </motion.main>
+            >
+              <span>
+                <nobr>
+                  {step === 0
+                    ? "Get Started"
+                    : step === 15
+                    ? "See Results"
+                    : "Next Step"}
+                </nobr>
+              </span>
+              <ArrowRight size="20" />
+            </button>
+          </div>
+        </motion.main>
 
-      <motion.aside
-        className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center"
-        variants={motionVars.childVariants}
-        transition={motionVars.childTransition}
-      >
-        <div
-          className="progress bg-accent h-full transition-[width]"
-          style={{ width: (step * 100) / 15 + "%" }}
-        ></div>
-      </motion.aside>
+        <motion.aside
+          className="h-[2px] bg-white/20 w-full max-w-sm flex flex-row justify-start items-center"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <div
+            className="progress bg-accent h-full transition-[width]"
+            style={{ width: (step * 100) / 15 + "%" }}
+          ></div>
+        </motion.aside>
 
-      <motion.div
-        className="div"
-        variants={motionVars.childVariants}
-        transition={motionVars.childTransition}
-      >
-        <CareerSelector message="...or jump to the resources:"></CareerSelector>
+        <motion.div
+          className="div"
+          variants={motionVars.childVariants}
+          transition={motionVars.childTransition}
+        >
+          <CareerSelector message="...or jump to the resources:"></CareerSelector>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 }
