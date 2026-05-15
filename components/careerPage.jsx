@@ -39,10 +39,10 @@ export default function CareerPage(props) {
             src={props.bg_src}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-black/0 to-black shadow-inner"></div>
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black/0 via-black/0 to-black shadow-inner"></div>
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-l from-black/0 via-black/0 to-black shadow-inner"></div>
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/0 via-black/0 to-black shadow-inner"></div>
+          <div className="absolute inset-0 w-full h-full bg-linear-to-b from-black/0 to-black inset-shadow-sm"></div>
+          <div className="absolute inset-0 w-full h-full bg-linear-to-t from-black/0 via-black/0 to-black inset-shadow-sm"></div>
+          <div className="absolute inset-0 w-full h-full bg-linear-to-l from-black/0 via-black/0 to-black inset-shadow-sm"></div>
+          <div className="absolute inset-0 w-full h-full bg-linear-to-r from-black/0 via-black/0 to-black inset-shadow-sm"></div>
         </motion.div>
         {/* HEADER */}
         <CareerHeader

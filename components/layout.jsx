@@ -78,7 +78,7 @@ export default function Layout({ children }) {
 
       <div className="text-white min-h-screen w-screen max-w-[100vw] overflow-x-clip flex flex-col justify-between gap-12">
         <motion.header
-          className="z-30 fixed inset-x-0 top-0 backdrop-blur bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
+          className="z-30 fixed inset-x-0 top-0 backdrop-blur-sm bg-black/80 flex flex-row justify-between items-center w-full px-3 h-12 border-b-2"
           variants={motionVars.headerVariants}
           initial="initial"
           animate="animate"
@@ -102,7 +102,7 @@ export default function Layout({ children }) {
               leaveFrom="translate-x-0 opacity-90"
               leaveTo="translate-x-24 opacity-0"
             >
-              <Popover.Panel className="absolute top-3 p-3 right-0 rounded-xl bg-gradient-to-b from-white/10 via-white/7 to-white/7">
+              <Popover.Panel className="absolute top-3 p-3 right-0 rounded-xl bg-linear-to-b from-white/10 via-white/7 to-white/7">
                 <div className="flex gap-1 items-center">
                   <a
                     href="http://twitter.com/share?url=Check%20out%20Design%20Navigator%20by%20@designdisciplin%20–%20a%20great%20tool%20and%20resource%20for%20designers!%0Ahttps://navigator.designdisciplin.com"

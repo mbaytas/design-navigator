@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
 
 @layer base {
     body {
@@ -11,40 +11,38 @@
     }
 }
 
-@layer utilities {
-    .text-r1 {
-        @apply text-sm 
-        sd:text-base
-        hd:text-base 
-        4k:text-base;
-    }
-    .text-r2 {
-        @apply text-base 
-        sd:text-lg 
-        hd:text-lg 
-        4k:text-lg
-        !leading-snug;
-    }
-    .text-r3 {
-        @apply font-display
-        text-xl 
-        sd:text-2xl 
-        hd:text-2xl 
-        4k:text-3xl
-        !leading-none;
-    }
-    .text-r4 {
-        @apply font-display
-        text-4xl 
-        sd:text-4xl
-        hd:text-4xl 
-        4k:text-6xl
-        !leading-none;
-    }
+@utility text-r1 {
+    @apply text-sm
+    sd:text-base
+    hd:text-base
+    4k:text-base;
+}
+@utility text-r2 {
+    @apply text-base
+    sd:text-lg
+    hd:text-lg
+    4k:text-lg
+    leading-snug!;
+}
+@utility text-r3 {
+    @apply font-display
+    text-xl
+    sd:text-2xl
+    hd:text-2xl
+    4k:text-3xl
+    leading-none!;
+}
+@utility text-r4 {
+    @apply font-display
+    text-4xl
+    sd:text-4xl
+    hd:text-4xl
+    4k:text-6xl
+    leading-none!;
+}
 
-    .shadow-spt {
-        @apply shadow-[0_9px_9px_0_rgba(0,0,0,.1),_0_0_29px_0_rgba(0,0,0,.1)];
-    }
+@utility shadow-spt {
+    @apply shadow-[0_9px_9px_0_rgba(0,0,0,.1),_0_0_29px_0_rgba(0,0,0,.1)];
 }
 
 @layer components {
@@ -58,14 +56,14 @@
         @apply px-3 py-2 rounded-lg bg-white/0  hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .hinted-button {
-        @apply px-3 py-2 rounded-lg bg-gradient-to-b from-white/10 via-white/7 bg-white/7 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
+        @apply px-3 py-2 rounded-lg bg-linear-to-b from-white/10 via-white/7 bg-white/7 hover:opacity-100 hover:bg-white/10 active:bg-white/20 active:transition-none transition-[opacity,background-color,background-image] cursor-pointer;
     }
     .highlight-button {
-        @apply bg-gradient-to-bl from-accent/80 to-accent/70 hover:bg-accent/90 active:bg-accent/100 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-white font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
+        @apply bg-linear-to-bl from-accent/80 to-accent/70 hover:bg-accent/90 active:bg-accent/100 py-2 px-6 h-12 rounded-full flex flex-row justify-center items-center gap-2 text-white font-display text-r2 font-medium leading-none cursor-pointer transition-[background-color,transform] active:transition-none;
     }
 
     .material-static {
-        @apply border-2 bg-black/50 backdrop-blur;
+        @apply border-2 bg-black/50 backdrop-blur-sm;
     }
 
     .career-container {

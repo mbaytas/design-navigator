@@ -33,7 +33,7 @@ export default function CareerHeader(props) {
               {props.title}
             </h1>
           </div>
-          <div className="bg-black/50 backdrop-blur p-5 rounded-full border-2 flex justify-center items-center">
+          <div className="bg-black/50 backdrop-blur-sm p-5 rounded-full border-2 flex justify-center items-center">
             <props.Icon
               size={32}
               className="opacity-80"
@@ -44,7 +44,7 @@ export default function CareerHeader(props) {
         <p className="opacity-70 text-r1">{props.p2}</p>
 
         {/* SHARE */}
-        <div className="flex flex-col justify-center gap-1 mt-9 rounded-xl bg-black/50 backdrop-blur w-fit mx-auto px-6 py-3">
+        <div className="flex flex-col justify-center gap-1 mt-9 rounded-xl bg-black/50 backdrop-blur-sm w-fit mx-auto px-6 py-3">
           <p className="text-r1 opacity-50 font-display font-medium text-center">
             Would you friends agree? Share and find out!
           </p>
