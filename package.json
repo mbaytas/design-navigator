@@ -28,6 +28,11 @@
     "tailwindcss": "3.4.19"
   },
   "pnpm": {
-    "onlyBuiltDependencies": []
+    "onlyBuiltDependencies": [],
+    "ignoredBuiltDependencies": [
+      "@carbon/icon-helpers",
+      "@carbon/icons-react",
+      "sharp"
+    ]
   }
 }
