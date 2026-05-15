@@ -4,7 +4,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
 
-import { motion, MotionConfig } from "framer-motion";
+import { motion, MotionConfig } from "motion/react";
 import splitbee from "@splitbee/web";
 
 import { Popover, Transition } from "@headlessui/react";

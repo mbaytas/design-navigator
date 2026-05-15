@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "@carbon/icons-react";
 import CareerSelector from "../components/careerSelector";
 import Layout from "../components/layout";
