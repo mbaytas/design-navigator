@@ -1,4 +1,5 @@
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { generateNextSeo } from "next-seo/pages";
 
 import CareerPage from "../components/careerPage";
 import PersonCard from "../components/personCard";
@@ -24,22 +25,25 @@ import { Rocket } from "@carbon/icons-react";
 export default function Founder() {
   return (
     <>
-      <NextSeo
-        title="Resources for Founder Designers"
-        canonical="https://navigator.designdisciplin.com/founder"
-        description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
-        openGraph={{
-          images: [
-            {
-              url: "https://navigator.designdisciplin.com/card_founder.png",
-              width: 1920,
-              height: 1080,
-              alt: "Resources for Founder Designers | Curated by Design Navigator",
-              type: "image/png",
-            },
-          ],
-        }}
-      />{" "}
+      <Head>
+        {generateNextSeo({
+          title: "Resources for Founder Designers",
+          canonical: "https://navigator.designdisciplin.com/founder",
+          description:
+            "Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate.",
+          openGraph: {
+            images: [
+              {
+                url: "https://navigator.designdisciplin.com/card_founder.png",
+                width: 1920,
+                height: 1080,
+                alt: "Resources for Founder Designers | Curated by Design Navigator",
+                type: "image/png",
+              },
+            ],
+          },
+        })}
+      </Head>{" "}
       <CareerPage
         title="Founder"
         icon={Rocket}

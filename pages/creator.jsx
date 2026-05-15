@@ -1,4 +1,5 @@
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { generateNextSeo } from "next-seo/pages";
 
 import CareerPage from "../components/careerPage";
 import CareerBackground from "../components/careerBackground";
@@ -32,22 +33,25 @@ import { motionVars } from "../utils/consts";
 export default function Creator() {
   return (
     <>
-      <NextSeo
-        title="Resources for Creator Designers"
-        canonical="https://navigator.designdisciplin.com/creator"
-        description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
-        openGraph={{
-          images: [
-            {
-              url: "https://navigator.designdisciplin.com/card_creator.png",
-              width: 1920,
-              height: 1080,
-              alt: "Resources for Creator Designers | Curated by Design Navigator",
-              type: "image/png",
-            },
-          ],
-        }}
-      />
+      <Head>
+        {generateNextSeo({
+          title: "Resources for Creator Designers",
+          canonical: "https://navigator.designdisciplin.com/creator",
+          description:
+            "Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate.",
+          openGraph: {
+            images: [
+              {
+                url: "https://navigator.designdisciplin.com/card_creator.png",
+                width: 1920,
+                height: 1080,
+                alt: "Resources for Creator Designers | Curated by Design Navigator",
+                type: "image/png",
+              },
+            ],
+          },
+        })}
+      </Head>
       <CareerPage
         title="Creator"
         icon={PenFountain}

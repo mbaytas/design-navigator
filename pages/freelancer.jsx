@@ -1,4 +1,5 @@
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { generateNextSeo } from "next-seo/pages";
 
 import CareerPage from "../components/careerPage";
 import PersonCard from "../components/personCard";
@@ -24,22 +25,25 @@ import { Calendar } from "@carbon/icons-react";
 export default function Freelancer() {
   return (
     <>
-      <NextSeo
-        title="Resources for Freelance Designers"
-        canonical="https://navigator.designdisciplin.com/freelancer"
-        description="Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate."
-        openGraph={{
-          images: [
-            {
-              url: "https://navigator.designdisciplin.com/card_freelancer.png",
-              width: 1920,
-              height: 1080,
-              alt: "Resources for Freelance Designers | Curated by Design Navigator",
-              type: "image/png",
-            },
-          ],
-        }}
-      />{" "}
+      <Head>
+        {generateNextSeo({
+          title: "Resources for Freelance Designers",
+          canonical: "https://navigator.designdisciplin.com/freelancer",
+          description:
+            "Design Navigator is a tool that helps you choose your path to become a great designer, and a library of 100+ books, podcasts, courses, and other resources to help you navigate.",
+          openGraph: {
+            images: [
+              {
+                url: "https://navigator.designdisciplin.com/card_freelancer.png",
+                width: 1920,
+                height: 1080,
+                alt: "Resources for Freelance Designers | Curated by Design Navigator",
+                type: "image/png",
+              },
+            ],
+          },
+        })}
+      </Head>{" "}
       <CareerPage
         title="Freelancer"
         icon={Calendar}

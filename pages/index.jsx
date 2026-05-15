@@ -6,7 +6,8 @@ import CareerSelector from "../components/careerSelector";
 import Layout from "../components/layout";
 import { RadioGroup } from "@headlessui/react";
 import { motionVars } from "../utils/consts";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { generateNextSeo } from "next-seo/pages";
 
 Home.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
@@ -280,7 +281,11 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo canonical="https://navigator.designdisciplin.com" />
+      <Head>
+        {generateNextSeo({
+          canonical: "https://navigator.designdisciplin.com",
+        })}
+      </Head>
       <motion.div
         className="flex flex-col justify-evenly items-center gap-12 w-full"
         initial="initial"
